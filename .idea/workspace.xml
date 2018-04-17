@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/css/list.css" line="382" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5d4fbb7-aa53-4027-80d8-61b35d559dd7" name="Default" comment="" />
+    <list default="true" id="a5d4fbb7-aa53-4027-80d8-61b35d559dd7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/map-room.html" beforeDir="false" afterPath="$PROJECT_DIR$/map-room.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map-room.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map-room.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/map-room.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="365">
+              <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -73,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map-room.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map-room.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/map-room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-661">
-              <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+            <state relative-caret-position="3510">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
             </state>
           </provider>
         </entry>
@@ -201,11 +203,11 @@
         <option value="$PROJECT_DIR$/js/detail.js" />
         <option value="$PROJECT_DIR$/place-order.html" />
         <option value="$PROJECT_DIR$/look-room.html" />
-        <option value="$PROJECT_DIR$/map-room.html" />
         <option value="$PROJECT_DIR$/js/map-room.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/list.js" />
         <option value="$PROJECT_DIR$/css/map-room.css" />
+        <option value="$PROJECT_DIR$/map-room.html" />
       </list>
     </option>
   </component>
@@ -233,11 +235,6 @@
             <path>
               <item name="Ulzz" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ulzz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ulzz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ulzz" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,21 +302,22 @@
       <workItem from="1523583886866" duration="21247000" />
       <workItem from="1523842503381" duration="17307000" />
       <workItem from="1523876449989" duration="152000" />
-      <workItem from="1523928437290" duration="5886000" />
+      <workItem from="1523928437290" duration="6778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177309000" />
+    <option name="totallyTimeSpent" value="178201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14322917" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14322917" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32925585" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -694,17 +692,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map-room.html">
+    <entry file="file://$PROJECT_DIR$/css/map-room.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="3510">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/map-room.css">
+    <entry file="file://$PROJECT_DIR$/map-room.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-661">
-          <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+        <state relative-caret-position="365">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
         </state>
       </provider>
     </entry>
