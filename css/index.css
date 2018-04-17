@@ -134,6 +134,7 @@
     border: 1px solid #DB8094;
     border-radius: 4px;
     background: #DB8094;
+    cursor: pointer;
 }
 
 .marker:after {
