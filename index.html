@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="toTop" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCheck/skins/all.css">
+    <link href="css/common.css" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href="css/index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/toTop.js"></script>
+    <script src="js/icheck.min.js"></script>
+    <script src="js/highlight.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/vue.min.js"></script>
+</head>
+<body type="index">
+    <div class="header">
+        <div class="header-detail">
+            <div class="item-1">
+                <div class="header-logo">
+                    <img src="img/logo.png"/>
+                </div>
+                <div class="header-location">
+                    <div class="location-text" title="哈德斯菲尔德">哈德斯菲尔德</div>
+                    <div class="location-detail">
+                        <div class="location-nav">
+                            <span class="location-item">选择国家:</span>
+                            <span class="location-item location-active">美国</span>
+                            <span class="location-item">加拿大</span>
+                            <span class="location-item">英国</span>
+                            <span class="location-item">澳大利亚</span>
+                        </div>
+                        <div class="location-option">
+                            <span class="location-item">纽约</span>
+                            <span class="location-item">芝加哥</span>
+                            <span class="location-item">华盛顿</span>
+                            <span class="location-item">洛杉矶</span>
+                            <span class="location-item">达拉斯</span>
+                            <span class="location-item">迈阿密</span>
+                            <span class="location-item">休斯顿</span>
+                            <span class="location-item">费城</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-2">
+                <a href="index.html" class="active" type="index">首页</a>
+                <a href="list.html" type="list">公寓列表</a>
+                <a type="home">资讯</a>
+                <a type="home">客户服务</a>
+            </div>
+            <div class="item-3">
+                <div class="user-content">
+                    <div class="user-name">beyond</div>
+                    <div class="user-detail">
+                        <div class="user-item">我的订单</div>
+                        <div class="user-item">我的收藏</div>
+                        <div class="user-item">消息通知</div>
+                        <div class="user-item">个人信息</div>
+                        <div class="user-item">安全设置</div>
+                        <div class="user-item">立即退出</div>
+                    </div>
+                </div>
+                <div class="login-group">
+                    <span class="header-login">登录</span><a class="header-register" href="register.html">注册</a>
+                </div>
+                <div class="company-phone">
+                    400-8652546
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="slide-box">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/banner1.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/banner1.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/banner1.jpg">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="swiper-search">
+            <div class="search-left pull-left" id="SearchBox">
+                <input type="text" placeholder="请输入城市、公寓名称、学校" class="pull-left search-val" id="text-search">
+                <div class="pull-left search-btn">搜索</div>
+                <div class="search-content shadow">
+                    <div class="search-history">
+                        <div class="history-title">历史搜索</div>
+                        <div class="history-detail">
+                            <span><img src="img/place_1.png">汉诺丁大学</span>
+                            <span><img src="img/place_2.png">汉诺丁helloroom公寓</span>
+                            <span><img src="img/place_3.png">东京</span>
+                        </div>
+                        <div class="history-delete">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </div>
+                    </div>
+                    <div class="search-detail">
+                        <div class="search-title">
+                            <span><img src="img/place_1.png">学校</span>
+                        </div>
+                        <ul class="search-section">
+                            <li>东京大学</li>
+                            <li>东京学艺大学</li>
+                            <li>东京福祉大学</li>
+                            <li>东京工业大学</li>
+                            <li>东京艺术大学</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="search-right pull-right">
+                地图找房
+            </div>
+            <div class="hot-search">
+                <span>热门搜索:</span>
+                <a>芝加哥大学</a>
+                <a>纽约大学</a>
+                <a>华盛顿大学</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="wrap-item">
+            <img src="img/wrap_icon1.png">
+            <div>专业团队</div>
+        </div>
+        <div class="wrap-item">
+            <img src="img/wrap_icon2.png">
+            <div>简洁流程</div>
+        </div>
+        <div class="wrap-item">
+            <img src="img/wrap_icon3.png">
+            <div>交易省心</div>
+        </div>
+    </div>
+    <div class="title">地图找房</div>
+    <div class="map-content">
+        <div class="country">澳大利亚</div>
+        <div id="map"></div>
+    </div>
+    <div class="title">纽约热门公寓推荐</div>
+    <div class="hot-apartment">
+        <ul class="hot-list">
+            <li class="hot-item">
+                <img src="img/hot_1.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">纽约Queens Woodside</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">2100</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="hot-item">
+                <img src="img/hot_2.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">罗岛Main Street 540</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">1592</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="hot-item">
+                <img src="img/hot_3.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">Lenox Avenue Residence</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">2100</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="hot-item">
+                <img src="img/hot_2.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">罗岛Main Street 540</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">1592</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="hot-item">
+                <img src="img/hot_3.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">Lenox Avenue Residence</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">2100</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="hot-item">
+                <img src="img/hot_1.png">
+                <ul class="hot-detail">
+                    <li class="hot-title">纽约Queens Woodside</li>
+                    <li class="hot-price">
+                        <span class="hot-unit">$</span><span class="hot-number">2100</span>/月
+                    </li>
+                    <li class="hot-tips">
+                        <span class="color_1">近学校</span>
+                        <span class="color_2">近地铁</span>
+                        <span class="color_3">配置完善</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="list.html" class="view-more">查看更多<img src="img/more_icon.png"/></a>
+    </div>
+    <div class="title">快速申请</div>
+    <div class="apply"></div>
+    <div class="title">合作伙伴</div>
+    <ul class="partner">
+        <li><img src="img/partner_1.png"/></li>
+        <li><img src="img/partner_2.png"/></li>
+        <li><img src="img/partner_3.png"/></li>
+        <li><img src="img/partner_4.png"/></li>
+        <li><img src="img/partner_5.png"/></li>
+    </ul>
+    <div class="title">您的贴身顾问</div>
+    <ul class="adviser">
+        <li>
+            <div class="adviser-img">
+                <div class="correct">
+                    <img src="img/user1.png">
+                </div>
+                <div class="opposite">
+                    <img src="img/code.png">
+                </div>
+            </div>
+            <div class="adviser-name">John</div>
+            <div class="adviser-tel">15220070233</div>
+        </li>
+        <li>
+            <div class="adviser-img">
+                <div class="correct">
+                    <img src="img/user2.png">
+                </div>
+                <div class="opposite">
+                    <img src="img/code.png">
+                </div>
+            </div>
+            <div class="adviser-name">Mike</div>
+            <div class="adviser-tel">15220070233</div>
+        </li>
+        <li>
+            <div class="adviser-img">
+                <div class="correct">
+                    <img src="img/user3.png">
+                </div>
+                <div class="opposite">
+                    <img src="img/code.png">
+                </div>
+            </div>
+            <div class="adviser-name">Mary</div>
+            <div class="adviser-tel">15220070233</div>
+        </li>
+        <li>
+            <div class="adviser-img">
+                <div class="correct">
+                    <img src="img/user4.png">
+                </div>
+                <div class="opposite">
+                    <img src="img/code.png">
+                </div>
+            </div>
+            <div class="adviser-name">James</div>
+            <div class="adviser-tel">15220070233</div>
+        </li>
+        <li>
+            <div class="adviser-img">
+                <div class="correct">
+                    <img src="img/user5.png">
+                </div>
+                <div class="opposite">
+                    <img src="img/code.png">
+                </div>
+            </div>
+            <div class="adviser-name">Machel</div>
+            <div class="adviser-tel">15220070233</div>
+        </li>
+    </ul>
+    <div class="footer">
+        <div class="footer-top">
+            <ul class="footer-list">
+                <li class="footer-logo">
+                    <img src="img/logo.png">
+                    <select class="form-control">
+                        <option value="cn">中文</option>
+                        <option value="en">英文</option>
+                    </select>
+                </li>
+                <li class="footer-item">
+                    <h4>荔枝租房</h4>
+                    <p>关于我们</p>
+                </li>
+                <li class="footer-item">
+                    <h4>服务指南</h4>
+                    <p>网站协议</p>
+                    <p>常见问题</p>
+                </li>
+                <li class="footer-item">
+                    <h4>联系我们</h4>
+                    <p>国内客服</p>
+                    <p>400-8652546</p>
+                    <p>国外客服</p>
+                    <p>+86-10-2531235</p>
+                </li>
+                <li class="footer-item">
+                    <div class="footer-qq">
+                        <p class="footer-title">QQ交流群</p>
+                        <p>265465565</p>
+                    </div>
+                    <div class="footer-email">
+                        <p class="footer-title">联系邮箱</p>
+                        <p>huahsi@group.com</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="friendly-link">
+                友情链接:
+                <a class="link" href="http://www.xdf.cn/" target="_blank">新东方</a>
+                <a class="link" href="http://www.koolearn.com/" target="_blank" rel="nofollow">新东方在线</a>
+                <a class="link" href="http://liuxue.xdf.cn/" target="_blank" rel="nofollow">新东方前途出国</a>
+                <a class="link" href="http://www.leogroup.cn/" target="_blank" rel="nofollow">利欧股份</a>
+                <a class="link" href="http://liuxue.zhan.com/" target="_blank">小站教育</a>
+                <a class="link" href="http://www.jiemo.net " target="_blank">芥末留学网</a>
+                <a class="link" href="http://www.uzai.com/outbound/" target="_blank" rel="nofollow">出境游</a>
+                <a class="link" href="http://www.sfkedu.com/" target="_blank" rel="nofollow">斯芬克艺术留学</a>
+                <a class="link" href="https://mall.jd.com/index-598979.html" target="_blank" rel="nofollow">京东留学</a>
+                <a class="link" href="http://www.leju.com" target="_blank">乐居房产</a>
+                <a class="link" href=" http://www.chenzhong.org/" target="_blank" rel="nofollow">晨钟教育</a>
+                <a class="link" href="http://zz.xhd.cn" target="_blank">郑州雅思</a>
+                <a class="link" href="http://www.mxsyzen.com/ " target="_blank">艺术留学</a>
+                <a class="link" href="http://wiki.smzdm.com/ " target="_blank">商品百科</a>
+                <a class="link" href="https://www.uhouzz.com/au/sydney/rent" target="_blank">悉尼租房</a>
+                <a class="link" href="https://www.uhouzz.com/au/adelaide/apartments" target="_blank">阿德莱德租房</a>
+                <a class="link" href="http://www.xdf.cn/" target="_blank">新东方</a>
+                <a class="link" href="http://www.koolearn.com/" target="_blank" rel="nofollow">新东方在线</a>
+                <a class="link" href="http://liuxue.xdf.cn/" target="_blank" rel="nofollow">新东方前途出国</a>
+                <a class="link" href="http://www.leogroup.cn/" target="_blank" rel="nofollow">利欧股份</a>
+                <a class="link" href="http://liuxue.zhan.com/" target="_blank">小站教育</a>
+                <a class="link" href="http://www.jiemo.net " target="_blank">芥末留学网</a>
+                <a class="link" href="http://www.uzai.com/outbound/" target="_blank" rel="nofollow">出境游</a>
+                <a class="link" href="http://www.sfkedu.com/" target="_blank" rel="nofollow">斯芬克艺术留学</a>
+                <a class="link" href="http://www.leju.com" target="_blank">乐居房产</a>
+                <a class="link" href=" http://www.chenzhong.org/" target="_blank" rel="nofollow">晨钟教育</a>
+                <a class="link" href="http://zz.xhd.cn" target="_blank">郑州雅思</a>
+                <a class="link" href="http://www.mxsyzen.com/ " target="_blank">艺术留学</a>
+                <a class="link" href="http://wiki.smzdm.com/ " target="_blank">商品百科</a>
+                <a class="link" href="https://www.uhouzz.com/au/sydney/rent" target="_blank">悉尼租房</a>
+                <a class="link" href="https://www.uhouzz.com/au/adelaide/apartments" target="_blank">阿德莱德租房</a>
+                <a class="link" href="http://www.xdf.cn/" target="_blank">新东方</a>
+                <a class="link" href="http://www.koolearn.com/" target="_blank" rel="nofollow">新东方在线</a>
+                <a class="link" href="http://liuxue.xdf.cn/" target="_blank" rel="nofollow">新东方前途出国</a>
+                <a class="link" href="http://www.leogroup.cn/" target="_blank" rel="nofollow">利欧股份</a>
+                <a class="link" href="http://liuxue.zhan.com/" target="_blank">小站教育</a>
+                <a class="link" href="http://www.jiemo.net " target="_blank">芥末留学网</a>
+                <a class="link" href="http://www.uzai.com/outbound/" target="_blank" rel="nofollow">出境游</a>
+                <a class="link" href="http://www.sfkedu.com/" target="_blank" rel="nofollow">斯芬克艺术留学</a>
+                <a class="link" href="https://mall.jd.com/index-598979.html" target="_blank" rel="nofollow">京东留学</a>
+                <a class="link" href="http://www.leju.com" target="_blank">乐居房产</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright©www.ulzzhome.com,All Rights Reserved.</p>
+            <div>深圳市华世恒通网络科技有限公司</div>
+        </div>
+    </div>
+    <div class="modal fade" id="MyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title text-center">快速申请</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-item">
+                        <input type="text" class="form-control" placeholder="姓名">
+                    </div>
+                    <div class="modal-item">
+                        <input type="text" class="form-control" placeholder="手机号码">
+                    </div>
+                    <div class="modal-item">
+                        <select class="form-control">
+                            <option value="">请选择城市</option>
+                            <option value="1">纽约</option>
+                            <option value="2">芝加哥</option>
+                            <option value="3">华盛顿</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control modal-textarea" placeholder="请输入您的需求！例如：是否有独立卫生间，是否可以养宠物，周围是否安静等"></textarea>
+                    <div class="modal-btn">
+                        <span data-dismiss="modal">取消</span>
+                        <span>保存</span>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <include src="tpl/loginModal.html"></include>
+    <include src="tpl/bindAccount.html"></include>
+</body>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var load = new Load();
+    });
+</script>
+</html>

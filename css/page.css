@@ -1,0 +1,34 @@
+.page{
+    width: 515px;
+    list-style: none;
+    overflow: hidden;
+    padding-top: 30px;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
+.page>li{
+    float: left;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.page .pageItem{
+    border: solid thin #f7f7f7;
+    margin: 5px;
+}
+.page .pageItemActive{
+    border: solid thin #2598cf;
+    margin: 5px;
+    background-color: #2598cf;
+    color:white;
+}
+.page .pageItem:hover{
+    border: solid thin #2598cf;
+    background-color: #2598cf;
+    color:white;
+}
+.page .pageItemDisable{
+    border: solid thin #f7f7f7;
+    margin: 5px;
+    background-color: #f7f7f7;
+}

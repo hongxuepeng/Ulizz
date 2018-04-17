@@ -1,0 +1,79 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    min-width: 1180px;
+}
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    background: url("../img/register.jpg") no-repeat center/cover;
+}
+.box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 560px;
+    background: #fff;
+    padding: 30px 50px;
+}
+.box-title{
+    color: #202020;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+.box-title>a{
+    float: right;
+    font-size: 14px;
+    position: relative;
+    top: 5px;
+    color: #70c4e9;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.box-title>a:hover{
+    text-decoration: none;
+    color: #237bad;
+}
+.box-tips{
+    color: #6b6b6b;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.box-item{
+    height: 230px;
+}
+.box-item>li{
+    width: 50%;
+    height: 230px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.box-item>li:hover{
+    background: #f9f9f9;
+}
+.box-item>li>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 45px;
+    color: #252525;
+}
+.box-item>li>a:hover,.box-item>li>a:focus{
+    text-decoration: none;
+}
+.box-item>li>a>p{
+    font-size: 16px;
+    padding-top: 20px;
+}
+.box-item>li>a>div{
+    color: #959595;
+}

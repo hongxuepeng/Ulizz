@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/retrieve-password.css">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <ul class="box-num-parent">
+            <li class="box-num-complate">
+                <div class="box-num1">
+                    <img src="../img/step_success.png">
+                </div>
+                <span>填写账户名</span>
+            </li>
+            <li>
+                <div class="box-num2">2</div>
+                <span>设置新密码</span>
+            </li>
+            <li>
+                <div class="box-num3">3</div>
+                <span>设置成功</span>
+            </li>
+        </ul>
+        <div class="box-content">
+            <div class="bind-modal-item">
+                <span>手机号码</span>
+                <div class="login-modal-form padding-100">
+                    <div class="login-modal-left">
+                        （+86）
+                    </div>
+                    <div class="login-modal-right">
+                        <input type="text" placeholder="请输入手机号">
+                    </div>
+                    <ul class="login-modal-menu">
+                        <li key="86">中国(+86)</li>
+                        <li key="1">美国(+1)</li>
+                        <li key="44">英国(+44)</li>
+                        <li key="61">澳大利亚(+61)</li>
+                        <li key="1">加拿大(+1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bind-modal-item">
+                <span>验证码</span>
+                <div class="bind-modal-form specil-modal-form">
+                    <div class="login-modal-right">
+                        <input type="text" placeholder="请输入验证码">
+                    </div>
+                    <div class="bind-modal-code">获取验证码</div>
+                </div>
+            </div>
+            <div class="login-modal-tips">用户名或密码错误</div>
+            <div class="login-modal-btn">确定</div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).bind("click", function (e) {
+        if (!$(".login-modal-menu").is(":hidden")) {
+            if ($(e.target).closest(".login-modal-left,.login-modal-menu").length == 0) {
+                $(".login-modal-menu").hide();
+            }
+        }
+    });
+    $(".login-modal-left").click(function () {
+        if($(".login-modal-menu").is(":hidden")){
+            $(".login-modal-menu").show();
+        }else{
+            $(".login-modal-menu").hide();
+        }
+    });
+    $(document).on('click','.login-modal-menu>li',function () {
+        var key=$(this).attr("key");
+        $(".login-modal-left").text("（+"+key+"）");
+        $(".login-modal-menu").hide();
+    });
+    $(".login-modal-tab>li").click(function () {
+        var tabindex=$(this).attr("tabindex");
+        $(this).addClass("login-modal-active").siblings().removeClass("login-modal-active");
+        $(".login-content>.login-content-"+tabindex).show().siblings().hide();
+    });
+    var wait=60;
+    function time() {
+        if (wait == 0) {
+            $(".bind-modal-code").removeClass("default");
+            $(".bind-modal-code").text("重新发送");
+            wait = 60;
+        } else {
+            $(".bind-modal-code").addClass("default");
+            $(".bind-modal-code").text( wait + " 秒");
+            wait--;
+            setTimeout(function () {
+                time();
+            },1000);
+        }
+    }
+    $(".bind-modal-code").click(function () {
+        time();
+    });
+    $(".login-modal-btn").click(function () {
+       location.href="set-password.html"
+    });
+</script>
+</html>

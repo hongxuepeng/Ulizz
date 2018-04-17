@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jqueryui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui-slider-pips.min.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link rel="stylesheet" href="css/map-room.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/jquery-plus-ui.min.js"></script>
+    <script src="js/jquery-ui-slider-pips.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/map-room.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="screen-box">
+        <div class="screen-title"><i class="fa fa-map-marker"></i>伦敦</div>
+        <div class="screen-detail">
+            <div class="screen-tips">当前城市大学</div>
+            <select class="form-control" id="university">
+                <option value="">请选择大学</option>
+                <option value="1">东京大学</option>
+                <option value="2">华盛顿大学</option>
+            </select>
+            <div class="screen-tips margin-20">公寓价格区间（单位：$）</div>
+            <div id="scale-slider"></div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var load = new Load();
+    });
+</script>
+</html>

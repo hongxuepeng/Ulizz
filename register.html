@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCheck/skins/all.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <link href="css/register.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/icheck.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+</head>
+    <body>
+        <div class="register-box">
+            <div class="register-left"></div>
+            <div class="register-right">
+                <div class="register-group">
+                    <ul class="register-tab">
+                        <li class="register-tab-active" tabindex="1">手机注册</li>
+                        <li tabindex="2">邮箱注册</li>
+                    </ul>
+                    <div class="register-content">
+                        <div class="register-content-1">
+                            <div class="login-modal-form padding-100">
+                                <div class="login-modal-left">
+                                    （+86）
+                                </div>
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入手机号">
+                                </div>
+                                <ul class="login-modal-menu">
+                                    <li key="86">中国(+86)</li>
+                                    <li key="1">美国(+1)</li>
+                                    <li key="44">英国(+44)</li>
+                                    <li key="61">澳大利亚(+61)</li>
+                                    <li key="1">加拿大(+1)</li>
+                                </ul>
+                            </div>
+                            <div class="bind-modal-form specil-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入验证码">
+                                </div>
+                                <div class="bind-modal-code phone-code">获取验证码</div>
+                            </div>
+                            <div class="login-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="设置8至15位英文+数字密码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="register-content-2">
+                            <div class="login-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入邮箱账号">
+                                </div>
+                            </div>
+                            <div class="bind-modal-form specil-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入邮箱验证码">
+                                </div>
+                                <div class="bind-modal-code email-code">获取验证码</div>
+                            </div>
+                            <div class="login-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="设置8至15位英文+数字密码">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-modal-tips">用户名或密码错误</div>
+                    <div class="login-input-parent">
+                        <span class="login-input">
+                            <input tabindex="1" type="checkbox" id="input-login">
+                            <label for="input-login">
+                                <span>已阅读并同意<a href="#">《用户服务协议》</a></span>
+                            </label>
+                        </span>
+                    </div>
+                    <div class="login-modal-btn">立即注册</div>
+                </div>
+            </div>
+        </div>
+    </body>
+<script>
+    $(document).bind("click", function (e) {
+        if (!$(".login-modal-menu").is(":hidden")) {
+            if ($(e.target).closest(".login-modal-left,.login-modal-menu").length == 0) {
+                $(".login-modal-menu").hide();
+            }
+        }
+    });
+    $(".login-modal-left").click(function () {
+        if($(".login-modal-menu").is(":hidden")){
+            $(".login-modal-menu").show();
+        }else{
+            $(".login-modal-menu").hide();
+        }
+    });
+    $(document).on('click','.login-modal-menu>li',function () {
+        var key=$(this).attr("key");
+        $(".login-modal-left").text("（+"+key+"）");
+        $(".login-modal-menu").hide();
+    });
+    $(".login-modal-tab>li").click(function () {
+        var tabindex=$(this).attr("tabindex");
+        $(this).addClass("login-modal-active").siblings().removeClass("login-modal-active");
+        $(".login-content>.login-content-"+tabindex).show().siblings().hide();
+    });
+    function GetCode(className){
+        var wait=60;
+        function time(className) {
+            if (wait == 0) {
+                $("."+className).removeClass("default");
+                $("."+className).text("重新发送");
+                wait = 60;
+            } else {
+                $("."+className).addClass("default");
+                $("."+className).text( wait + " 秒");
+                wait--;
+                setTimeout(function () {
+                    time(className);
+                },1000);
+            }
+        }
+        time(className);
+    }
+
+    $(".phone-code").click(function () {
+        GetCode("phone-code");
+    });
+    $(".email-code").click(function () {
+        GetCode("email-code");
+    });
+    $('#input-login').iCheck({
+        checkboxClass: 'icheckbox_minimal-blue',
+        increaseArea: '20%'
+    });
+    $(".register-tab>li").click(function () {
+        var tabindex=$(this).attr("tabindex");
+        $(this).addClass("register-tab-active").siblings().removeClass("register-tab-active");
+        $(".register-content>.register-content-"+tabindex).show().siblings().hide();
+    });
+    $(".login-modal-btn").click(function () {
+        swal({
+            title: "注册成功!",
+            text: '2秒后自动关闭',
+            type: "success",
+            timer:2000,
+            showConfirmButton: false
+        },function () {
+            location.href = "index.html";
+        });
+    });
+</script>
+</html>

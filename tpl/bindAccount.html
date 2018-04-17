@@ -1,0 +1,147 @@
+<div class="modal fade" id="BindModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="img/close.png" data-dismiss="modal" class="close-img" >
+                <div class="bind-modal-content">
+                    <div class="bind-modal-content_1">
+                        <div class="bind-modal-title">绑定账号</div>
+                        <div class="bind-modal-tips">为了您的账号安全，请先绑定账号</div>
+                        <div class="bind-modal-item">
+                            <span>国家地区</span>
+                            <div class="bind-modal-form padding-right-100">
+                                <div class="bind-modal-left">中国大陆</div>
+                                <div class="bind-modal-right">（+86）</div>
+                                <ul class="bind-modal-menu">
+                                    <li key="86" tips="中国大陆">中国大陆(+86)</li>
+                                    <li key="1" tips="美国">美国(+1)</li>
+                                    <li key="44" tips="英国">英国(+44)</li>
+                                    <li key="61" tips="澳大利亚">澳大利亚(+61)</li>
+                                    <li key="1" tips="加拿大">加拿大(+1)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bind-modal-item">
+                            <span>手机号</span>
+                            <div class="bind-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入手机号">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bind-modal-item">
+                            <span>验证码</span>
+                            <div class="bind-modal-form specil-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入验证码">
+                                </div>
+                                <div class="bind-modal-code">获取验证码</div>
+                            </div>
+                        </div>
+                        <div class="login-modal-tips">用户名或密码错误</div>
+                        <div class="login-modal-btn immediate-bind">立即绑定</div>
+                    </div>
+                    <div class="bind-modal-content_2">
+                        <div class="bind-modal-title">设置密码</div>
+                        <div class="bind-modal-item">
+                            <span>设置密码</span>
+                            <div class="bind-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请输入密码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bind-modal-item">
+                            <span>确认密码</span>
+                            <div class="bind-modal-form">
+                                <div class="login-modal-right">
+                                    <input type="text" placeholder="请再次输入密码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-modal-tips">用户名或密码错误</div>
+                        <div class="bind-modal-remind">
+                            <div class="bind-modal-remind-item">温馨提示</div>
+                            <div class="bind-modal-remind-item">1、密码长度需为8-15个字符</div>
+                            <div class="bind-modal-remind-item">2、密码中必须包含字母和数字(不能包含特殊字符)</div>
+                        </div>
+                        <div class="login-modal-btn bind-modal-confirm">确定</div>
+                    </div>
+                    <div class="bind-modal-content_3">
+                        <div class="bind-modal-title">绑定成功</div>
+                        <div class="text-center bind-modal-success">
+                            <img src="img/success_icon.png">
+                            <div>您已成功绑定手机号</div>
+                            <div>132****4584</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    $(document).bind("click", function (e) {
+        if (!$(".bind-modal-menu").is(":hidden")) {
+            if ($(e.target).closest(".bind-modal-right,.bind-modal-menu").length == 0) {
+                $(".bind-modal-menu").hide();
+            }
+        }
+    });
+    $(".bind-modal-right").click(function () {
+        if($(".bind-modal-menu").is(":hidden")){
+            $(".bind-modal-menu").show();
+        }else{
+            $(".bind-modal-menu").hide();
+        }
+    });
+    $(document).on('click','.bind-modal-menu>li',function () {
+        var key=$(this).attr("key");
+        var tips=$(this).attr("tips");
+        $(".bind-modal-right").text("（+"+key+"）");
+        $(".bind-modal-left").text(tips);
+        $(".bind-modal-menu").hide();
+    });
+    $(".bind-modal-code").click(function () {
+        time();
+    });
+    var wait=60;
+    function time() {
+        if (wait == 0) {
+            $(".bind-modal-code").removeClass("default");
+            $(".bind-modal-code").text("重新发送");
+            wait = 60;
+        } else {
+            $(".bind-modal-code").addClass("default");
+            $(".bind-modal-code").text( wait + " 秒");
+            wait--;
+            setTimeout(function () {
+                time();
+            },1000);
+        }
+    }
+    $(".immediate-bind").click(function () {
+        $(".bind-modal-content_1").hide();
+        $(".bind-modal-content_3").hide();
+        $(".bind-modal-content_2").show();
+    });
+    $(".bind-modal-confirm").click(function () {
+        $(".bind-modal-content_1").hide();
+        $(".bind-modal-content_2").hide();
+        $(".bind-modal-content_3").show();
+        var closeModal=setTimeout(function () {
+            $("#BindModal").modal('hide');
+        },2000);
+    });
+    $('#BindModal').on('show.bs.modal', function () {
+        $(".bind-modal-content_2").hide();
+        $(".bind-modal-content_3").hide();
+        $(".bind-modal-content_1").show();
+    })
+    // var myreg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,15}$/;
+    // if(!myreg.test('12aae3455')){
+    //     alert("密码不对")
+    // }else{
+    //     alert("密码正确")
+    // }
+</script>
