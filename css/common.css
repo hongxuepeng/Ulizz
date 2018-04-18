@@ -30,7 +30,7 @@ ul,li{
 	width: 350px;
 }
 .item-2{
-	width: 550px;
+	width: 650px;
 }
 .item-3{
 	width: 300px;
@@ -607,4 +607,7 @@ ul,li{
 }
 .bind-modal-success>div:last-child{
 	margin-bottom: 30px;
+}
+.bread{
+	font-size: 15px;
 }

@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 .page .pageItem{
-    border: solid thin #f7f7f7;
+    border: solid thin #f1f1f1;
     margin: 5px;
 }
 .page .pageItemActive{
@@ -28,7 +28,7 @@
     color:white;
 }
 .page .pageItemDisable{
-    border: solid thin #f7f7f7;
+    border: solid thin #f1f1f1;
     margin: 5px;
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
 }
