@@ -1,6 +1,7 @@
 body{
 	color: #8f8d8e;
 	font-size: 16px;
+	min-width: 1200px;
 	padding-right: 0!important;
 }
 ul,li{

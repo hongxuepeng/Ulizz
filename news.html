@@ -54,9 +54,9 @@
         </div>
         <div class="item-2">
             <a href="index.html" type="index">首页</a>
-            <a href="list.html" type="list" class="active">公寓列表</a>
-            <a type="home">资讯</a>
-            <a type="home">客户服务</a>
+            <a href="list.html" type="list">公寓列表</a>
+            <a href="news.html" type="news" class="active">资讯</a>
+            <a href="service.html" type="service">客户服务</a>
         </div>
         <div class="item-3">
             <div class="user-content">
@@ -80,7 +80,87 @@
     </div>
 </div>
     <div class="section">
-        <img src="img/news-banner.jpg">
+        <div class="news-content">
+            <div class="news-detail">
+                <ul class="news-screen">
+                    <li class="news-active">全部</li>
+                    <li>租房</li>
+                    <li>购物</li>
+                    <li>旅游</li>
+                    <li>其他</li>
+                </ul>
+                <div class="news-recommend">
+                    <img src="img/news_hot1.png">
+                    <div class="news-right">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题。</div>
+                    </div>
+                </div>
+                <ul class="news-list">
+                    <li>
+                        <img src="img/news_hot2.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                    <li>
+                        <img src="img/news_hot3.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                    <li>
+                        <img src="img/news_hot4.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                    <li>
+                        <img src="img/news_hot4.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                    <li>
+                        <img src="img/news_hot3.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                    <li>
+                        <img src="img/news_hot2.png">
+                        <h4>海外留学生国外租房安全问题如何解决？</h4>
+                        <div class="news-author">
+                            <span>小强</span>
+                            <span>2018-04-18</span>
+                        </div>
+                        <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房</div>
+                    </li>
+                </ul>
+                <div class="news-page">
+                    <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <div class="footer-top">
@@ -169,5 +249,11 @@
             <div>深圳市华世恒通网络科技有限公司</div>
         </div>
     </div>
+    <script src="js/news.js"></script>
+    <script>
+        $(function () {
+            var load = new Load();
+        })
+    </script>
 </body>
 </html>

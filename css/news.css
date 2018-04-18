@@ -1,0 +1,133 @@
+.section{
+    background: url("../img/news-banner.jpg") no-repeat;
+    background-size: 100% auto;
+    background-color: #CFEAF5;
+    padding-top: 17%;
+    padding-bottom: 50px;
+}
+.news-content{
+    width: 1200px;
+    background: #fff;
+    margin: auto;
+}
+.news-detail{
+    width: 900px;
+    margin: auto;
+    padding-top: 50px;
+}
+.news-screen{
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+}
+.news-screen>li{
+    margin-right: 50px;
+    float: left;
+    cursor: pointer;
+}
+.news-screen>li:last-child{
+    margin-right: 0;
+}
+.news-active{
+    color: #2598CF;
+}
+.news-recommend{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #fafafc;
+    margin-top: 30px;
+    padding-left: 335px;
+    cursor: pointer;
+}
+.news-recommend>img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 240px;
+}
+.news-right{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+.news-right>h4{
+    color: #000;
+    margin-bottom: 15px;
+}
+.news-author{
+    font-size: 13px;
+    padding-bottom: 12px;
+    color: #c4c4c6;
+}
+.news-author>span{
+    margin-left: 25px;
+}
+.news-author>span:first-child{
+    margin-left: 0;
+}
+.news-right>.news-text{
+    line-height: 25px;
+    font-size: 14px;
+    color: #878787;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+.news-list{
+    overflow: hidden;
+    margin-top: 50px;
+}
+.news-list>li{
+    width: 270px;
+    height: 350px;
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 20px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+.news-list>li:hover{
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.news-list>li:nth-child(3n){
+    margin-right: 0;
+}
+.news-list>li>img{
+    width: 270px;
+    height: 202px;
+}
+.news-list>li>h4{
+    padding: 0 5px;
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+.news-list>li>.news-author{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.news-list>li>.news-text{
+    padding: 0 5px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #878787;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.news-page{
+    padding-bottom: 20px;
+}
+.footer{
+    margin-top: 0;
+}
