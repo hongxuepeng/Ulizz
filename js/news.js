@@ -10,7 +10,13 @@ Load.prototype = {
         }
         $("#page").initPage(100,1,GG.kk);
     },
+    ViewDetail:function () {
+        $(".news-recommend,.news-list>li").click(function () {
+           location.href="news-detail.html";
+        });
+    },
     init:function () {
         this.pageLoad();
+        this.ViewDetail();
     }
 }

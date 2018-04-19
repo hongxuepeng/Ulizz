@@ -1,3 +1,27 @@
+.bread{
+    padding: 20px 15px;
+}
+.bread>a{
+    color: #929292;
+}
+.bread>a:after {
+    position: relative;
+    top: 1px;
+    content: "\f105";
+    width: 18px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    color: #a2a2a2;
+    font-family: FontAwesome;
+    margin: 0 3px;
+}
+.bread>a:last-child:after{
+    display: none;
+}
+.bread>a:focus,.bread>a:hover{
+    text-decoration: none;
+}
 .section{
     background: url("../img/news-banner.jpg") no-repeat;
     background-size: 100% auto;
@@ -130,4 +154,115 @@
 }
 .footer{
     margin-top: 0;
+}
+.article-title{
+    font-size: 20px;
+    color: #2C2F40;
+    font-weight: 700;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 10px 15px;
+}
+.article-content{
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.article-date{
+    float: left;
+    width: 100px;
+}
+.article-detail{
+    width: 700px;
+    float: left;
+}
+.article-aside{
+    float: right;
+    width: 350px;
+}
+.article-day{
+    font-size: 32px;
+    color: #2a97cf;
+}
+.article-month,.article-year{
+    color: #9a9899;
+    font-size: 15px;
+}
+.article-year{
+    margin-top: 5px;
+}
+.article-collet{
+    width: 40px;
+    margin: auto;
+    height: 20px;
+    font-size: 12px;
+    background: #ea736f;
+    color: #fff;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.article-html>img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.article-html{
+    font-size: 15px;
+    color: #2C2F40;
+}
+.article-section{
+    line-height: 25px;
+}
+.social-share .social-share-icon{
+    margin-left: 15px;
+    line-height: 30px;
+}
+.social-share .social-share-icon:first-child{
+    margin-left: 0;
+}
+.article-tips{
+    font-size: 16px;
+    color: #333;
+    margin-top: 50px;
+}
+.article-list{
+    padding-right: 10px;
+}
+.article-item{
+    overflow: hidden;
+}
+.article-item>img{
+    width: 96px;
+    height: 72px;
+    float: left;
+}
+.article-list>li{
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.article-item-detail{
+    width: 244px;
+    float: left;
+    height: 72px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.article-item-content{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #333;
+    cursor: pointer;
+}
+.article-item-content:hover{
+    text-decoration: underline;
+}
+.article-item-author{
+    margin-top: 10px;
+}
+.article-item-author>span:first-child{
+    margin-right: 20px;
 }
