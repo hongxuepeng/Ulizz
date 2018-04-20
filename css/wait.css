@@ -89,7 +89,8 @@
 }
 .order-form{
     width: 100%;
-    height: 800px;
+    /*height: 800px;*/
+    height: 720px;
     background: #fff;
     padding: 80px;
 }
