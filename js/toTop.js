@@ -22,4 +22,7 @@ jQuery(document).ready(function ($) {
             )
         });
     }
+    $(".my-order").click(function () {
+       location.href="order.html";
+    });
 });
