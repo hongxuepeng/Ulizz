@@ -305,6 +305,27 @@ Load.prototype = {
            location.href="map-room.html";
         });
     },
+    ModalPhone:function () {
+        $(document).bind("click", function (e) {
+            if (!$(".phone-modal-menu").is(":hidden")) {
+                if ($(e.target).closest(".phone-modal-left,.phone-modal-menu").length == 0) {
+                    $(".phone-modal-menu").hide();
+                }
+            }
+        });
+        $(".phone-modal-left").click(function () {
+            if($(".phone-modal-menu").is(":hidden")){
+                $(".phone-modal-menu").show();
+            }else{
+                $(".phone-modal-menu").hide();
+            }
+        });
+        $(document).on('click','.phone-modal-menu>li',function () {
+            var key=$(this).attr("key");
+            $(".phone-modal-left").text("（+"+key+"）");
+            $(".phone-modal-menu").hide();
+        });
+    },
     init:function () {
         this.GetData();
         this.loadSwiper();
@@ -315,6 +336,7 @@ Load.prototype = {
         this.ShowSearch();
         this.HideSearch();
         this.ToDetail();
+        this.ModalPhone();
         this.MapRoom();
     }
 }

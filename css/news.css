@@ -99,6 +99,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+    height: 125px;
 }
 .news-list{
     overflow: hidden;
@@ -148,6 +149,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    height: 45px;
 }
 .news-page{
     padding-bottom: 20px;
@@ -253,6 +255,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    height: 38px;
     overflow: hidden;
     color: #333;
     cursor: pointer;

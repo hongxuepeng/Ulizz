@@ -418,6 +418,7 @@ label{
 .list-section-content{
     font-size: 15px;
     color: #a1a1a1;
+    height: 42px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

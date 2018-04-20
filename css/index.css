@@ -694,5 +694,9 @@
 .highlight {
     color: #2598cf;
 }
-
+#MyModal .form-control{
+    border-radius: 0;
+    border-color: #e2e2e2;
+    box-shadow: none;
+}
 /* 搜索css样式End */
