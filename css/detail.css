@@ -749,3 +749,16 @@ video::-webkit-media-controls-panel {
     padding-top: 5px;
     padding-left: 160px;
 }
+.carousel-div{
+    line-height: 28px;
+}
+.carousel-div>span{
+    display: inline-block;
+    width: 150px;
+}
+.carousel-specil-title{
+    margin-top: 0;
+}
+.carousel-specil-list>.carousel-item{
+    margin-top: 15px;
+}
