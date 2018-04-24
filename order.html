@@ -240,6 +240,47 @@
                     <span>JP18032836852</span>
                     <span class="pull-right">
                         <span>订单状态：</span>
+                        <span class="order-status">待认证资料</span>
+                    </span>
+                </div>
+                <div class="order-section-content">
+                    <div class="pull-left order-img">
+                        <img src="img/news_hot3.png">
+                    </div>
+                    <div class="pull-left order-room">
+                        <h4>学生公寓 University Gatewayroom</h4>
+                        <div class="order-room-type">
+                            <span>房型：</span><span>studio（201）</span>
+                        </div>
+                        <div class="order-room-date">
+                            <span>入住日期：</span><span>2018-10-01</span>
+                        </div>
+                    </div>
+                    <div class="pull-left order-price">
+                        <div class="text-center order-price-box">
+                            <div class="order-price-num">
+                                <span>£</span>
+                                <span class="detail-price-num">289.00</span>
+                                <span>起/月</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-left order-operation">
+                        <ul class="text-center order-operation-box">
+                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-cancel">取消订单</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="order-section-header">
+                    <span>下单时间：</span>
+                    <span>2018-01-08 15:02:00</span>
+                    <span class="margin-30">订单编号：</span>
+                    <span>JP18032836852</span>
+                    <span class="pull-right">
+                        <span>订单状态：</span>
                         <span class="order-status">已完成</span>
                     </span>
                 </div>
@@ -387,7 +428,9 @@
     $(document).on('click','.order-view',function () {
         location.href="order-detail.html";
     });
-
+    $(document).on('click','.order-operation-btn',function () {
+        location.href="payment.html";
+    });
 </script>
 </body>
 </html>

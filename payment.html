@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="toTop" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCheck/skins/all.css">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/payment.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/icheck.min.js"></script>
+    <script src="js/include.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-detail">
+            <div class="item-1">
+                <div class="header-logo">
+                    <img src="img/logo.png"/>
+                </div>
+                <div class="header-location">
+                    <div class="location-text" title="哈德斯菲尔德">哈德斯菲尔德</div>
+                    <div class="location-detail">
+                        <div class="location-nav">
+                            <span class="location-item">选择国家:</span>
+                            <span class="location-item location-active">美国</span>
+                            <span class="location-item">加拿大</span>
+                            <span class="location-item">英国</span>
+                            <span class="location-item">澳大利亚</span>
+                        </div>
+                        <div class="location-option">
+                            <span class="location-item">纽约</span>
+                            <span class="location-item">芝加哥</span>
+                            <span class="location-item">华盛顿</span>
+                            <span class="location-item">洛杉矶</span>
+                            <span class="location-item">达拉斯</span>
+                            <span class="location-item">迈阿密</span>
+                            <span class="location-item">休斯顿</span>
+                            <span class="location-item">费城</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-2">
+                <a href="index.html" type="index">首页</a>
+                <a href="list.html" type="list">公寓列表</a>
+                <a href="news.html" type="news">资讯</a>
+                <a href="service.html" type="service">客户服务</a>
+            </div>
+            <div class="item-3">
+                <div class="user-content">
+                    <div class="user-name">beyond</div>
+                    <div class="user-detail">
+                        <div class="user-item my-order">我的订单</div>
+                        <div class="user-item my-collection">我的收藏</div>
+                        <div class="user-item message-notification">消息通知</div>
+                        <div class="user-item personal-information">个人信息</div>
+                        <div class="user-item security-setting">安全设置</div>
+                        <div class="user-item exit-immediately">立即退出</div>
+                    </div>
+                </div>
+                <div class="login-group">
+                    <span class="header-login">登录</span><a class="header-register" href="register.html">注册</a>
+                </div>
+                <div class="company-phone">
+                    400-8652546
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="payment-complete">
+            <div class="payment-success">公寓确认完成，请支付定金！</div>
+            <div class="payment-complete-tips">请您在<span>23</span>小时<span>59</span>分<span>59</span>秒内完成支付，否则订单会自动取消！</div>
+            <div class="payment-complete-detail">
+                <div>学生公寓 University Gatewayroom</div>
+                <div>入住日期：2018-10-01</div>
+                <div>租期：50周</div>
+            </div>
+        </div>
+        <div class="payment-content">
+            <div class="payment-money">
+                支付金额：<span>￥1005.00</span>
+            </div>
+            <ul class="payment-mode">
+                <li>
+                    <div class="payment-mode-item payment-mode-active">
+                        <img src="img/payment-mode-1.png">
+                    </div>
+                </li>
+                <li>
+                    <div class="payment-mode-item">
+                        <img src="img/payment-mode-2.png">
+                    </div>
+                </li>
+                <li>
+                    <div class="payment-mode-item">
+                        <img src="img/payment-mode-3.png">
+                    </div>
+                </li>
+                <li>
+                    <div class="payment-mode-item">
+                        <img src="img/payment-mode-4.png">
+                    </div>
+                    <div class="pull-left">跨境支付，安全快捷</div>
+                </li>
+            </ul>
+            <div class="payment-btn">去支付</div>
+        </div>
+    </div>
+    <include src="tpl/footer.html"></include>
+    <include src="tpl/loginModal.html"></include>
+    <include src="tpl/bindAccount.html"></include>
+    <div class="modal fade" id="TipsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tips-header">
+                        提示
+                        <img src="img/close.png" data-dismiss="modal">
+                    </div>
+                    <div class="tips-content">
+                        <div class="tips-text">
+                            请在第三方支付页面完成付款，付款完成前请不要关闭此窗口
+                        </div>
+                        <div class="tips-btn text-center">
+                            <span>我已付款成功</span>
+                            <span>付款遇到问题，重新支付</span>
+                        </div>
+                        <div class="contact">联系人工客服</div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</body>
+<script>
+    $(".payment-mode-item").click(function () {
+        $(this).addClass("payment-mode-active");
+        $(this).parent("li").siblings().find(".payment-mode-item").removeClass("payment-mode-active");
+    });
+    $(".payment-btn").click(function () {
+        $("#TipsModal").modal();
+    });
+</script>
+</html>

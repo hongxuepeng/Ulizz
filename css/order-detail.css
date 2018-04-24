@@ -1,5 +1,6 @@
 body{
     background: #cfeaf5;
+    min-width: 1200px;
 }
 ul,li{
     list-style: none;

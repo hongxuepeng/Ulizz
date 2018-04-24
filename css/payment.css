@@ -1,0 +1,161 @@
+body{
+    background: #cfeaf5;
+}
+.section{
+    padding-top: 30px;
+}
+.payment-complete{
+    width: 1200px;
+    height: 260px;
+    margin: auto;
+    background: #fff;
+    padding: 30px 50px;
+}
+.payment-success{
+    height: 46px;
+    line-height: 46px;
+    background: url("../img/success_icon.png") no-repeat left center;
+    background-size: 46px 46px;
+    padding-left: 60px;
+    color: #000;
+}
+.payment-complete-tips{
+    padding: 15px 0;
+    font-size: 14px;
+    color: #676b6a;
+    border-bottom: 1px solid #eaeaea;
+}
+.payment-complete-tips>span{
+    color: #f07381;
+    font-weight: 600;
+    font-size: 15px;
+}
+.payment-complete-detail{
+    font-size: 14px;
+    color: #343434;
+}
+.payment-complete-detail>div{
+    margin-top: 15px;
+}
+.payment-content{
+    height: 574px;
+    width: 1200px;
+    background: #fff;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0 50px;
+}
+.payment-money{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+}
+.payment-money>span{
+    color: #f56161;
+    font-size: 18px;
+    font-weight: 600;
+}
+.payment-mode{
+    margin-top: 50px;
+}
+.payment-mode-item{
+    width: 294px;
+    height: 58px;
+    border: 1px solid #e9e9e9;
+    padding-left: 100px;
+    background: url("../img/payment-mode-check.png") no-repeat center left 50px;
+    cursor: pointer;
+    float: left;
+}
+.payment-mode-active{
+    background: url("../img/payment-mode-checked.png") no-repeat center left 50px;
+    border: 1px solid #a0d4fb;
+}
+.payment-mode>li{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.payment-mode>li:nth-child(2)>.payment-mode-item{
+    padding-top: 4px;
+}
+.payment-mode>li:nth-child(3)>.payment-mode-item{
+    padding-top: 4px;
+}
+.payment-mode>li:first-child{
+    margin-top: 0;
+}
+.payment-mode>li>.pull-left{
+    height: 58px;
+    line-height: 58px;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.payment-btn{
+   width: 294px;
+    height: 40px;
+    line-height: 40px;
+    background: #2798d0;
+    color: #fff;
+    text-align: center;
+    margin-top: 70px;
+    cursor: pointer;
+}
+#TipsModal .modal-dialog{
+    width: 450px;
+}
+#TipsModal .modal-body{
+    padding: 0 30px;
+}
+.tips-header{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 10px;
+}
+.tips-header>img{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+.tips-text{
+    background: url("../img/payment-mode-mark.png") no-repeat left center;
+    background-size: 30px 30px;
+    font-size: 14px;
+    padding: 20px 0;
+    padding-left: 45px;
+    color: #595959;
+}
+.tips-btn{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.tips-btn>span{
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px;
+    border: 1px solid #dedede;
+    color: #777777;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tips-btn>span:first-child{
+    margin-right: 20px;
+    background: #2798d0;
+    border-color: #2798d0;
+    color: #fff;
+}
+.contact{
+    color: #2699d0;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
