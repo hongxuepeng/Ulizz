@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5d4fbb7-aa53-4027-80d8-61b35d559dd7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/payment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-checked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/payment-mode-mark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/order-detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/order-detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/refunds-rule.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/refunds-rule.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wait.html" beforeDir="false" afterPath="$PROJECT_DIR$/wait.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,8 +34,8 @@
       <file leaf-file-name="payment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/payment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="95" column="20" lean-forward="true" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+            <state relative-caret-position="368">
+              <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -346,12 +332,12 @@
       <workItem from="1524101027644" duration="11009000" />
       <workItem from="1524188529529" duration="12587000" />
       <workItem from="1524446810256" duration="13469000" />
-      <workItem from="1524533631282" duration="15290000" />
+      <workItem from="1524533631282" duration="15893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256088000" />
+    <option name="totallyTimeSpent" value="256691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -827,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/payment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="95" column="20" lean-forward="true" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+        <state relative-caret-position="368">
+          <caret line="117" column="41" selection-start-line="117" selection-start-column="41" selection-end-line="117" selection-end-column="41" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
