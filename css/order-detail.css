@@ -1,6 +1,8 @@
 body{
     background: #cfeaf5;
     min-width: 1200px;
+    font-size: 14px;
+    color: #4B4B4B;
 }
 ul,li{
     list-style: none;
@@ -293,4 +295,115 @@ ul,li{
 }
 .be-careful>.text-center{
     margin-bottom: 30px;
+}
+.order-help{
+    position: relative;
+}
+.order-help>i{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.order-help-tips{
+    position: absolute;
+    left: 28px;
+    top: -22px;
+    height: 60px;
+    width: 180px;
+    background: #F98585;
+    color: #fff;
+    padding: 10px;
+    line-height: 22px;
+    font-size: 13px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+.order-help-tips:before{
+    position: absolute;
+    bottom: 44%;
+    left: -5px;
+    content: '';
+    border-right: 5px solid #F98585;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+.order-help:hover>.order-help-tips{
+    opacity: 1;
+    visibility: visible;
+}
+.cost-detailed>li>span{
+    margin-left: 5px;
+}
+.order-help-tips-auto{
+    min-width: 180px;
+    height: 40px;
+    top: -12px;
+    white-space: nowrap;
+    width: auto;
+}
+.order-help-tips-auto:before{
+    bottom: 39%;
+}
+#TipsModal .modal-dialog{
+    width: 450px;
+}
+#TipsModal .modal-body{
+    padding: 0 30px;
+}
+.tips-header{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 10px;
+}
+.tips-header>img{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+.tips-text{
+    font-size: 14px;
+    padding: 20px 33px;
+    color: #595959;
+}
+.tips-btn{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.tips-btn>span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 140px;
+    text-align: center;
+    border: 1px solid #dedede;
+    color: #777777;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tips-btn>span:first-child{
+    margin-right: 50px;
+    background: #2798d0;
+    border-color: #2798d0;
+    color: #fff;
+}
+.contact{
+    color: #2699d0;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.order-help-long{
+    width: 250px;
+}
+.cost-detailed>li>.order-explain{
+    color: #4B4B4B;
 }
