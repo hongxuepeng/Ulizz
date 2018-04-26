@@ -99,7 +99,7 @@
             </ul>
         </div>
         <ul class="order-section">
-            <li class="order-section-item-1">
+            <li class="order-section-item" status="1">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -141,7 +141,7 @@
                    </div>
                </div>
            </li>
-            <li class="order-section-item-2">
+            <li class="order-section-item" status="2">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-3">
+            <li class="order-section-item" status="3">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-4">
+            <li class="order-section-item" status="4">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -273,7 +273,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-5">
+            <li class="order-section-item" status="5">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-6">
+            <li class="order-section-item" status="6">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -354,7 +354,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-7">
+            <li class="order-section-item" status="7">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -395,7 +395,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-8">
+            <li class="order-section-item" status="8">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -436,7 +436,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-9">
+            <li class="order-section-item" status="9">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -478,7 +478,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-10">
+            <li class="order-section-item" status="10">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -520,7 +520,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-11">
+            <li class="order-section-item" status="11">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -562,7 +562,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-12">
+            <li class="order-section-item" status="12">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -604,7 +604,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-13">
+            <li class="order-section-item" status="13">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -645,7 +645,7 @@
                     </div>
                 </div>
             </li>
-            <li class="order-section-item-14">
+            <li class="order-section-item" status="14">
                 <div class="order-section-header">
                     <span>下单时间：</span>
                     <span>2018-01-08 15:02:00</span>
@@ -692,6 +692,8 @@
 <include src="tpl/footer.html"></include>
 <include src="tpl/loginModal.html"></include>
 <include src="tpl/bindAccount.html"></include>
+<include src="tpl/TipsModal.html"></include>
+<include src="tpl/IdentityModal.html"></include>
 <script src="js/order.js"></script>
 <script>
     $(document).on('click','.order-cancel',function () {
@@ -716,10 +718,16 @@
         location.href="change-orders.html";
     });
     $(document).on('click','.order-view',function () {
-        location.href="order-detail.html";
+        var status=$(this).parents(".order-section-item").attr("status");
+        location.href="order-detail.html?status="+status;
     });
     $(document).on('click','.order-operation-btn',function () {
-        location.href="payment.html";
+        var status=$(this).parents(".order-section-item").attr("status");
+        if(status=="2"||status=="11"){
+            $("#IdentityModal").modal();
+        }else{
+            $("#TipsModal").modal();
+        }
     });
 </script>
 </body>

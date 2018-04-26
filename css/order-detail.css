@@ -407,3 +407,67 @@ ul,li{
 .cost-detailed>li>.order-explain{
     color: #4B4B4B;
 }
+.order-detail-header>img{
+    cursor: pointer;
+}
+#toTop{
+    display: none;
+}
+.identity-close>img{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+.identity-title{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.identity-subtitle{
+    padding-bottom: 50px;
+}
+.identity-item{
+    position: relative;
+    height: 34px;
+    padding-left: 95px;
+    padding-right: 10px;
+    width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.identity-name{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+}
+.identity-input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #E0E1E1;
+}
+.identity-input>input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+}
+.identity-btn{
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background: #2699CF;
+    color: #fff;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.identity-btn:hover{
+    background: #2783AF;
+}

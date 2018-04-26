@@ -8,6 +8,7 @@
     <title>ULIZZ.COM荔枝租房</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/showBo.css">
     <link href="css/common.css" rel="stylesheet">
     <link rel="stylesheet" href="css/order-detail.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,6 +20,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/toTop.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/showBo.js"></script>
 </head>
 <body>
     <include class="order-include" src="order/order-status-1.html"></include>
@@ -31,6 +33,24 @@
         var status = getUrlParam("status");
         var src = "order/order-status-"+status+".html";
         $(".order-include").attr("src",src);
+        $(document).on('click','.order-detail-header>img',function () {
+            location.href="index.html";
+        });
+        $(document).on('click','.my-order',function () {
+           location .href="order.html";
+        });
+        $(document).on('click','.payment-btn',function () {
+            location.href="payment.html";
+        });
+        $(document).on('click','.order-cancel',function () {
+            Showbo.Msg.confirm('您确定要取消该订单吗？', function(flag) {
+                if (flag == 'yes') {
+                    console.log('你点击了确定!');
+                } else if (flag == 'no') {
+                    console.log('你点击了取消!');
+                }
+            });
+        });
     </script>
 </body>
 </html>

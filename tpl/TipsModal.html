@@ -1,0 +1,27 @@
+<div class="modal fade" id="TipsModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="tips-header">
+                    注意
+                    <img src="img/close.png" data-dismiss="modal">
+                </div>
+                <div class="tips-content">
+                    <div class="tips-text">
+                        支付前请务必查看租房协议，避免产生不必要的纠纷
+                    </div>
+                    <div class="contact">查看协议</div>
+                    <div class="tips-btn text-center">
+                        <span class="payment-btn">已查看，去支付</span>
+                        <span data-dismiss="modal">返回</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    $(document).on('click','.payment-btn',function () {
+        location.href="payment.html";
+    });
+</script>

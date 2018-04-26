@@ -1,0 +1,27 @@
+<div class="modal fade" id="IdentityModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-right identity-close">
+                    <img src="img/close.png" data-dismiss="modal">
+                </div>
+                <div class="text-center identity-title">申请人身份信息输入</div>
+                <div class="text-center identity-subtitle">根据国家外汇政策，请输入申请人身份信息</div>
+                <div class="identity-item">
+                    <div class="identity-name">姓名：</div>
+                    <div class="identity-input"><input type="text"></div>
+                </div>
+                <div class="identity-item">
+                    <div class="identity-name">身份证号：</div>
+                    <div class="identity-input"><input type="text"></div>
+                </div>
+                <div class="identity-btn">下一步</div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    $(".identity-btn").click(function () {
+        location.href="payment.html";
+    });
+</script>

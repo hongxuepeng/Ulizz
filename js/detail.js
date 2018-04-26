@@ -319,6 +319,9 @@ Load.prototype = {
             $(this).addClass("collet-active");
             $(this).find("span").text("已收藏");
         });
+        $(".carousel-place>a").click(function () {
+           location.href="map-room.html";
+        });
     },
     loginModal:function () {
         $(".evaluate-btn").click(function () {

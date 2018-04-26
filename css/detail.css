@@ -391,12 +391,15 @@ video::-webkit-media-controls-panel {
     font-size: 15px;
 }
 .table>tbody>tr>td{
-    background: #f4f4f4;
-    border-color: #d9d9d9;
+    background: rgba(236,246,251,.5);
+    border-color: rgba(124,124,123,.1);
     vertical-align: middle;
 }
 .table>tbody>tr:first-child>td{
     border-top: none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding: 12px;
 }
 .reserve{
     display: inline-block;
@@ -650,7 +653,8 @@ video::-webkit-media-controls-panel {
     border-radius: 4px;
     cursor: pointer;
     position: relative;
-    top: -2px;cursor: pointer;-webkit-transition: all .2s linear;
+    top: -2px;cursor: pointer;
+    -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
 .evaluate-btn:hover{

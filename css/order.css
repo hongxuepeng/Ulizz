@@ -188,3 +188,132 @@
 .footer{
     margin-top: 0;
 }
+#TipsModal .modal-dialog{
+    width: 450px;
+    color: #0c0c0c;
+    font-size: 14px;
+}
+#TipsModal .modal-body{
+    padding: 0 30px;
+}
+.tips-header{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #000;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 10px;
+}
+.tips-header>img{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+.tips-text{
+    font-size: 14px;
+    padding: 20px 33px;
+    color: #595959;
+}
+.tips-btn{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.tips-btn>span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 140px;
+    text-align: center;
+    border: 1px solid #dedede;
+    color: #777777;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tips-btn>span:first-child{
+    margin-right: 50px;
+    background: #2798d0;
+    border-color: #2798d0;
+    color: #fff;
+}
+.contact{
+    color: #2699d0;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.order-help-long{
+    width: 250px;
+}
+.cost-detailed>li>.order-explain{
+    color: #4B4B4B;
+}
+.order-detail-header>img{
+    cursor: pointer;
+}
+#IdentityModal{
+    color: #0c0c0c;
+    font-size: 14px;
+}
+.identity-close>img{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+.identity-title{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.identity-subtitle{
+    padding-bottom: 50px;
+}
+.identity-item{
+    position: relative;
+    height: 34px;
+    padding-left: 95px;
+    padding-right: 10px;
+    width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.identity-name{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+}
+.identity-input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #E0E1E1;
+}
+.identity-input>input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+}
+.identity-btn{
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+    text-align: center;
+    background: #2699CF;
+    color: #fff;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.identity-btn:hover{
+    background: #2783AF;
+}
