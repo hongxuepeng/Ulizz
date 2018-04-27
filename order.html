@@ -729,6 +729,58 @@
             $("#TipsModal").modal();
         }
     });
+    function status(data){
+        var code= "1";
+        switch (data){
+            case "10":
+                code = 1;
+                break;
+            case "20":
+                code = 2;
+                break;
+            case "50":
+                code = 3;
+                break;
+            case "40":
+                code = 4;
+                break;
+            case "0":
+                code = 5;
+                break;
+            case "-20":
+                code = 6;
+                break;
+            case "-21":
+                code = 7;
+                break;
+            case "-10":
+                code = 8;
+                break;
+            case "-11":
+                code = 8;
+                break;
+            case "-13":
+                code = 9;
+                break;
+            case "-14":
+                code = 10;
+                break;
+            case "31":
+                code = 11;
+                break;
+            case "61":
+                code = 12;
+                break;
+            case "30":
+                code = 13;
+                break;
+            case "60":
+                code = 14;
+                break;
+        }
+        return code
+    }
+    console.log(status("-10"))
 </script>
 </body>
 </html>
