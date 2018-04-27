@@ -13,7 +13,7 @@ Load.prototype = {
                 ],
                 "money": "£150",
                 "img": "img/banner1.jpg",
-                "url": "https://www.baidu.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -33,7 +33,7 @@ Load.prototype = {
                 ],
                 "money": "£250",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -53,7 +53,7 @@ Load.prototype = {
                 ],
                 "money": "£150",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -73,7 +73,7 @@ Load.prototype = {
                 ],
                 "money": "£290",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -93,7 +93,7 @@ Load.prototype = {
                 ],
                 "money": "£450",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -113,7 +113,7 @@ Load.prototype = {
                 ],
                 "money": "£60",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -133,7 +133,7 @@ Load.prototype = {
                 ],
                 "money": "£260",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -153,7 +153,7 @@ Load.prototype = {
                 ],
                 "money": "£390",
                 "img": "img/banner2.jpg",
-                "url": "http://www.qq.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -173,7 +173,7 @@ Load.prototype = {
                 ],
                 "money": "£350",
                 "img": "img/banner3.jpg",
-                "url": "http://www.163.com"
+                "url": "detail.html"
             },
             "geometry": {
                 "type": "Point",
@@ -244,7 +244,7 @@ Load.prototype = {
             // add markers to allData
             geojson.features.forEach(function(marker) {
                 var popup = new mapboxgl.Popup()
-                    .setHTML('<a class="mask-content" href="'+marker.properties.url+'" target="_blank"><img src="'+marker.properties.img+'"><div class="NameTips">纽约大学</div></a>');
+                    .setHTML('<a class="mask-content" href="'+marker.properties.url+'" target="_blank"><img src="'+marker.properties.img+'"><div class="NameTips">学生公寓 Universitity Gateway</div></a>');
                 // create a DOM element for the marker
                 var el = document.createElement('div');
                 el.className = 'marker';

@@ -69,6 +69,7 @@ label{
     padding:0 15px;
     width: 980px;
     border: 1px solid #dfdfdf;
+    font-size: 15px;
 }
 .search-val:focus{
     outline: none;
@@ -207,6 +208,8 @@ label{
 .screen-item-title{
     color: #898987;
     padding-bottom: 65px;
+    position: relative;
+    left: -5px;
 }
 #scale-slider.ui-slider {
     border-radius: 0px;
@@ -407,7 +410,7 @@ label{
     color: #010101;
     font-weight: bold;
     margin: 15px 0 20px 0;
-    font-size: 20px;
+    font-size: 18px;
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
@@ -416,7 +419,7 @@ label{
     color: #0A67A7;
 }
 .list-section-content{
-    font-size: 15px;
+    font-size: 14px;
     color: #a1a1a1;
     height: 42px;
     display: -webkit-box;
@@ -450,7 +453,8 @@ label{
     color: #16618b;
 }
 .list-section-distance{
-    font-size: 15px;
+    font-size: 14px;
+    margin-top: 5px;
 }
 .list-section-distance>span{
     margin-right: 20px;
@@ -470,4 +474,55 @@ label{
 }
 .list-distance-place{
     color: #643b97;
+}
+.list-sort{
+    overflow: hidden;
+    width: 1200px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+.list-apartment-num{
+    color: #2699CF;
+    padding: 0 2px;
+    font-size: 16px;
+}
+.list-sort-tab{
+    cursor: pointer;
+}
+.list-sort-price{
+    position: relative;
+    margin-left: 20px;
+}
+.list-sort-price:before{
+    position: absolute;
+    right: -22px;
+    top: -3px;
+    content: '\f0de';
+    width: 16px;
+    text-align: left;
+    color: #D2D1D1;
+    display: inline-block;
+    font-family: FontAwesome;
+}
+.list-sort-price:after{
+    position: absolute;
+    right: -22px;
+    bottom: -3px;
+    content: '\f0dd';
+    width: 16px;
+    text-align: left;
+    color: #D2D1D1;
+    display: inline-block;
+    font-family: FontAwesome;
+}
+.list-sort-active{
+    color: #2699CF;
+}
+.list-sort-desc:after{
+    color: #2699CF;
+}
+.list-sort-asc:before{
+    color: #2699CF;
 }

@@ -576,6 +576,7 @@
     padding: 0 15px;
     width: 610px;
     border: none;
+    font-size: 15px;
 }
 
 .search-val:focus {

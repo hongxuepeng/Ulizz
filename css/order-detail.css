@@ -288,7 +288,7 @@ ul,li{
     margin-bottom: 15px;
 }
 .cost-detailed>li>span{
-    color: #f07381;
+    color: #ee5c67;
 }
 .be-careful-title{
     padding-bottom: 30px;
@@ -334,6 +334,7 @@ ul,li{
 }
 .cost-detailed>li>span{
     margin-left: 5px;
+    font-size: 18px;
 }
 .order-help-tips-auto{
     min-width: 180px;
@@ -470,4 +471,12 @@ ul,li{
 }
 .identity-btn:hover{
     background: #2783AF;
+}
+.lease-term{
+    font-size: 14px;
+    margin-left: 100px;
+}
+.cost-detailed>li>.lease-term-data{
+    color: #4B4B4B;
+    font-size: 14px;
 }

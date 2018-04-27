@@ -25,4 +25,7 @@ jQuery(document).ready(function ($) {
     $(".my-order").click(function () {
        location.href="order.html";
     });
+    $(".personal-information").click(function () {
+        location.href="personal.html";
+    });
 });
