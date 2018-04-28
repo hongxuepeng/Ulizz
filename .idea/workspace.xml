@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5d4fbb7-aa53-4027-80d8-61b35d559dd7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/downline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/downline.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tips.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/message-notification.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/toTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/toTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/setting.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/order-status-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/order-status-9.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setting.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setting.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="526">
@@ -62,8 +55,8 @@
       <file leaf-file-name="setting.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/setting.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="129" column="14" lean-forward="true" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+            <state relative-caret-position="256">
+              <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -204,7 +197,6 @@
         <option value="$PROJECT_DIR$/js/code.js" />
         <option value="$PROJECT_DIR$/personal.html" />
         <option value="$PROJECT_DIR$/css/common.css" />
-        <option value="$PROJECT_DIR$/list.html" />
         <option value="$PROJECT_DIR$/js/list.js" />
         <option value="$PROJECT_DIR$/css/message.css" />
         <option value="$PROJECT_DIR$/message-notification.html" />
@@ -224,10 +216,11 @@
         <option value="$PROJECT_DIR$/order/order-status-14.html" />
         <option value="$PROJECT_DIR$/js/toTop.js" />
         <option value="$PROJECT_DIR$/order-detail.html" />
-        <option value="$PROJECT_DIR$/css/setting.css" />
         <option value="$PROJECT_DIR$/css/downline.css" />
         <option value="$PROJECT_DIR$/downline.html" />
         <option value="$PROJECT_DIR$/setting.html" />
+        <option value="$PROJECT_DIR$/css/setting.css" />
+        <option value="$PROJECT_DIR$/list.html" />
       </list>
     </option>
   </component>
@@ -336,12 +329,12 @@
       <workItem from="1524623257687" duration="3649000" />
       <workItem from="1524706098578" duration="22583000" />
       <workItem from="1524792183128" duration="20604000" />
-      <workItem from="1524878840307" duration="14936000" />
+      <workItem from="1524878840307" duration="17012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320454000" />
+    <option name="totallyTimeSpent" value="322530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -584,20 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="382" column="14" lean-forward="true" selection-start-line="380" selection-start-column="8" selection-end-line="382" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -816,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/setting.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="129" column="14" lean-forward="true" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -871,6 +843,27 @@
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/setting.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
