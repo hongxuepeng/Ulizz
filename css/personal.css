@@ -179,3 +179,32 @@
 .form-control[readonly]{
     background-color: #fff;
 }
+#PhoneModal{
+    font-size: 14px;
+}
+.close-header{
+    padding-bottom: 20px;
+    text-align: right;
+}
+.change-content{
+    padding: 0 30px;
+}
+.close-header>img{
+    height: 14px;
+    width: 14px;
+}
+.change-btn{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #2798D0;
+    margin: auto;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.change-content>.change-modal-item:last-child{
+    margin-top: 30px;
+}

@@ -254,19 +254,6 @@ Load.prototype = {
             });
         }
     },
-    adviser:function () {
-        $(".adviser>li").hover(function(){
-            $(this).find(".correct>img").removeClass();
-            $(this).find(".opposite>img").removeClass();
-            $(this).find(".correct>img").addClass("front");
-            $(this).find(".opposite>img").addClass('after');
-        },function(){
-            $(this).find(".correct>img").removeClass();
-            $(this).find(".opposite>img").removeClass();
-            $(this).find(".correct>img").addClass("after");
-            $(this).find(".opposite>img").addClass('front');
-        });
-    },
     BindHighlight:function () {
         $('#text-search').bind('keyup change',function(ev) {
             var searchTerm = $(this).val();
@@ -330,7 +317,6 @@ Load.prototype = {
         this.GetData();
         this.loadSwiper();
         this.mouseAnimate();
-        this.adviser();
         this.BindHighlight();
         this.OpneModal();
         this.ShowSearch();

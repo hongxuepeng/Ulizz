@@ -381,7 +381,7 @@ ul,li{
 	border: 1px solid #e2e2e2;
 	margin-bottom: 30px;
 }
-.bind-modal-form{
+.bind-modal-form,.change-modal-form{
 	position: relative;
 	width: 100%;
 	height: 40px;
@@ -390,7 +390,7 @@ ul,li{
 	margin-top: 20px;
 	color: #2e3337;
 }
-.login-modal-menu,.bind-modal-menu,.phone-modal-menu{
+.login-modal-menu,.bind-modal-menu,.phone-modal-menu,.change-modal-menu{
 	 position: absolute;
 	 left: -1px;
 	 top: 39px;
@@ -406,7 +406,7 @@ ul,li{
 .phone-modal-menu{
 	width: 438px;
 }
-.login-modal-menu>li,.bind-modal-menu>li,.phone-modal-menu>li{
+.login-modal-menu>li,.bind-modal-menu>li,.phone-modal-menu>li,.change-modal-menu>li{
 	height: 30px;
 	line-height: 30px;
 	padding: 0 15px;
@@ -414,7 +414,7 @@ ul,li{
 	color: #252525;
 	cursor: pointer;
 }
-.login-modal-menu>li:hover,.bind-modal-menu>li:hover,.phone-modal-menu>li:hover{
+.login-modal-menu>li:hover,.bind-modal-menu>li:hover,.phone-modal-menu>li:hover,.change-modal-menu>li:hover{
 	background: #f7f7f7;
 }
 .padding-100{
@@ -423,7 +423,7 @@ ul,li{
 .padding-right-100{
 	padding-right: 100px;
 }
-.login-modal-left,.phone-modal-left{
+.login-modal-left,.phone-modal-left,.change-modal-left{
 	position: absolute;
 	left: 0;
 	top: 1px;
@@ -453,11 +453,11 @@ ul,li{
 	padding: 0 15px;
 	line-height: 40px;
 }
-.login-modal-right,.phone-modal-right{
+.login-modal-right,.phone-modal-right,.change-modal-right{
 	width: 100%;
 	height: 100%;
 }
-.login-modal-right>input,.phone-modal-right>input{
+.login-modal-right>input,.phone-modal-right>input,.change-modal-right>input{
 	display: block;
 	height: 100%;
 	width: 100%;
@@ -478,6 +478,13 @@ ul,li{
 }
 
 .bind-modal-form input:-ms-input-placeholder, .bind-modal-form textarea:-ms-input-placeholder {
+	color: #cacaca!important;
+}
+.change-modal-form input::-webkit-input-placeholder, .change-modal-form textarea::-webkit-input-placeholder {
+	color: #cacaca!important;
+}
+
+.change-modal-form input:-ms-input-placeholder, .change-modal-form textarea:-ms-input-placeholder {
 	color: #cacaca!important;
 }
 .login-modal-tips{
@@ -564,11 +571,11 @@ ul,li{
 	padding: 15px 0;
 	color: #585d64;
 }
-.bind-modal-item{
+.bind-modal-item,.change-modal-item{
 	position: relative;
 	padding-left: 80px;
 }
-.bind-modal-item>span{
+.bind-modal-item>span,.change-modal-item>span{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -586,7 +593,7 @@ ul,li{
 .specil-modal-form>.login-modal-right{
 	border: 1px solid #e2e2e2;
 }
-.bind-modal-code{
+.bind-modal-code,.change-modal-code{
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -600,7 +607,7 @@ ul,li{
 	font-size: 14px;cursor: pointer;-webkit-transition: all .2s linear;
 	transition: all .2s linear;
 }
-.bind-modal-code:hover{
+.bind-modal-code:hover,.change-modal-code:hover{
 	background: #2783AF;
 }
 .default{
@@ -635,4 +642,7 @@ ul,li{
 }
 .bread{
 	font-size: 15px;
+}
+.footer-logo>.form-control{
+	width: 100%!important;
 }
