@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="toTop" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <title>ULIZZ.COM荔枝租房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCheck/skins/all.css">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/setting.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toTop.js"></script>
+    <script src="js/icheck.min.js"></script>
+    <script src="js/include.js"></script>
+<body>
+<div class="header">
+    <div class="header-detail">
+        <div class="item-1">
+            <div class="header-logo">
+                <img src="img/logo.png"/>
+            </div>
+            <div class="header-location">
+                <div class="location-text" title="哈德斯菲尔德">哈德斯菲尔德</div>
+                <div class="location-detail">
+                    <div class="location-nav">
+                        <span class="location-item">选择国家:</span>
+                        <span class="location-item location-active">美国</span>
+                        <span class="location-item">加拿大</span>
+                        <span class="location-item">英国</span>
+                        <span class="location-item">澳大利亚</span>
+                    </div>
+                    <div class="location-option">
+                        <span class="location-item">纽约</span>
+                        <span class="location-item">芝加哥</span>
+                        <span class="location-item">华盛顿</span>
+                        <span class="location-item">洛杉矶</span>
+                        <span class="location-item">达拉斯</span>
+                        <span class="location-item">迈阿密</span>
+                        <span class="location-item">休斯顿</span>
+                        <span class="location-item">费城</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-2">
+            <a href="index.html" type="index">首页</a>
+            <a href="list.html" type="list">公寓列表</a>
+            <a href="news.html" type="news">资讯</a>
+            <a href="service.html" type="service">客户服务</a>
+        </div>
+        <div class="item-3">
+            <div class="user-content">
+                <div class="user-name">beyond</div>
+                <div class="user-detail">
+                    <div class="user-item my-order">我的订单</div>
+                    <div class="user-item my-collection">我的收藏</div>
+                    <div class="user-item message-notification">消息通知</div>
+                    <div class="user-item personal-information">个人信息</div>
+                    <div class="user-item security-setting">安全设置</div>
+                    <div class="user-item exit-immediately">立即退出</div>
+                </div>
+            </div>
+            <div class="login-group">
+                <span class="header-login">登录</span><a class="header-register" href="register.html">注册</a>
+            </div>
+            <div class="company-phone">
+                400-8652546
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bread">
+    <a>首页</a><a>安全设置</a>
+</div>
+<div class="section">
+    <div class="order-content">
+        <div class="order-aside">
+            <div class="order-aside-title">个人中心</div>
+            <ul class="order-aside-list">
+                <li class="my-order">我的订单</li>
+                <li class="message-notification">消息通知</li>
+                <li class="personal-information">个人信息</li>
+                <li class="my-collection">我的收藏</li>
+                <li class="order-aside-active security-setting">安全设置</li>
+            </ul>
+        </div>
+        <div class="order-section">
+            <div class="setting-header">修改密码</div>
+            <div class="setting-content">
+                <div class="setting-item">
+                    <div class="setting-left">旧密码</div>
+                    <div class="setting-right">
+                        <input type="text">
+                        <a href="forget.html" class="setting-forget">忘记密码?</a>
+                        <div class="setting-tips">旧密码错误</div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-left">新密码</div>
+                    <div class="setting-right">
+                        <input type="text">
+                        <div class="setting-tips">8～15位字母和数字的组合</div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-left">确认密码</div>
+                    <div class="setting-right">
+                        <input type="text">
+                        <div class="setting-tips">两次密码输入不一致</div>
+                    </div>
+                </div>
+            </div>
+            <div class="setting-btn">确认</div>
+        </div>
+    </div>
+</div>
+<include src="tpl/footer.html"></include>
+<include src="tpl/loginModal.html"></include>
+<include src="tpl/bindAccount.html"></include>
+<script>
+    $(".setting-btn").click(function () {
+        location.href="downline.html";
+    });
+</script>
+</body>
+</html>

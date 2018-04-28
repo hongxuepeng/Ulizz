@@ -28,4 +28,10 @@ jQuery(document).ready(function ($) {
     $(".personal-information").click(function () {
         location.href="personal.html";
     });
+    $(".message-notification").click(function () {
+        location.href="message-notification.html";
+    });
+    $(document).on('click','.security-setting',function () {
+        location.href="setting.html";
+    });
 });
