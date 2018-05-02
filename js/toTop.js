@@ -34,4 +34,7 @@ jQuery(document).ready(function ($) {
     $(document).on('click','.security-setting',function () {
         location.href="setting.html";
     });
+    $(document).on('click','.my-collection',function () {
+        location.href="collection.html";
+    });
 });

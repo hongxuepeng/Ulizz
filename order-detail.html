@@ -51,6 +51,9 @@
         $(document).on('click','.security-setting',function () {
             location.href="setting.html";
         });
+        $(document).on('click','.my-collection',function () {
+            location.href="collection.html";
+        });
         $(document).on('click','.order-cancel',function () {
             Showbo.Msg.confirm('您确定要取消该订单吗？', function(flag) {
                 if (flag == 'yes') {
