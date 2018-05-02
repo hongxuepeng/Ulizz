@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5d4fbb7-aa53-4027-80d8-61b35d559dd7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/collection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/setting.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/setting.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/toTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/toTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message-notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/message-notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/villa-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/villa-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -116,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order-detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="order-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/order-detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
@@ -124,6 +116,15 @@
               <folding>
                 <element signature="e#2314#2590#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="581" column="17" lean-forward="true" selection-start-line="581" selection-start-column="17" selection-end-line="581" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -196,7 +197,6 @@
         <option value="$PROJECT_DIR$/css/404.css" />
         <option value="$PROJECT_DIR$/service.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/css/personal.css" />
         <option value="$PROJECT_DIR$/js/upload.js" />
@@ -231,6 +231,7 @@
         <option value="$PROJECT_DIR$/collection.html" />
         <option value="$PROJECT_DIR$/js/toTop.js" />
         <option value="$PROJECT_DIR$/order-detail.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
       </list>
     </option>
   </component>
@@ -345,12 +346,12 @@
       <workItem from="1524706098578" duration="22583000" />
       <workItem from="1524792183128" duration="20604000" />
       <workItem from="1524878840307" duration="17012000" />
-      <workItem from="1525224799941" duration="9747000" />
+      <workItem from="1525224799941" duration="10172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332277000" />
+    <option name="totallyTimeSpent" value="332702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
@@ -449,13 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
           <caret line="328" column="44" lean-forward="true" selection-start-line="328" selection-start-column="44" selection-end-line="328" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="369" column="14" lean-forward="true" selection-start-line="369" selection-start-column="14" selection-end-line="369" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -806,6 +800,13 @@
           <folding>
             <element signature="e#2314#2590#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="581" column="17" lean-forward="true" selection-start-line="581" selection-start-column="17" selection-end-line="581" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -579,13 +579,15 @@
 }
 
 .hot-search {
-    padding-top: 15px;
+    width: 680px;
+    padding: 15px;
+    background: rgba(0,0,0,.2);
     clear: both;
     font-size: 15px;
 }
 
 .hot-search > a, .hot-search > span {
-    color: #8b8f98;
+    color: #fff;
 }
 
 .hot-search > a {
