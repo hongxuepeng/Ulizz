@@ -1,8 +1,10 @@
 .page{
-    width: 515px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
     list-style: none;
     overflow: hidden;
-    padding-top: 30px;
     text-align: center;
     margin: auto;
     font-size: 14px;

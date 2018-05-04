@@ -1,74 +1,116 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>ULIZZ.COM荔枝租房</title>
+    <meta charset="utf-8">
+    <meta name="toTop" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link href="css/404.css" rel="stylesheet" type="text/css" />
+    <title>ULIZZ.COM荔枝租房</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="iCheck/skins/all.css">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/service.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
     <script src="js/jquery-1.11.3.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            var h = $(window).height();
-            $('body').height(h);
-            $('.mianBox').height(h);
-            centerWindow(".tipInfo");
-        });
-
-        //2.将盒子方法放入这个方，方便法统一调用
-        function centerWindow(a) {
-            center(a);
-            //自适应窗口
-            $(window).bind('scroll resize',
-                function() {
-                    center(a);
-                });
-        }
-
-        //1.居中方法，传入需要剧中的标签
-        function center(a) {
-            var wWidth = $(window).width();
-            var wHeight = $(window).height();
-            var boxWidth = $(a).width();
-            var boxHeight = $(a).height();
-            var scrollTop = $(window).scrollTop();
-            var scrollLeft = $(window).scrollLeft();
-            var top = scrollTop + (wHeight - boxHeight) / 2;
-            var left = scrollLeft + (wWidth - boxWidth) / 2;
-            $(a).css({
-                "top": top,
-                "left": left
-            });
-        }
-    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toTop.js"></script>
+    <script src="js/icheck.min.js"></script>
+    <script src="js/include.js"></script>
 </head>
 <body>
-<div class="mianBox">
-    <img src="images/yun0.png" alt="" class="yun yun0" />
-    <img src="images/yun1.png" alt="" class="yun yun1" />
-    <img src="images/yun2.png" alt="" class="yun yun2" />
-    <img src="images/bird.png" alt="" class="bird" />
-    <img src="images/san.png" alt="" class="san" />
-    <div class="tipInfo">
-        <div class="in">
-            <div class="textThis">
-                <h2>出错啦404！</h2>
-                <p><span>页面自动<a id="href" href="index.html">跳转</a></span><span>等待<b id="wait">6</b>秒</span></p>
-                <script type="text/javascript">                            (function() {
-                    var wait = document.getElementById('wait'), href = document.getElementById('href').href;
-                    var interval = setInterval(function() {
-                        var time = --wait.innerHTML;
-                        if (time <= 0) {
-                            clearInterval(interval);
-                            location.href = "index.html";
-                        }
-                        ;
-                    }, 1000);
-                })();
-                </script>
+<div class="header">
+    <div class="header-detail">
+        <div class="item-1">
+            <div class="header-logo">
+                <img src="img/logo.png"/>
+            </div>
+            <div class="header-location">
+                <div class="location-text" title="哈德斯菲尔德">哈德斯菲尔德</div>
+                <div class="location-detail">
+                    <div class="location-nav">
+                        <span class="location-item">选择国家:</span>
+                        <span class="location-item location-active">美国</span>
+                        <span class="location-item">加拿大</span>
+                        <span class="location-item">英国</span>
+                        <span class="location-item">澳大利亚</span>
+                    </div>
+                    <div class="location-option">
+                        <span class="location-item">纽约</span>
+                        <span class="location-item">芝加哥</span>
+                        <span class="location-item">华盛顿</span>
+                        <span class="location-item">洛杉矶</span>
+                        <span class="location-item">达拉斯</span>
+                        <span class="location-item">迈阿密</span>
+                        <span class="location-item">休斯顿</span>
+                        <span class="location-item">费城</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-2">
+            <a href="index.html" type="index">首页</a>
+            <a href="list.html" type="list">公寓列表</a>
+            <a href="news.html" type="news">资讯</a>
+            <a href="service.html" type="service">客户服务</a>
+        </div>
+        <div class="item-3">
+            <div class="user-content">
+                <div class="user-name">beyond</div>
+                <div class="user-detail">
+                    <div class="user-item my-order">我的订单</div>
+                    <div class="user-item my-collection">我的收藏</div>
+                    <div class="user-item message-notification">消息通知</div>
+                    <div class="user-item personal-information">个人信息</div>
+                    <div class="user-item security-setting">安全设置</div>
+                    <div class="user-item exit-immediately">立即退出</div>
+                </div>
+            </div>
+            <div class="login-group">
+                <span class="header-login">登录</span><a class="header-register" href="register.html">注册</a>
+            </div>
+            <div class="company-phone">
+                400-8652546
             </div>
         </div>
     </div>
 </div>
-
+<img src="img/service-banner.jpg" class="service-banner">
+<div class="section">
+    <div class="order-content">
+        <div class="order-aside">
+            <ul class="order-aside-list">
+                <li class="order-aside-active" tabindex="1">客户服务</li>
+                <li tabindex="2">预定流程</li>
+                <li tabindex="3">网络条款</li>
+                <li tabindex="4">费用及支付问题</li>
+                <li tabindex="5">退订及退款政策</li>
+                <li tabindex="6">入住后及注意事项</li>
+            </ul>
+        </div>
+        <div class="order-section">
+            <div class="order-section-1">客户服务</div>
+            <div class="order-section-2">预定流程</div>
+            <div class="order-section-3">网络条款</div>
+            <div class="order-section-4">费用及支付问题</div>
+            <div class="order-section-5">退订及退款政策</div>
+            <div class="order-section-6">入住后及注意事项</div>
+        </div>
+    </div>
+</div>
+<include src="tpl/footer.html"></include>
+<include src="tpl/loginModal.html"></include>
+<include src="tpl/bindAccount.html"></include>
+<script>
+    $(".order-aside-list>li").click(function () {
+        $(this).addClass("order-aside-active").siblings().removeClass("order-aside-active");
+        var tab = $(this).attr("tabindex");
+        $(".order-section>.order-section-" + tab).show().siblings().hide();
+    });
+</script>
 </body>
 </html>

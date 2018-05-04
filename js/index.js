@@ -184,10 +184,29 @@ Load.prototype = {
             }
         }
     ],
-    GetData:function () {
-        this.loadMap();
-    },
+    url:'http://47.106.83.149:8081/api',
     loadSwiper:function(){
+        var that=this;
+        $.ajax({
+            url:this.url+'/adv/load',
+            type:'GET',//GET
+            async:true,//或false,是否异步,
+            timeout:5000,//超时时间
+            dataType:'json',
+            data:{location:'1'},
+            success:function(data){
+                if(data.code=="0"){
+                    var swiperHTML = template('SwiperHtml', data);
+                    $("#swiperContent").html(swiperHTML);
+                    that.initSwiper();
+                }
+            },
+            error:function(){
+                console.log('错误')
+            }
+        });
+    },
+    initSwiper:function(){
         var swiper = new Swiper('.swiper-container', {
             autoHeight: true, //enable auto height
             loop:true,
@@ -314,7 +333,7 @@ Load.prototype = {
         });
     },
     init:function () {
-        this.GetData();
+        this.loadMap();
         this.loadSwiper();
         this.mouseAnimate();
         this.BindHighlight();

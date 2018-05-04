@@ -25,7 +25,6 @@
     <script src="js/icheck.min.js"></script>
     <script src="js/highlight.js"></script>
     <script src="js/include.js"></script>
-    <script src="js/vue.min.js"></script>
 </head>
 <body type="index">
     <div class="header">
@@ -87,16 +86,7 @@
     <!-- Swiper -->
     <div class="slide-box">
         <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/banner1.jpg">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/banner2.jpg">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/banner3.jpg">
-                </div>
+            <div class="swiper-wrapper" id="swiperContent">
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -387,6 +377,14 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </body>
+<script type="text/html" id="SwiperHtml">
+    {{each advList}}
+    <div class="swiper-slide">
+        <img src="{{$value.file}}">
+    </div>
+    {{/each}}
+</script>
+<script src="js/template.js"></script>
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function(){

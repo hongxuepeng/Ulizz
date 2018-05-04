@@ -327,6 +327,9 @@ Load.prototype = {
         $(".evaluate-btn").click(function () {
             $("#LoginModal").modal();
         });
+        $(document).on('click','.view-matching',function () {
+            $("#matching").modal();
+        });
     },
     reserve:function () {
         $(".reserve").click(function () {

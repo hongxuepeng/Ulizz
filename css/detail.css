@@ -766,3 +766,69 @@ video::-webkit-media-controls-panel {
 .carousel-specil-list>.carousel-item{
     margin-top: 15px;
 }
+.view-matching{
+    color: #3099d2;
+    cursor: pointer;
+}
+.matching-header{
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F5F3F3;
+    color: #000;
+}
+.matching-header>img{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+.matching-list{
+    position: relative;
+    padding-left: 90px;
+    margin-top: 30px;
+}
+.matching-list>span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #040202;
+}
+.matching-list>div{
+    width: 100%;
+}
+.matching-img>img{
+    height: 211px;
+    width: 222px;
+}
+.matching-span{
+    overflow: hidden;
+}
+.matching-span>span{
+    display: block;
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    color: #040202;
+    margin-bottom: 20px;
+}
+#matching .modal-body{
+    padding: 30px;
+}
+#matching .modal-dialog{
+    width: 550px;
+}
+.matching-deposit{
+    color: #df616c;
+    line-height: 25px;
+    font-size: 16px;
+}
+.matching-tips{
+    font-size: 14px;
+    color: #040202;
+    margin-top: 30px;
+}

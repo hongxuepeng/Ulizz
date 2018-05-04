@@ -640,9 +640,29 @@ ul,li{
 .bind-modal-success>div:last-child{
 	margin-bottom: 30px;
 }
+.footer-logo>.form-control{
+	width: 100%!important;
+}
+.page-parent{
+	height: 37px;
+	position: relative;
+	margin-top: 20px;
+}
 .bread{
 	font-size: 15px;
 }
-.footer-logo>.form-control{
-	width: 100%!important;
+.bread>a:hover{
+	color: #2a97cf;
+}
+.bread>a:last-child{
+	color: #bbb!important;
+}
+.no-data{
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.no-data>div{
+	margin-top: 20px;
+	font-size: 15px;
+	color: #575757;
 }
