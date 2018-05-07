@@ -1,6 +1,6 @@
 .page{
     position: absolute;
-    left: 48%;
+    left: 50%;
     top: 0;
     transform: translate(-50%,0);
     list-style: none;
@@ -8,9 +8,10 @@
     text-align: center;
     margin: auto;
     font-size: 14px;
+    white-space: nowrap;
 }
 .page>li{
-    float: left;
+    display: inline-block;
     padding: 5px 10px;
     cursor: pointer;
 }

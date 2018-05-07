@@ -253,3 +253,9 @@
     font-size: 15px;
     padding-bottom: 20px;
 }
+.jeinpbox>.form-control{
+    border-radius: 0;
+    height: 44px;
+    padding: 11px 15px;
+    border: 1px solid #e1e1e1;
+}

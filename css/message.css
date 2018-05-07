@@ -84,8 +84,13 @@
     margin-bottom: 10px;
     color: #101010;
     font-size: 15px;
+    cursor: pointer;
 }
 .message-date{
     font-size: 13px;
     color: #717171;
+}
+.message-title:hover{
+    color: #0A67A7;
+    text-decoration: underline;
 }

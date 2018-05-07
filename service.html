@@ -21,6 +21,7 @@
     <script src="js/toTop.js"></script>
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/template.js"></script>
 </head>
 <body>
 <div class="header">
@@ -84,32 +85,44 @@
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="order-aside-active" tabindex="1">客户服务</li>
-                <li tabindex="2">预定流程</li>
-                <li tabindex="3">网络条款</li>
-                <li tabindex="4">费用及支付问题</li>
-                <li tabindex="5">退订及退款政策</li>
-                <li tabindex="6">入住后及注意事项</li>
+                <li class="order-aside-active" type="1">客户服务</li>
+                <li type="2">预定流程</li>
+                <li type="6">网络条款</li>
+                <li type="3">费用及支付问题</li>
+                <li type="5">退订及退款政策</li>
+                <li type="4">入住后及注意事项</li>
             </ul>
         </div>
         <div class="order-section">
-            <div class="order-section-1">客户服务</div>
-            <div class="order-section-2">预定流程</div>
-            <div class="order-section-3">网络条款</div>
-            <div class="order-section-4">费用及支付问题</div>
-            <div class="order-section-5">退订及退款政策</div>
-            <div class="order-section-6">入住后及注意事项</div>
+            <div class="service-title">客户服务</div>
+            <div class="service-list"></div>
         </div>
     </div>
 </div>
 <include src="tpl/footer.html"></include>
 <include src="tpl/loginModal.html"></include>
 <include src="tpl/bindAccount.html"></include>
+<script src="js/service.js"></script>
+<script type="text/html" id="NoData">
+    <div class="no-data text-center">
+        <img src="img/no-data.png">
+        <div>暂无内容</div>
+    </div>
+</script>
+<script type="text/html" id="ServiceTab">
+    <li>预定流程</li>
+</script>
+<script type="text/html" id="ServiceHtml">
+    {{each list}}
+    <div class="service-item">
+        <div class="service-item-ask"><span>问：</span>{{$value.title}}</div>
+        <div class="service-item-answer"><span>答：</span>{{$value.content}}</div>
+    </div>
+    {{/each}}
+</script>
 <script>
-    $(".order-aside-list>li").click(function () {
-        $(this).addClass("order-aside-active").siblings().removeClass("order-aside-active");
-        var tab = $(this).attr("tabindex");
-        $(".order-section>.order-section-" + tab).show().siblings().hide();
+    $(function () {
+        var load = new Load();
     });
 </script>
 </body>

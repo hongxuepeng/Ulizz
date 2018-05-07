@@ -10,10 +10,11 @@
 }
 .order-aside{
     width: 190px;
-    height: 320px;
+    height: auto!important;
     background: #fff;
     float: left;
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 .order-section{
     padding: 20px 50px;
@@ -56,9 +57,19 @@
     width: 100%;
     height: auto;
 }
-.order-section>div{
-    display: none;
+.service-title{
+    color: #000;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
 }
-.order-section>.order-section-1{
-    display: block;
+.service-item{
+   font-size: 14px;
+    margin-top: 20px;
+}
+.service-item-ask{
+    color: #353535;
+    margin-bottom: 15px;
+}
+.service-item-answer{
+    color: #7A7A7A;
 }

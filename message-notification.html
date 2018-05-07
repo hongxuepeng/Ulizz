@@ -23,6 +23,7 @@
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
     <script src="js/page.js"></script>
+    <script src="js/template.js"></script>
 </head>
 <body>
 <div class="header">
@@ -82,12 +83,11 @@
     </div>
 </div>
 <div class="bread">
-    <a>首页</a><a>个人中心</a><a>消息通知</a>
+    <a href="index.html">首页</a><a>消息通知</a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
-            <div class="order-aside-title">个人中心</div>
             <ul class="order-aside-list">
                 <li class="my-order">我的订单</li>
                 <li class="order-aside-active message-notification">消息通知</li>
@@ -97,29 +97,8 @@
             </ul>
         </div>
         <div class="order-section">
-            <div class="message-list">
-                <div class="message-item">
-                    <div class="message-title">公寓helloroom订单提交成功，请耐心等待平台方确认</div>
-                    <div class="message-date">2018-10-01 12:02</div>
-                </div>
-                <div class="message-item">
-                    <div class="message-title">公寓helloroom房源已确认，请在24小时内支付订金</div>
-                    <div class="message-date">2018-10-01 12:02</div>
-                </div>
-                <div class="message-item">
-                    <div class="message-title">公寓helloroom认证申请已通过，请在24小时内支付房租及押金</div>
-                    <div class="message-date">2018-10-01 12:02</div>
-                </div>
-                <div class="message-item">
-                    <div class="message-title">公寓helloroom预定完成，点此查看详情</div>
-                    <div class="message-date">2018-10-01 12:02</div>
-                </div>
-                <div class="message-item">
-                    <div class="message-title">公寓helloroom订单退款成功，点此查看详情</div>
-                    <div class="message-date">2018-10-01 12:02</div>
-                </div>
-            </div>
-            <div>
+            <div class="message-list"></div>
+            <div class="page-parent">
                 <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
             </div>
         </div>
@@ -128,13 +107,25 @@
 <include src="tpl/footer.html"></include>
 <include src="tpl/loginModal.html"></include>
 <include src="tpl/bindAccount.html"></include>
+<script type="text/html" id="NoData">
+    <div class="no-data text-center">
+        <img src="img/no-data.png">
+        <div>暂无消息</div>
+    </div>
+</script>
+<script type="text/html" id="MessageHtml">
+    {{each list}}
+    <div class="message-item" order-id="{{$value.orderId}}" status="{{$value.payStatus}}">
+        <div class="message-title">{{$value.content}}</div>
+        <div class="message-date">{{$value.createTime}}</div>
+    </div>
+    {{/each}}
+</script>
+<script src="js/message.js"></script>
 <script>
-    var GG = {
-        "kk":function(mm){
-            console.log(mm);
-        }
-    }
-    $("#page").initPage(100,1,GG.kk);
+    $(function () {
+        var load = new Load();
+    });
 </script>
 </body>
 </html>

@@ -24,8 +24,8 @@ Load.prototype = {
             dataType:'json',
             success:function(data){
                 if(data.code=="0"){
-                    console.log(data);
                     var info = data.info;
+                    that.BindArticle(info.type);
                     $(".article-title").html(info.title);
                     $(".article-html").html(info.content);
                     var createTime = info.createTime;
@@ -35,6 +35,25 @@ Load.prototype = {
                     $(".article-year").html(myDate.getFullYear());
                     $(".article-month").html(month+"月");
                     $(".article-day").html(date);
+                }
+            },
+            error:function(){
+                console.log('错误')
+            }
+        });
+    },
+    BindArticle:function(type){
+        $.ajax({
+            url:this.url+'/news/correlation',
+            type:'GET',//GET
+            async:true,//或false,是否异步,
+            timeout:5000,//超时时间
+            dataType:'json',
+            data:{newsId:this.getUrlParam("newsID"),newsType:type},
+            success:function(data){
+                if(data.code=="0"){
+                    var ArticleHtml = template('ArticleHtml',data);
+                    $(".article-list").html(ArticleHtml);
                 }
             },
             error:function(){
