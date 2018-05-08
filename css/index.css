@@ -698,3 +698,6 @@
     box-shadow: none;
 }
 /* 搜索css样式End */
+.swiper-slide{
+    cursor: pointer;
+}

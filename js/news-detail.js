@@ -61,7 +61,26 @@ Load.prototype = {
             }
         });
     },
+    Statistics:function () {
+        var that = this;
+        $(document).on('click','.social-share-icon',function () {
+            $.ajax({
+                url:that.url+'/news/count',
+                type:'POST',
+                async:true,//或false,是否异步,
+                timeout:5000,//超时时间
+                dataType:'json',
+                data:{newsId:that.getUrlParam("newsID")},
+                success:function(data){
+                },
+                error:function(){
+                    console.log('错误')
+                }
+            });
+        });
+    },
     init:function () {
+        this.Statistics();
         this.GetDetail();
     }
 }

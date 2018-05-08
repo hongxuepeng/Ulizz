@@ -379,7 +379,7 @@
 </body>
 <script type="text/html" id="SwiperHtml">
     {{each list}}
-    <div class="swiper-slide">
+    <div class="swiper-slide"  data-url="{{$value.url}}" banner-id="{{$value.id}}">
         <img src="{{$value.file}}">
     </div>
     {{/each}}

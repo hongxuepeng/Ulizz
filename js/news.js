@@ -17,7 +17,6 @@ Load.prototype = {
     ViewDetail:function () {
         $(document).on('click','.news-recommend,.news-list>li',function () {
             var newsID = $(this).attr("news-id");
-            console.log(newsID);
             location.href="news-detail.html?newsID=" + newsID;
         });
     },

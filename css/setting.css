@@ -296,6 +296,11 @@
     margin-bottom: 15px;
     margin-top: 15px;
     color: #000;
+    cursor: pointer;
+}
+.collection-information-center>h4:hover{
+    text-decoration: underline;
+    color: #0A67A7;
 }
 .collection-information-center>.news-text {
     line-height: 25px;

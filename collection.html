@@ -219,20 +219,20 @@
     <div class="collection-housing-item">
         <img src="img/hot_1.png">
         <div class="collection-housing-center">
-            <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
+            <a href="detail.html">{{$value.title}}</a>
             <div class="list-section-tips">
                 <span class="color_1">交通便利</span>
                 <span class="color_2">安全保障</span>
                 <span class="color_3">可短租</span>
             </div>
             <div class="list-section-distance">
-                <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                <span><img src="img/list_walk.png">20分</span>
-                <span><img src="img/list_car.png">5分</span>
-                <span><img src="img/list_riding.png">10分</span>
+                <span class="list-distance-place">{{$value.schoolName}}前往伦敦大学伦敦校区</span>
+                <span><img src="img/list_walk.png">{{$value.walkTime}}20分</span>
+                <span><img src="img/list_car.png">{{$value.carTime}}5分</span>
+                <span><img src="img/list_riding.png">{{$value.bikeTime}}10分</span>
             </div>
         </div>
-        <div class="collection-housing-right">£289起/月</div>
+        <div class="collection-housing-right">{{$value.currencySymbol}}{{$value.price}}起/月</div>
         <span class="cancel-collet">取消收藏</span>
     </div>
     {{/each}}
@@ -240,12 +240,12 @@
 <script type="text/html" id="InformationHtml">
     {{each list}}
     <div class="collection-information-item">
-        <img src="img/news_hot1.png">
+        <img src="{{$value.coverImg}}">
         <div class="collection-information-center">
-            <h4>海外留学生国外租房安全问题如何解决？</h4>
-            <div class="news-text">海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题，海外留学生选择房屋时应综合考虑房屋安全问题。</div>
+            <h4 news-id="{{$value.id}}">{{$value.title}}</h4>
+            <div class="news-text">{{$value.intro}}</div>
             <div class="news-author">
-                <span>2018-04-18 12:02</span>
+                <span>{{$value.createTime}}</span>
             </div>
         </div>
         <span class="cancel-information">取消收藏</span>

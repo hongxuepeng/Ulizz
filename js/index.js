@@ -188,7 +188,7 @@ Load.prototype = {
     loadSwiper:function(){
         var that=this;
         $.ajax({
-            url:this.url+'/adv/load',
+            url:this.url+'/adv/list',
             type:'GET',//GET
             async:true,//或false,是否异步,
             timeout:5000,//超时时间
@@ -332,6 +332,27 @@ Load.prototype = {
             $(".phone-modal-menu").hide();
         });
     },
+    Statistics:function () {
+        var that = this;
+        $(document).on('click','.swiper-slide',function () {
+            var bannerID = $(this).attr("banner-id");
+            var url = $(this).attr("data-url");
+            $.ajax({
+                url:that.url+'/adv/click',
+                type:'POST',
+                async:false,//或false,是否异步,
+                timeout:5000,//超时时间
+                dataType:'json',
+                data:{id:bannerID},
+                success:function(data){
+                },
+                error:function(){
+                    console.log('错误')
+                }
+            });
+            location.href = url;
+        });
+    },
     init:function () {
         this.loadMap();
         this.loadSwiper();
@@ -343,5 +364,6 @@ Load.prototype = {
         this.ToDetail();
         this.ModalPhone();
         this.MapRoom();
+        this.Statistics();
     }
 }

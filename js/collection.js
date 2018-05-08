@@ -119,8 +119,14 @@ Load.prototype = {
             }
         });
     },
+    ViewDetail:function () {
+        $(document).on('click','.collection-information-center>h4',function () {
+            var newsID = $(this).attr("news-id");
+            location.href="news-detail.html?newsID=" + newsID;
+        });
+    },
     init:function () {
-        //this.InformationPageLoad();
+        this.ViewDetail();
         this.TabSwitch();
         this.CancelCollect();
         this.GetHousing("1");
