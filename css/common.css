@@ -189,7 +189,7 @@ ul,li{
     border-bottom: 1px solid #e1e1e1;
     line-height: 40px;
 }
-.location-item:first-child{
+.location-nav>.location-item:first-child{
 	cursor:default;
 }
 .location-item{
