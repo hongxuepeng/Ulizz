@@ -31,10 +31,34 @@ Load.prototype = {
         $("#page-information").initPage(totalCount,1,information.kk);
     },
     CancelCollect:function () {
+        var that=this;
         $(document).on('click','.cancel-collet,.cancel-information',function () {
+            var collectId=$(this).attr("collectId");
+            var type=$(this).attr("type");
             Showbo.Msg.confirm('您确定要取消该收藏吗？', function(flag) {
                 if (flag == 'yes') {
-                    console.log('你点击了确定!');
+                    $.ajax({
+                        url:that.url+'/collect/delete',
+                        type:'POST',//GET
+                        async:true,//或false,是否异步,
+                        timeout:5000,//超时时间
+                        dataType:'json',
+                        data:{id:collectId},
+                        success:function(data){
+                            if(data.code=="0"){
+                                if(type == '1'){
+                                    that.HousingTotal==""
+                                    that.GetHousing("1");
+                                }else{
+                                    that.InformationTotal==""
+                                    that.GetInformation("1");
+                                }
+                            }
+                        },
+                        error:function(){
+                            console.log('错误')
+                        }
+                    });
                 } else if (flag == 'no') {
                     console.log('你点击了取消!');
                 }
@@ -52,7 +76,6 @@ Load.prototype = {
             data:{currPage:page,pageSize:10,type:1},
             success:function(data){
                 if(data.code=="0"){
-                    console.log(data);
                     var total = data.page.totalCount;
                     if(total < 10){
                         $("#page-housing").hide();
@@ -91,7 +114,6 @@ Load.prototype = {
             data:{currPage:page,pageSize:10,type:2},
             success:function(data){
                 if(data.code=="0"){
-                    console.log(data);
                     var total = data.page.totalCount;
                     if(total < 10){
                         $("#page-information").hide();
@@ -108,7 +130,7 @@ Load.prototype = {
                             var InformationHTML = template('InformationHtml', data.page);
                             $("#collection-information").html(InformationHTML);
                         }else{
-                            var HouseHTML = template('InformationHtml', data.page);
+                            var InformationHTML = template('InformationHtml', data.page);
                             $("#collection-information").html(InformationHTML);
                         }
                     }

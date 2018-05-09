@@ -79,8 +79,15 @@ Load.prototype = {
             });
         });
     },
+    ViewDetail:function () {
+        $(document).on('click','.article-item-content',function () {
+            var newsID = $(this).attr("news-id");
+            location.href = "news-detail.html?newsID=" + newsID;
+        });
+    },
     init:function () {
         this.Statistics();
         this.GetDetail();
+        this.ViewDetail();
     }
 }
