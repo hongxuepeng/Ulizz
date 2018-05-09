@@ -33,11 +33,11 @@ ul,li{
 	float: left;
 }
 .item-2{
-	width: 550px;
-	padding-left: 90px;
+	width: 540px;
+	padding-left: 85px;
 }
 .item-3{
-	width: 300px;
+	width: 310px;
 	padding-left: 30px;
 }
 .item-3>.company-phone{
