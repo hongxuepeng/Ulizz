@@ -4,7 +4,7 @@
             <img src="img/logo.png"/>
         </div>
         <div class="header-location">
-            <div class="location-text" title="哈德斯菲尔德">哈德斯菲尔德</div>
+            <div class="location-text" title="纽约">纽约</div>
             <div class="location-detail">
                 <div class="location-nav">
                     <span class="location-item">选择国家:</span>
@@ -29,20 +29,25 @@
     <div class="item-2">
         <a href="index.html" type="index">首页</a>
         <a href="list.html" type="list">公寓列表</a>
-        <a type="home">资讯</a>
-        <a type="home">客户服务</a>
+        <a href="news.html" type="news">资讯</a>
+        <a href="service.html" type="service">客户服务</a>
     </div>
     <div class="item-3">
         <div class="user-content">
             <div class="user-name">beyond</div>
             <div class="user-detail">
-                <div class="user-item">我的订单</div>
-                <div class="user-item">我的收藏</div>
-                <div class="user-item">消息通知</div>
-                <div class="user-item">个人信息</div>
-                <div class="user-item">安全设置</div>
-                <div class="user-item">立即退出</div>
+                <div class="user-item my-order">我的订单</div>
+                <div class="user-item my-collection">我的收藏</div>
+                <div class="user-item message-notification">消息通知</div>
+                <div class="user-item personal-information">个人信息</div>
+                <div class="user-item security-setting">安全设置</div>
+                <div class="user-item exit-immediately">立即退出</div>
+                <div class="user-item user-item-login">登录</div>
+                <div class="user-item user-item-register">注册</div>
             </div>
+        </div>
+        <div class="login-group">
+            <span class="header-login">登录</span><a class="header-register" href="register.html">注册</a>
         </div>
         <div class="company-phone">
             400-8652546
@@ -52,7 +57,15 @@
 <script>
     function AddActive() {
         var type=$("body").attr("type");
-        $(".item-2>a[type="+type+"]").addClass("active");
+        if(type!=""&&type!=null&&type!=undefined){
+            $(".item-2>a[type="+type+"]").addClass("active");
+        }
     }
     AddActive();
+    $(".user-item-login").click(function () {
+        $("#LoginModal").modal();
+    });
+    $(".user-item-register").click(function () {
+        location.href = "register.html";
+    });
 </script>

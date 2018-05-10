@@ -22,13 +22,13 @@ jQuery(document).ready(function ($) {
             )
         });
     }
-    $(".my-order").click(function () {
-       location.href="order.html";
+    $(document).on('click','.my-order',function () {
+        location.href="order.html";
     });
-    $(".personal-information").click(function () {
+    $(document).on('click','.personal-information',function () {
         location.href="personal.html";
     });
-    $(".message-notification").click(function () {
+    $(document).on('click','.message-notification',function () {
         location.href="message-notification.html";
     });
     $(document).on('click','.security-setting',function () {
