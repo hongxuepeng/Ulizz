@@ -29,6 +29,7 @@
     <script src="js/highlight.js"></script>
     <script src="js/page.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/template.js"></script>
 </head>
 <body type="list">
     <div class="header">
@@ -92,74 +93,15 @@
             <div class="screen-group">
                 <div class="screen-list">
                     <span>房型</span>
-                    <ul>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-0" checked>
-                            <label for="input-0"><span>不限</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-1">
-                            <label for="input-1"><span>Studio</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-2">
-                            <label for="input-2"><span>Ensuite</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-3">
-                            <label for="input-3"><span>Villa</span></label>
-                        </li>
-                    </ul>
+                    <ul id="houseType"></ul>
                 </div>
                 <div class="screen-list">
                     <span>公寓配套</span>
-                    <ul>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-8" checked>
-                            <label for="input-8"><span>不限</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-4">
-                            <label for="input-4"><span>洗衣房</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-5">
-                            <label for="input-5"><span>健身房</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-6">
-                            <label for="input-6"><span>电梯房</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-7">
-                            <label for="input-7"><span>车库</span></label>
-                        </li>
-                    </ul>
+                    <ul id="config"></ul>
                 </div>
                 <div class="screen-list">
                     <span>周边配套</span>
-                    <ul>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-15" checked>
-                            <label for="input-15"><span>不限</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-11">
-                            <label for="input-11"><span>监控</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-12">
-                            <label for="input-12"><span>安保人员</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-13">
-                            <label for="input-13"><span>安全门禁</span></label>
-                        </li>
-                        <li>
-                            <input tabindex="1" type="checkbox" id="input-14">
-                            <label for="input-14"><span>维修团队</span></label>
-                        </li>
-                    </ul>
+                    <ul id="aroundConfig"></ul>
                 </div>
             </div>
         </div>
@@ -344,6 +286,48 @@
     <include src="tpl/loginModal.html"></include>
     <include src="tpl/bindAccount.html"></include>
     <script src="js/list.js"></script>
+    <script type="text/html" id="houseTypeHtml">
+        <li>
+            <input type="checkbox" id="input-houseType" checked>
+            <label for="input-houseType"><span>不限</span></label>
+        </li>
+        {{each houseType}}
+        <li>
+            <input type="checkbox" id="input-{{$value.id}}" myied="{{$value.id}}">
+            <label for="input-{{$value.id}}"><span>{{$value.value}}</span></label>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="configHtml">
+        <li>
+            <input type="checkbox" id="input-config" checked>
+            <label for="input-config"><span>不限</span></label>
+        </li>
+        {{each config}}
+        <li>
+            <input type="checkbox" id="config-{{$value.id}}" myied="{{$value.id}}">
+            <label for="config-{{$value.id}}"><span>{{$value.value}}</span></label>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="aroundHtml">
+        <li>
+            <input type="checkbox" id="input-around" checked>
+            <label for="input-around"><span>不限</span></label>
+        </li>
+        {{each aroundConfig}}
+        <li>
+            <input type="checkbox" id="around-{{$value.id}}" myied="{{$value.id}}">
+            <label for="around-{{$value.id}}"><span>{{$value.value}}</span></label>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="universityHtml">
+        <option value="">请选择大学</option>
+        {{each schoolEntityList}}
+        <option value="{{$value.id}}">{{$value.name}}</option>
+        {{/each}}
+    </script>
     <script>
         $(function(){
             var load = new Load();

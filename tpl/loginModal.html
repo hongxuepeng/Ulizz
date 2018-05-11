@@ -5,7 +5,7 @@
                 <img src="img/close.png" data-dismiss="modal" class="close-img" >
                 <div class="login-modal-content">
                     <ul class="login-modal-tab">
-                        <li class="login-modal-active" tabindex="1"><span>密码登录</span></li>
+                        <li class="login-modal-active" tabindex="1"><span>手机登录</span></li>
                         <li tabindex="2"><span>邮箱登录</span></li>
                     </ul>
                     <div class="login-content">
@@ -15,44 +15,46 @@
                                     （+86）
                                 </div>
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入手机号">
+                                    <input type="text" placeholder="请输入手机号" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" id="phone-input">
                                 </div>
-                                <ul class="login-modal-menu">
-                                    <li key="86">中国(+86)</li>
-                                    <li key="1">美国(+1)</li>
-                                    <li key="44">英国(+44)</li>
-                                    <li key="61">澳大利亚(+61)</li>
-                                    <li key="1">加拿大(+1)</li>
+                                <ul class="login-modal-menu" id="phone-key" data-key="+86">
+                                    <li key="86">中国 (+86)</li>
+                                    <!--<li key="+1">美国(+1)</li>-->
+                                    <!--<li key="+44">英国(+44)</li>-->
+                                    <!--<li key="+61">澳大利亚(+61)</li>-->
+                                    <!--<li key="+1">加拿大(+1)</li>-->
                                 </ul>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入登录密码">
+                                    <input type="password" placeholder="请输入登录密码" autocomplete="new-password" id="phone-password">
                                 </div>
                             </div>
                             <div class="login-modal-tips">用户名或密码错误</div>
+                            <div class="login-modal-btn margin-30" id="phoneLogin">登录</div>
                         </div>
                         <div class="login-content-2">
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入邮箱">
+                                    <input type="text" placeholder="请输入邮箱" autocomplete="off" id="email-input">
                                 </div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入登录密码">
+                                    <input type="password" placeholder="请输入登录密码" autocomplete="new-password" id="email-password">
                                 </div>
                             </div>
                             <div class="login-modal-tips">用户名或密码错误</div>
+                            <div class="login-modal-btn margin-30" id="emailLogin">登录</div>
                         </div>
                     </div>
-                    <div class="login-input-parent">
-                        <span class="login-input">
-                            <input tabindex="1" type="checkbox" id="input-login">
-                            <label for="input-login"><span>自动登录</span></label>
-                        </span>
-                    </div>
-                    <div class="login-modal-btn">登录</div>
+                    <!--<div class="login-input-parent">-->
+                        <!--<span class="login-input">-->
+                            <!--<input tabindex="1" type="checkbox" id="input-login">-->
+                            <!--<label for="input-login"><span>自动登录</span></label>-->
+                        <!--</span>-->
+                    <!--</div>-->
                     <div class="login-modal-href">
                         <a href="forget.html" class="pull-left">忘记密码?</a>
                         <a href="register.html" class="pull-right">立即注册</a>
@@ -68,6 +70,7 @@
 </div><!-- /.modal -->
 <script>
     $(function () {
+        var url= 'http://47.106.83.149:8081/api';
         $('#input-login').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
             increaseArea: '20%'
@@ -92,6 +95,7 @@
         $(document).on('click','.login-modal-menu>li',function () {
             var key=$(this).attr("key");
             $(".login-modal-left").text("（+"+key+"）");
+            $(".login-modal-menu").attr("data-key","+"+key);
             $(".login-modal-menu").hide();
         });
         $(".login-modal-tab>li").click(function () {
@@ -105,6 +109,88 @@
         });
         $(".header-logo").click(function () {
             location.href="index.html";
-        })
+        });
+        $(".login-content .login-modal-form input").focus(function () {
+            $(".login-modal-tips").hide();
+        });
+        var myreg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,15}$/;
+        var emialreg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        $("#phoneLogin").click(function () {
+            var key = $("#phone-key").attr("data-key");
+            var phone = $("#phone-input").val();
+            var thisReg = reg(key);
+            var password = $("#phone-password").val();
+            if(phone==""){
+                $(".login-content-1 .login-modal-tips").text("请输入手机号").show();
+            }else if(!thisReg.test(phone)){
+                $(".login-content-1 .login-modal-tips").show().text("手机格式不正确");
+            }else if(password==""){
+                $(".login-content-1 .login-modal-tips").text("请输登录密码").show();
+            }else if(!myreg.test(password)){
+                $(".login-content-1 .login-modal-tips").text("密码格式不正确，请重新输入").show();
+            }else{
+                $.ajax({
+                    url:url+'/login',
+                    type:'POST',
+                    async:true,//或false,是否异步,
+                    timeout:5000,//超时时间
+                    dataType:'json',
+                    data:{type:2,telephoneCode:key,mobile:phone,password:password,captcha:"123456"},
+                    success:function(data){
+                        console.log(data)
+                        if(data.code=="0"){
+
+                        }else{
+                            $(".login-content-1 .login-modal-tips").text(data.msg).show();
+                        }
+                    },
+                    error:function(){
+                        console.log('错误')
+                    }
+                });
+            }
+        });
+        $("#emailLogin").click(function () {
+            var email = $("#email-input").val();
+            var password = $("#email-password").val();
+            if(email==""){
+                $(".login-content-2 .login-modal-tips").text("请输邮箱").show();
+            }else if(!emialreg.test(email)){
+                $(".login-content-2 .login-modal-tips").text("邮箱格式不正确，请重新输入").show();
+            }else if(password==""){
+                $(".login-content-2 .login-modal-tips").text("请输登录密码").show();
+            }else if(!myreg.test(password)){
+                $(".login-content-2 .login-modal-tips").text("密码格式不正确，请重新输入").show();
+            }else{
+                $.ajax({
+                    url:url+'/login',
+                    type:'POST',
+                    async:true,//或false,是否异步,
+                    timeout:5000,//超时时间
+                    dataType:'json',
+                    data:{type:3,email:email,password:password,captcha:"123456"},
+                    success:function(data){
+                        console.log(data)
+                        if(data.code=="0"){
+
+                        }else{
+                            $(".login-content-2.login-modal-tips").text(data.msg).show();
+                        }
+                    },
+                    error:function(){
+                        console.log('错误')
+                    }
+                });
+            }
+        });
+        function reg(data){
+            var myreg="";
+            switch (data){
+                case "+86":
+                    myreg = /^1\d{10}$/;
+                    break;
+            }
+            return myreg
+        }
     });
 </script>

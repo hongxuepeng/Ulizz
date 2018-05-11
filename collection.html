@@ -81,10 +81,10 @@
                 <span class="color_3">可短租</span>
             </div>
             <div class="list-section-distance">
-                <span class="list-distance-place">{{$value.schoolName}}前往伦敦大学伦敦校区</span>
-                <span><img src="img/list_walk.png">{{$value.walkTime}}20分</span>
-                <span><img src="img/list_car.png">{{$value.carTime}}5分</span>
-                <span><img src="img/list_riding.png">{{$value.bikeTime}}10分</span>
+                <span class="list-distance-place">{{$value.schoolName}}</span>
+                <span><img src="img/list_walk.png">{{$value.houseSchoolEntity.walkTime}}分</span>
+                <span><img src="img/list_car.png">{{$value.houseSchoolEntity.carTime}}分</span>
+                <span><img src="img/list_riding.png">{{$value.houseSchoolEntity.bikeTime}}分</span>
             </div>
         </div>
         <div class="collection-housing-right">{{$value.currencySymbol}}{{$value.price}}起/月</div>

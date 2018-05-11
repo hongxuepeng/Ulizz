@@ -19,6 +19,7 @@
     <script src="js/sweetalert.js"></script>
 </head>
     <body>
+        <input type="hidden" id="register-type" value="1">
         <div class="register-box">
             <div class="register-left"></div>
             <div class="register-right">
@@ -34,43 +35,46 @@
                                     （+86）
                                 </div>
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入手机号">
+                                    <input type="text" placeholder="请输入手机号" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" id="phone-input">
                                 </div>
-                                <ul class="login-modal-menu">
-                                    <li key="86">中国(+86)</li>
-                                    <li key="1">美国(+1)</li>
-                                    <li key="44">英国(+44)</li>
-                                    <li key="61">澳大利亚(+61)</li>
-                                    <li key="1">加拿大(+1)</li>
+                                <ul class="login-modal-menu" id="phone-key" data-key="+86">
+                                    <li key="86">中国 (+86)</li>
+                                    <!--<li key="1">美国 (+1)</li>-->
+                                    <!--<li key="44">英国 (+44)</li>-->
+                                    <!--<li key="61">澳大利亚 (+61)</li>-->
+                                    <!--<li key="1">加拿大 (+1)</li>-->
                                 </ul>
                             </div>
                             <div class="bind-modal-form specil-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入验证码">
+                                    <input type="text" id="phone-captcha" autocomplete="off" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入验证码">
                                 </div>
                                 <div class="bind-modal-code phone-code">获取验证码</div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="设置8至15位英文+数字密码">
+                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" id="phone-password">
                                 </div>
                             </div>
                         </div>
                         <div class="register-content-2">
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入邮箱账号">
+                                    <input type="text" placeholder="请输入邮箱账号" id="email-input">
                                 </div>
                             </div>
                             <div class="bind-modal-form specil-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入邮箱验证码">
+                                    <input type="text" id="email-captcha" autocomplete="off" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入邮箱验证码">
                                 </div>
                                 <div class="bind-modal-code email-code">获取验证码</div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="设置8至15位英文+数字密码">
+                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" id="email-password">
                                 </div>
                             </div>
                         </div>
@@ -78,10 +82,11 @@
                     <div class="login-modal-tips">用户名或密码错误</div>
                     <div class="login-input-parent">
                         <span class="login-input">
-                            <input tabindex="1" type="checkbox" id="input-login">
-                            <label for="input-login">
-                                <span>已阅读并同意<a href="#">《用户服务协议》</a></span>
-                            </label>
+                            <!--<input tabindex="1" type="checkbox" id="input-login">-->
+                            <!--<label for="input-login">-->
+                                <!--<span>已阅读并同意<a href="#">《用户服务协议》</a></span>-->
+                            <!--</label>-->
+                            <span class="login-input-tips">注册即同意<a href="#">《用户服务协议》</a></span>
                         </span>
                     </div>
                     <div class="login-modal-btn">立即注册</div>
@@ -90,6 +95,7 @@
         </div>
     </body>
 <script>
+    var url= 'http://47.106.83.149:8081/api';
     $(document).bind("click", function (e) {
         if (!$(".login-modal-menu").is(":hidden")) {
             if ($(e.target).closest(".login-modal-left,.login-modal-menu").length == 0) {
@@ -107,6 +113,7 @@
     $(document).on('click','.login-modal-menu>li',function () {
         var key=$(this).attr("key");
         $(".login-modal-left").text("（+"+key+"）");
+        $(".login-modal-menu").attr("data-key","+"+key);
         $(".login-modal-menu").hide();
     });
     $(".login-modal-tab>li").click(function () {
@@ -145,19 +152,122 @@
     });
     $(".register-tab>li").click(function () {
         var tabindex=$(this).attr("tabindex");
+        $("#register-type").val(tabindex);
         $(this).addClass("register-tab-active").siblings().removeClass("register-tab-active");
         $(".register-content>.register-content-"+tabindex).show().siblings().hide();
     });
     $(".login-modal-btn").click(function () {
-        swal({
-            title: "注册成功!",
-            text: '2秒后自动关闭',
-            type: "success",
-            timer:2000,
-            showConfirmButton: false
-        },function () {
-            location.href = "index.html";
-        });
+        var type = $("#register-type").val();
+        if(type == 1){
+            var telephoneCode = $("#phone-key").attr("data-key");
+            var thisReg = reg(telephoneCode);
+            var codereg = /^\d{6}$/;
+            var myreg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,15}$/;
+            var mobile = $("#phone-input").val();
+            var phoneCaptcha = $("#phone-captcha").val();
+            var phonePassword = $("#phone-password").val();
+            if(mobile==""){
+                $(".login-modal-tips").show().text("请输入手机号");
+            }else if(!thisReg.test(mobile)){
+                $(".login-modal-tips").show().text("手机格式不正确");
+            }else if(phoneCaptcha==""){
+                $(".login-modal-tips").show().text("请输入手机验证码");
+            }else if(!codereg.test(phoneCaptcha)){
+                $(".login-modal-tips").show().text("验证码错误");
+            }else if(phonePassword==""){
+                $(".login-modal-tips").show().text("请输入密码");
+            }else if(!myreg.test(phonePassword)){
+                $(".login-modal-tips").text("密码格式不正确，请重新输入").show();
+            }else{
+                $.ajax({
+                    url:url+'/register',
+                    type:'POST',
+                    async:true,//或false,是否异步,
+                    timeout:5000,//超时时间
+                    dataType:'json',
+                    data:{type:2,telephoneCode:telephoneCode,mobile:mobile,password:phonePassword,captcha:phoneCaptcha},
+                    success:function(data){
+                        console.log(data)
+                        if(data.code=="0"){
+                            swal({
+                                title: "注册成功!",
+                                text: '2秒后自动关闭',
+                                type: "success",
+                                timer:2000,
+                                showConfirmButton: false
+                            },function () {
+                                location.href = "index.html";
+                            });
+                        }else{
+                            $(".login-content-1 .login-modal-tips").text(data.msg).show();
+                        }
+                    },
+                    error:function(){
+                        console.log('错误')
+                    }
+                });
+            }
+        }else{
+            var emailReg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");;
+            var codereg = /^\d{6}$/;
+            var myreg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,15}$/;
+            var email = $("#email-input").val();
+            var emailCaptcha = $("#email-captcha").val();
+            var emailPassword = $("#email-password").val();
+            if(email==""){
+                $(".login-modal-tips").show().text("请输入邮箱");
+            }else if(!emailReg.test(email)){
+                $(".login-modal-tips").show().text("邮箱格式不正确");
+            }else if(emailCaptcha==""){
+                $(".login-modal-tips").show().text("请输入邮箱验证码");
+            }else if(!codereg.test(emailCaptcha)){
+                $(".login-modal-tips").show().text("验证码错误");
+            }else if(emailPassword==""){
+                $(".login-modal-tips").show().text("请输入密码");
+            }else if(!myreg.test(emailPassword)){
+                $(".login-modal-tips").text("密码格式不正确，请重新输入").show();
+            }else{
+                $.ajax({
+                    url:url+'/register',
+                    type:'POST',
+                    async:true,//或false,是否异步,
+                    timeout:5000,//超时时间
+                    dataType:'json',
+                    data:{type:3,email:email,password:emailPassword,captcha:emailCaptcha},
+                    success:function(data){
+                        console.log(data)
+                        if(data.code=="0"){
+                            swal({
+                                title: "注册成功!",
+                                text: '2秒后自动关闭',
+                                type: "success",
+                                timer:2000,
+                                showConfirmButton: false
+                            },function () {
+                                location.href = "index.html";
+                            });
+                        }else{
+                            $(".login-content-1 .login-modal-tips").text(data.msg).show();
+                        }
+                    },
+                    error:function(){
+                        console.log('错误')
+                    }
+                });
+            }
+        }
+    });
+    function reg(data){
+        var myreg="";
+        switch (data){
+            case "+86":
+                myreg = /^1\d{10}$/;
+                break;
+        }
+        return myreg
+    }
+    $(".login-modal-form input").focus(function () {
+        $(".login-modal-tips").hide();
     });
 </script>
 </html>

@@ -2,6 +2,7 @@ var Load  = function () {
     this.init();
 };
 Load.prototype = {
+    url:'http://47.106.83.149:8081/api',
     BindHighlight:function () {
         $('#text-search').bind('keyup change',function(ev) {
             var searchTerm = $(this).val();
@@ -88,13 +89,57 @@ Load.prototype = {
             }
         })
     },
+    eqSearch:function () {
+        var that=this;
+        $.ajax({
+            url:this.url+'/house/eqSearch',
+            type:'GET',//GET
+            async:true,//或false,是否异步,
+            timeout:5000,//超时时间
+            dataType:'json',
+            success:function(data){
+                if(data.code=="0"){
+                    var houseTypeHtml = template('houseTypeHtml', data.eqSearchDict);
+                    $("#houseType").html(houseTypeHtml);
+                    var configHtml = template('configHtml', data.eqSearchDict);
+                    $("#config").html(configHtml);
+                    var aroundHtml = template('aroundHtml', data.eqSearchDict);
+                    $("#aroundConfig").html(aroundHtml);
+                    that.checkboxLoad();
+                }
+            },
+            error:function(){
+                console.log('错误')
+            }
+        });
+    },
+    listByCity:function () {
+        $.ajax({
+            url:this.url+'/school/listByCity',
+            type:'GET',//GET
+            async:true,//或false,是否异步,
+            timeout:5000,//超时时间
+            dataType:'json',
+            data:{city:"纽约"},
+            success:function(data){
+                if(data.code=="0"){
+                    var universityHtml = template('universityHtml', data);
+                    $("#university").html(universityHtml);
+                }
+            },
+            error:function(){
+                console.log('错误')
+            }
+        });
+    },
     init:function () {
+        this.listByCity();
+        this.eqSearch();
         this.BindHighlight();
         this.ShowSearch();
         this.HideSearch();
         this.pageLoad();
         this.sliderLoad();
-        this.checkboxLoad();
         this.MapRoom();
         this.SortTab();
     }
