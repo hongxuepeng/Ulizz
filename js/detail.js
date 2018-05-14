@@ -345,7 +345,7 @@ Load.prototype = {
         this.LoadCheckbox();
         this.collet();
         this.loginModal();
-        this.GetData();
+        //this.GetData();
         this.reserve();
     }
 }

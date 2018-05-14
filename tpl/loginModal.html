@@ -5,8 +5,8 @@
                 <img src="img/close.png" data-dismiss="modal" class="close-img" >
                 <div class="login-modal-content">
                     <ul class="login-modal-tab">
-                        <li class="login-modal-active" tabindex="1"><span>手机登录</span></li>
-                        <li tabindex="2"><span>邮箱登录</span></li>
+                        <li class="login-modal-active" type="phone" tabindex="1"><span>手机登录</span></li>
+                        <li tabindex="2" type="email"><span>邮箱登录</span></li>
                     </ul>
                     <div class="login-content">
                         <div class="login-content-1">
@@ -68,9 +68,35 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<input type="hidden" id="LoginType" value="phone">
 <script>
     $(function () {
         var url= 'http://47.106.83.149:8081/api';
+        function BindUser() {
+            var url= 'http://47.106.83.149:8081/api';
+            $.ajax({
+                url:url+'/user/info',
+                type:'GET',
+                async:true,//或false,是否异步,
+                timeout:5000,//超时时间
+                dataType:'json',
+                data:{token:$.cookie('token')},
+                success:function(data){
+                    //console.log(data)
+                    if(data.code=="0"){
+                        $(".login-group").hide();
+                        $(".user-content").show();
+                        $(".user-name").text(data.info.nickname);
+                    }else{
+                        $(".user-content").hide();
+                        $(".login-group").show();
+                    }
+                },
+                error:function(){
+                    console.log('错误')
+                }
+            });
+        }
         $('#input-login').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
             increaseArea: '20%'
@@ -100,12 +126,13 @@
         });
         $(".login-modal-tab>li").click(function () {
             var tabindex=$(this).attr("tabindex");
+            $("#LoginType").val($(this).attr("type"));
             $(this).addClass("login-modal-active").siblings().removeClass("login-modal-active");
             $(".login-content>.login-content-"+tabindex).show().siblings().hide();
         });
         $(".wechat-login>img").click(function () {
             $("#LoginModal").modal('hide');
-            $("#BindModal").modal();
+            $("#BindModal").modal({backdrop: 'static', keyboard: false});
         });
         $(".header-logo").click(function () {
             location.href="index.html";
@@ -115,7 +142,7 @@
         });
         var myreg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,15}$/;
         var emialreg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
-        $("#phoneLogin").click(function () {
+        function PhoneLogin(){
             var key = $("#phone-key").attr("data-key");
             var phone = $("#phone-input").val();
             var thisReg = reg(key);
@@ -137,9 +164,11 @@
                     dataType:'json',
                     data:{type:2,telephoneCode:key,mobile:phone,password:password,captcha:"123456"},
                     success:function(data){
-                        console.log(data)
                         if(data.code=="0"){
-
+                            $.cookie('token', data.info.token);
+                            $("#LoginModal input").val("");
+                            $("#LoginModal").modal('hide');
+                            BindUser();
                         }else{
                             $(".login-content-1 .login-modal-tips").text(data.msg).show();
                         }
@@ -149,8 +178,8 @@
                     }
                 });
             }
-        });
-        $("#emailLogin").click(function () {
+        }
+        function EmailLogin(){
             var email = $("#email-input").val();
             var password = $("#email-password").val();
             if(email==""){
@@ -170,11 +199,14 @@
                     dataType:'json',
                     data:{type:3,email:email,password:password,captcha:"123456"},
                     success:function(data){
-                        console.log(data)
+                        //console.log(data)
                         if(data.code=="0"){
-
+                            $.cookie('token', data.info.token);
+                            $("#LoginModal input").val("");
+                            $("#LoginModal").modal('hide');
+                            BindUser();
                         }else{
-                            $(".login-content-2.login-modal-tips").text(data.msg).show();
+                            $(".login-content-2 .login-modal-tips").text(data.msg).show();
                         }
                     },
                     error:function(){
@@ -182,6 +214,12 @@
                     }
                 });
             }
+        }
+        $("#phoneLogin").click(function () {
+            PhoneLogin();
+        });
+        $("#emailLogin").click(function () {
+            EmailLogin();
         });
         function reg(data){
             var myreg="";
@@ -192,5 +230,15 @@
             }
             return myreg
         }
+        $("body").keydown(function() {
+            if (event.keyCode == "13") {//keyCode=13是回车键；数字不同代表监听的按键不同
+                var type = $("#LoginType").val();
+                if(type=="phone"){
+                    PhoneLogin();
+                }else{
+                    EmailLogin();
+                }
+            }
+        });
     });
 </script>
