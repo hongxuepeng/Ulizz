@@ -2,186 +2,76 @@ var Load  = function () {
     this.init();
 };
 Load.prototype = {
-    featdata:[
+    list:[
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Foo",
-                "iconSize": [
-                    60,
-                    60
-                ],
-                "money": "£150",
-                "img": "img/banner1.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -66.324462890625,
-                    -16.024695711685304
-                ]
-            }
+            "latitude":"51.4052",
+            "longitude":"-0.299754",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/mansion-waterside/image-p70kst.jpeg",
+            "name":"金斯顿大学Knights Park校区",
+            "price":"£249"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£250",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -61.2158203125,
-                    -15.97189158092897
-                ]
-            }
+            "latitude":"51.4035",
+            "longitude":"-0.303725",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/bowden-court/image-p42llr.jpeg",
+            "name":"金斯顿大学伦敦校区",
+            "price":"£267"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£150",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -63.2158203125,
-                    -15.97189158092897
-                ]
-            }
+            "latitude":"51.4334",
+            "longitude":"-0.26275",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/studyo-paddington/image-olhz3v.jpeg",
+            "name":"金斯顿大学（Kingston Hill校区）",
+            "price":"£236"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£290",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -59.2158203125,
-                    -15.97189158092897
-                ]
-            }
+            "latitude":"51.4373",
+            "longitude":"-0.25095",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/go-native-mayfair/image-o79h10.jpeg",
+            "name":"金斯顿大学（Roehampton Vale校区）",
+            "price":"£252"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£450",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -59.2158203125,
-                    -16.97189158092897
-                ]
-            }
+            "latitude":"51.5017",
+            "longitude":"0.00575338",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/paris-gardens/image-p5zivf.jpeg",
+            "name":"雷文斯本学院",
+            "price":"£362"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£60",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -59.2158203125,
-                    -18.97189158092897
-                ]
-            }
+            "latitude":"51.5164",
+            "longitude":"-0.07302",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/urbanest-tower-bridge/image-o6i73c.jpeg",
+            "name":"霍特国际商学院伦敦校区（本科生）",
+            "price":"£215"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£260",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -56.2158203125,
-                    -18.97189158092897
-                ]
-            }
+            "latitude":"51.5212",
+            "longitude":"-0.115201",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/landale-house/image-p70kqh.jpeg",
+            "name":"霍特国际商学院伦敦校区（研究生）",
+            "price":"£255"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Bar",
-                "iconSize": [
-                    50,
-                    50
-                ],
-                "money": "£390",
-                "img": "img/banner2.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -52.2158203125,
-                    -10.97189158092897
-                ]
-            }
+            "latitude":"51.5184",
+            "longitude":"-0.0725624",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/1-dawes-houe/image-ov4nhk.jpeg",
+            "name":"马兰欧尼学院",
+            "price":"£245"
         },
         {
-            "type": "Feature",
-            "properties": {
-                "message": "Baz",
-                "iconSize": [
-                    40,
-                    40
-                ],
-                "money": "£350",
-                "img": "img/banner3.jpg",
-                "url": "detail.html"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -0.0696830000,
-                    51.5130640000
-                ]
-            }
+            "latitude":"51.5176",
+            "longitude":"-0.0779877",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/urbanest-st-pancras/image-ogm0tx.jpeg",
+            "name":"考文垂大学伦敦校区",
+            "price":"£375"
+        },
+        {
+            "latitude":"51.4574",
+            "longitude":"-0.245021",
+            "url":"//cdn.student.com/media/cache/property_preview_mobile/mstr/country/united-kingdom/city/london/property/francis-gardner/image-otdnsh.jpeg",
+            "name":"罗汉普顿大学",
+            "price":"£275"
         }
     ],
     url:'http://47.106.83.149:8081/api',
@@ -235,43 +125,41 @@ Load.prototype = {
         });
     },
     loadMap:function () {
-        // mapboxgl.accessToken = 'pk.eyJ1IjoieHVlcGVuZ2hvbmciLCJhIjoiY2plcWpuMGllMGEzaTJwcDdoZGl3ZjIwYyJ9.1fVEnVymEmu89XLxUkCDSw';
-        // if (!mapboxgl.supported()) {
-        //     $(".search-right,.map-content,.map-title").hide();
-        // }else{
-        //     var geojson = {
-        //         "type": "FeatureCollection",
-        //         "features": this.featdata
-        //     };
-        //     var map = new mapboxgl.Map({
-        //         container: 'map',
-        //         style: 'mapbox://styles/mapbox/streets-v9',
-        //         center: [-65.017, -16.457],
-        //         zoom: 5
-        //     });
-        //     // add markers to allData
-        //     geojson.features.forEach(function(marker) {
-        //         var popup = new mapboxgl.Popup()
-        //             .setHTML('<a class="mask-content" href="'+marker.properties.url+'" target="_blank"><img src="'+marker.properties.img+'"><div class="NameTips">学生公寓 Universitity Gateway</div></a>');
-        //         // create a DOM element for the marker
-        //         var el = document.createElement('div');
-        //         el.className = 'marker';
-        //         el.innerHTML =marker.properties.money;
-        //         el.addEventListener('click', function() {
-        //             var chapterName={
-        //                 center: marker.geometry.coordinates,
-        //                 zoom: 8,
-        //                 speed: 1.5
-        //             }
-        //             map.flyTo(chapterName);
-        //         });
-        //         // add marker to allData
-        //         new mapboxgl.Marker(el)
-        //             .setLngLat(marker.geometry.coordinates)
-        //             .setPopup(popup) // sets a popup on this marker
-        //             .addTo(map);
-        //     });
-        // }
+        var normalMap = L.tileLayer.chinaProvider('Google.Normal.Map', {
+                maxZoom: 18,
+                minZoom: 5
+            }),
+            satelliteMap = L.tileLayer.chinaProvider('Google.Satellite.Map', {
+                maxZoom: 18,
+                minZoom: 5
+            });
+        var baseLayers = {
+            "地图": normalMap,
+            "影像": satelliteMap,
+        }
+        var overlayLayers = {}
+        var map = L.map("map", {
+            center: [51.4574, -0.245021],
+            zoom: 11,
+            layers: [normalMap],
+            zoomControl: false
+        });
+        L.control.layers(baseLayers, overlayLayers).addTo(map);
+        var list = this.list;
+        for(var i=0;i<list.length;i++){
+            var markerHtml="<a class='map-section' href='detail.html'>" +
+                "<img src='"+list[i].url+"'/>" +
+                "<div class='map-tips'>"+list[i].name+"</div>" +
+                "<div class='map-price'>" +
+                "<span class='current-price'>"+list[i].price+"</span> 起 每周" +
+                "</div>" +
+                "</a>"
+            L.marker([list[i].latitude, list[i].longitude]).addTo(map).bindPopup(markerHtml);
+        }
+        L.control.zoom({
+            zoomInTitle: '放大',
+            zoomOutTitle: '缩小'
+        }).addTo(map);
     },
     BindHighlight:function () {
         $('#text-search').bind('keyup change',function(ev) {

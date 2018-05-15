@@ -20,7 +20,7 @@ Load.prototype = {
             async:true,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
-            data:{currPage:page,pageSize:10},
+            data:{currPage:page,pageSize:10,token:$.cookie('token')},
             success:function(data){
                 if(data.code=="0"){
                     console.log(data);

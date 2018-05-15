@@ -43,7 +43,7 @@ Load.prototype = {
                         async:true,//或false,是否异步,
                         timeout:5000,//超时时间
                         dataType:'json',
-                        data:{id:collectId},
+                        data:{id:collectId,token:$.cookie('token')},
                         success:function(data){
                             if(data.code=="0"){
                                 if(type == '1'){
@@ -73,7 +73,7 @@ Load.prototype = {
             async:true,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
-            data:{currPage:page,pageSize:10,type:1},
+            data:{currPage:page,pageSize:10,type:1,token:$.cookie('token')},
             success:function(data){
                 if(data.code=="0"){
                     var total = data.page.totalCount;
@@ -111,7 +111,7 @@ Load.prototype = {
             async:true,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
-            data:{currPage:page,pageSize:10,type:2},
+            data:{currPage:page,pageSize:10,type:2,token:$.cookie('token')},
             success:function(data){
                 if(data.code=="0"){
                     var total = data.page.totalCount;
