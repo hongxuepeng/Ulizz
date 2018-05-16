@@ -406,7 +406,7 @@
 	text-decoration: none;
 	color: #4c4c4c!important;
 }
-.map-section:focus{
+.map-section:focus,.map-section:hover{
 	text-decoration: none;
 }
 .map-section>img{

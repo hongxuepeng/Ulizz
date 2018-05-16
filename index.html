@@ -288,7 +288,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="modal-item">
-                        <input type="text" class="form-control" placeholder="姓名">
+                        <select class="form-control">
+                            <option value="">请选择国家</option>
+                            <option value="1">美国</option>
+                            <option value="2">英国</option>
+                            <option value="3">加拿大</option>
+                        </select>
                     </div>
                     <div class="modal-item">
                         <select class="form-control">
@@ -298,22 +303,26 @@
                             <option value="3">华盛顿</option>
                         </select>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="modal-phone">
-                        <div class="phone-modal-form padding-100">
-                            <div class="phone-modal-left">
-                                （+86）
+                    <div class="modal-item">
+                        <input type="text" class="form-control" placeholder="姓名">
+                    </div>
+                    <div class="modal-item">
+                        <div class="modal-phone">
+                            <div class="phone-modal-form index-modal-form padding-90">
+                                <div class="phone-modal-left">
+                                    （+86）
+                                </div>
+                                <div class="phone-modal-right">
+                                    <input type="text" placeholder="请输入手机号">
+                                </div>
+                                <ul class="phone-modal-menu" style="display: none;">
+                                    <li key="86">中国(+86)</li>
+                                    <li key="1">美国(+1)</li>
+                                    <li key="44">英国(+44)</li>
+                                    <li key="61">澳大利亚(+61)</li>
+                                    <li key="1">加拿大(+1)</li>
+                                </ul>
                             </div>
-                            <div class="phone-modal-right">
-                                <input type="text" placeholder="请输入手机号">
-                            </div>
-                            <ul class="phone-modal-menu" style="display: none;">
-                                <li key="86">中国(+86)</li>
-                                <li key="1">美国(+1)</li>
-                                <li key="44">英国(+44)</li>
-                                <li key="61">澳大利亚(+61)</li>
-                                <li key="1">加拿大(+1)</li>
-                            </ul>
                         </div>
                     </div>
                     <textarea class="form-control modal-textarea" placeholder="请输入您的需求！例如：是否有独立卫生间，是否可以养宠物，周围是否安静等"></textarea>

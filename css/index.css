@@ -475,18 +475,32 @@
 .modal-header .close {
     margin-top: 6px;
 }
-
+#MyModal .modal-content{
+    width: 550px;
+}
 .modal-body {
     overflow: hidden;
     padding: 20px;
 }
 
 .modal-item {
-    width: 200px;
+    width: 235px;
     float: left;
     margin-bottom: 30px;
 }
-
+.padding-90{
+    padding-left: 90px;
+}
+.padding-90>.phone-modal-left{
+    width: 90px;
+}
+.modal-item>.form-control{
+    height: 40px;
+    padding: 9px 12px;
+}
+.index-modal-form{
+    margin-bottom: 0!important;
+}
 .modal-item:nth-child(2n) {
     margin-left: 35px;
 }
