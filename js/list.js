@@ -3,6 +3,7 @@ var Load  = function () {
 };
 Load.prototype = {
     url:'http://47.106.83.149:8081/api',
+    MessageTotal:'',
     BindHighlight:function () {
         $('#text-search').bind('keyup change',function(ev) {
             var searchTerm = $(this).val();
@@ -26,13 +27,28 @@ Load.prototype = {
             }
         });
     },
-    pageLoad:function () {
+    pageLoad:function (totalCount) {
         var GG = {
             "kk":function(mm){
-                console.log(mm);
+                var dataObj={
+                    houseType:"",//房源类型
+                    houseConfig:"",//公寓配套
+                    aroundConfig:"",//周边配套
+                    minInterval:0,//最低值
+                    maxInterval:300,//最高值
+                    intervalColumn:'price',//区间类型
+                    rankColumn:'price',//排序类型
+                    rankIsAsc:'',//升序-true,降序-false
+                    cityCode:'USNY002',//城市
+                    schoolId:'',//学校ID
+                    likeSearch:'',//模糊查询
+                    currPage:mm,//当前页码
+                    pageSize:'10'
+                }
+                this.BindList(dataObj);
             }
         }
-        $("#page").initPage(100,1,GG.kk);
+        $("#page").initPage(totalCount,1,GG.kk);
     },
     sliderLoad:function () {
         $("#scale-slider")
@@ -94,7 +110,7 @@ Load.prototype = {
         $.ajax({
             url:this.url+'/house/eqSearch',
             type:'GET',//GET
-            async:true,//或false,是否异步,
+            async:false,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             success:function(data){
@@ -117,7 +133,7 @@ Load.prototype = {
         $.ajax({
             url:this.url+'/school/listByCity',
             type:'GET',//GET
-            async:true,//或false,是否异步,
+            async:false,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             data:{city:"纽约"},
@@ -132,15 +148,68 @@ Load.prototype = {
             }
         });
     },
+    BindList:function (dataObj) {
+        var that=this;
+        $.ajax({
+            url:this.url+'/house/list',
+            type:'GET',//GET
+            async:true,//或false,是否异步,
+            timeout:5000,//超时时间
+            dataType:'json',
+            data:dataObj,
+            success:function(data){
+                console.log(data);
+                if(data.code=="0"){
+                    var total = data.page.totalCount;
+                    if(total < 10){
+                        $(".page-parent").hide();
+                    }else{
+                        $(".page-parent").show();
+                    }
+                    if(total < 1){
+                        $(".no-find").show();
+                    }else{
+                        if(that.MessageTotal==""){
+                            that.MessageTotal = total;
+                            that.pageLoad(total);
+                            var listHtml = template('listHtml', data.page);
+                            $(".list-section").html(listHtml);
+                        }else{
+                            var listHtml = template('listHtml', data.page);
+                            $(".list-section").html(listHtml);
+                        }
+                    }
+                }
+            },
+            error:function(){
+                console.log('错误')
+            }
+        });
+    },
     init:function () {
         this.listByCity();
         this.eqSearch();
         this.BindHighlight();
         this.ShowSearch();
         this.HideSearch();
-        this.pageLoad();
         this.sliderLoad();
         this.MapRoom();
         this.SortTab();
+        var dataObj={
+            houseType:"",//房源类型
+            houseConfig:"",//公寓配套
+            aroundConfig:"",//周边配套
+            minInterval:0,//最低值
+            maxInterval:300,//最高值
+            intervalColumn:'price',//区间类型
+            rankColumn:'price',//排序类型
+            rankIsAsc:'',//升序-true,降序-false
+            cityCode:'USNY002',//城市
+            schoolId:'',//学校ID
+            likeSearch:'',//模糊查询
+            currPage:1,//当前页码
+            pageSize:'10'
+        }
+        this.BindList(dataObj);
     }
 }

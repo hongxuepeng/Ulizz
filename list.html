@@ -31,6 +31,7 @@
     <script src="js/include.js"></script>
     <script src="js/template.js"></script>
     <script src="js/jquery.cookie.js"></script>
+    <script src="js/md5.js"></script>
 </head>
 <body type="list">
     <div class="header">
@@ -80,11 +81,7 @@
                     <div class="screen-title pull-left">
                         附近大学
                     </div>
-                    <select class="form-control pull-left" id="university">
-                        <option value="">请选择大学</option>
-                        <option value="1">东京大学</option>
-                        <option value="2">华盛顿大学</option>
-                    </select>
+                    <select class="form-control pull-left" id="university"></select>
                 </div>
                 <div class="screen-item">
                     <div class="screen-item-title">公寓价格区间（单位：$）</div>
@@ -130,7 +127,6 @@
             <div class="no-find-recommend">我们为您推荐以下房源</div>
         </div>
         <div class="list-detail">
-            <div class="list-bread"></div>
             <div class="list-section">
                 <div class="list-section-item">
                     <img src="img/hot_1.png">
@@ -327,6 +323,39 @@
         <option value="">请选择大学</option>
         {{each schoolEntityList}}
         <option value="{{$value.id}}">{{$value.name}}</option>
+        {{/each}}
+    </script>
+    <script type="text/html" id="listHtml">
+        {{each list}}
+        <div class="list-section-item">
+            <img src="img/hot_1.png">
+            <div class="list-section-detial">
+                <a href="detail.html?id={{$value.id}}">{{$value.title}}</a>
+                <div class="list-section-content">
+                    {{$value.desc}}
+                </div>
+                <div class="list-section-tips">
+                    {{each $value.labelDict as labelDict index}}
+                    <span class="color_1">{{labelDict.value}}</span>
+                    {{/each}}
+                </div>
+                <div class="list-section-distance">
+                    <span class="list-distance-place">{{$value.schoolName}}</span>
+                    <span><img src="img/list_walk.png">{{$value.houseSchoolEntity.walkTime}}分</span>
+                    <span><img src="img/list_car.png">{{$value.houseSchoolEntity.carTime}}分</span>
+                    <span><img src="img/list_riding.png">{{$value.houseSchoolEntity.bikeTime}}分</span>
+                    <a href="map-room.html"><img src="img/list_location.png"/></a>
+                </div>
+            </div>
+            <div class="list-price">
+                <div class="list-price-section">
+                    <span>{{$value.currencySymbol}}</span>
+                    <span class="list-price-num">{{$value.price}}</span>
+                    <span>起/{{$value.leaseUnitDict.value}}</span>
+                </div>
+                <a href="detail.html?id={{$value.id}}" class="view-detail">查看详情</a>
+            </div>
+        </div>
         {{/each}}
     </script>
     <script>

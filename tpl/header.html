@@ -71,7 +71,7 @@
         $.ajax({
             url:url+'/user/info',
             type:'GET',
-            async:true,//或false,是否异步,
+            async:false,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             data:{token:$.cookie('token')},
