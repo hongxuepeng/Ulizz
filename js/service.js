@@ -3,7 +3,9 @@ var Load  = function () {
 };
 Load.prototype = {
     url:'http://47.106.83.149:8081/api',
+    noText:'暂无内容',
     ServiceLoad:function(type){
+        var that=this;
         $.ajax({
             url:this.url+'/server/list',
             type:'GET',//GET
@@ -16,6 +18,7 @@ Load.prototype = {
                     if(data.list.length < 1){
                         var NoHTML = template('NoData');
                         $(".service-list").html(NoHTML);
+                        $(".no-text").text(that.noText);
                     }else{
                         var ServiceHTML = template('ServiceHtml',data);
                         $(".service-list").html(ServiceHTML);
@@ -29,14 +32,15 @@ Load.prototype = {
     },
     TypeLoad:function(){
         $.ajax({
-            url:this.url+'/server/type',
+            url:this.url+'/dict/list/help_type',
             type:'GET',//GET
             async:true,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             success:function(data){
                 if(data.code=="0"){
-                    console.log(data);
+                    var ServiceTab = template('ServiceTab',data);
+                    $(".order-aside-list").html(ServiceTab);
                 }
             },
             error:function(){
@@ -54,7 +58,23 @@ Load.prototype = {
             that.ServiceLoad(type);
         });
     },
+    NoData:function(){
+        var lan = $.cookie('lan');
+        switch(lan){
+            case 'cn':
+                var text = '暂无内容';
+                break;
+            case 'en':
+                var text = 'No content';
+                break;
+            default:
+                var text = 'No content';
+        }
+        this.noText = text;
+    },
     init:function () {
+        this.NoData();
+        this.TypeLoad();
         this.ServiceLoad("1");
         this.TabSwitch();
     }

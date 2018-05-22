@@ -18,24 +18,26 @@
 <body>
     <div class="box">
         <div class="box-title">
-            <span>找回密码</span>
-            <a href="index.html">返回首页</a>
+            <span set-lan="html:retrieve">找回密码</span>
+            <a href="index.html" set-lan="html:back">返回首页</a>
         </div>
-        <div class="box-tips">选择找回方式</div>
+        <div class="box-tips" set-lan="html:choose">选择找回方式</div>
         <ul class="box-item">
             <li>
                 <a href="phone/fill-account.html">
                     <img src="img/phone-get.png">
-                    <p>通过手机找回密码</p>
+                    <p set-lan="html:throughPhone">通过手机找回密码</p>
                 </a>
             </li>
             <li>
                 <a href="email/fill-account.html">
                     <img src="img/emial-get.png">
-                    <p>通过邮箱找回密码</p>
+                    <p set-lan="html:throughEmail">通过邮箱找回密码</p>
                 </a>
             </li>
         </ul>
     </div>
+    <script src="language/forget.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

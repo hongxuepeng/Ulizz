@@ -33,7 +33,7 @@ Load.prototype = {
                     var month = that.checkTime(myDate.getMonth()+1);
                     var date = that.checkTime(myDate.getDate());
                     $(".article-year").html(myDate.getFullYear());
-                    $(".article-month").html(month+"月");
+                    $(".article-month-num").html(month);
                     $(".article-day").html(date);
                 }
             },

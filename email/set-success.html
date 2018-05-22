@@ -12,37 +12,39 @@
     <![endif]-->
     <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/md5.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/md5.js"></script>
 </head>
 <body>
     <div class="box">
         <ul class="box-num-parent">
             <li class="box-num-complate">
                 <div class="box-num1">1</div>
-                <span>填写账户名</span>
+                <span set-lan="html:account">填写账户名</span>
             </li>
             <li class="box-num-complate">
                 <div class="box-num2">
                     2
                 </div>
-                <span>设置新密码</span>
+                <span set-lan="html:newPassword">设置新密码</span>
             </li>
             <li class="box-num-complate">
                 <div class="box-num3">
                     <img src="../img/step_success.png">
                 </div>
-                <span>设置成功</span>
+                <span set-lan="html:success">设置成功</span>
             </li>
         </ul>
         <div class="box-content text-center">
             <div class="box-success">
                 <img src="../img/success_icon.png">
-                <p>密码重置成功</p>
-                <div>下次请使用新密码进行登录</div>
-                <a href="../index.html">进入首页</a>
+                <p set-lan="html:resetSuccess">密码重置成功</p>
+                <div set-lan="html:tips">下次请使用新密码进行登录</div>
+                <a href="../index.html" set-lan="html:homePage">进入首页</a>
             </div>
         </div>
     </div>
 </body>
+<script src="../language/forget.js"></script>
+<script src="../js/language.js"></script>
 </html>

@@ -107,7 +107,7 @@
 .title {
     height: 130px;
     line-height: 130px;
-    font-size: 30px;
+    font-size: 24px;
     color: #000000;
     text-align: center;
 }
@@ -301,13 +301,13 @@
 
 .view-more {
     display: block;
-    width: 120px;
-    height: 35px;
+    width: 150px;
+    height: 40px;
     background: #2598cf;
     color: #fff;
     margin: auto;
     text-align: center;
-    line-height: 35px;
+    line-height: 40px;
     border-radius: 4px;
     cursor: pointer;
     transition: all .5s;

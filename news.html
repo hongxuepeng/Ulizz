@@ -20,10 +20,10 @@
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/toTop.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/page.js"></script>
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
-    <script src="js/jquery.cookie.js"></script>
     <script src="js/md5.js"></script>
 </head>
 <body type="news">
@@ -34,11 +34,11 @@
     <div class="news-content">
         <div class="news-detail">
             <ul class="news-screen">
-                <li class="news-active" type="">全部</li>
-                <li type="1">租房</li>
-                <li type="2">购物</li>
-                <li type="3">旅游</li>
-                <li type="4">其他</li>
+                <li class="news-active" type="" set-lan="html:all">全部</li>
+                <li type="1" set-lan="html:renting">租房</li>
+                <li type="2" set-lan="html:shopping">购物</li>
+                <li type="3" set-lan="html:tourism">旅游</li>
+                <li type="4" set-lan="html:other">其他</li>
             </ul>
             <div class="news-recommend-parent"></div>
             <ul class="news-list"></ul>
@@ -82,7 +82,7 @@
 <script type="text/html" id="NoData">
     <div class="no-data text-center">
         <img src="img/no-data.png">
-        <div>暂无内容</div>
+        <div class="no-text">暂无内容</div>
     </div>
 </script>
 <script>
@@ -90,5 +90,7 @@
         var load = new Load();
     });
 </script>
+<script src="language/news.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

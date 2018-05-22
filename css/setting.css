@@ -92,14 +92,14 @@
     position: relative;
     height: 40px;
     line-height: 40px;
-    padding-left: 120px;
+    padding-left: 170px;
     margin-bottom: 60px;
 }
 .setting-left{
     position: absolute;
     left: 0;
     top: 0;
-    width: 80px;
+    width: 140px;
     height: 40px;
     color: #000;
     text-align: right;
@@ -121,7 +121,7 @@
 }
 .setting-forget{
     position: absolute;
-    right: -90px;
+    right: -180px;
     top: 0;
     color: #F05D6F;
     font-size: 14px;

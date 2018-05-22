@@ -12,8 +12,8 @@
     <![endif]-->
     <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/md5.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/md5.js"></script>
 </head>
 <body>
 <div class="box">
@@ -22,23 +22,23 @@
             <div class="box-num1">
                 <img src="../img/step_success.png">
             </div>
-            <span>填写账户名</span>
+            <span set-lan="html:account">填写账户名</span>
         </li>
         <li>
             <div class="box-num2">2</div>
-            <span>设置新密码</span>
+            <span set-lan="html:newPassword">设置新密码</span>
         </li>
         <li>
             <div class="box-num3">3</div>
-            <span>设置成功</span>
+            <span set-lan="html:success">设置成功</span>
         </li>
     </ul>
     <div class="box-content">
         <div class="bind-modal-item">
-            <span>邮箱</span>
+            <span set-lan="html:email">邮箱</span>
             <div class="login-modal-form">
                 <div class="login-modal-right">
-                    <input type="text" placeholder="请输入邮箱号码">
+                    <input type="text" placeholder="请输入邮箱号码" set-lan="placeholder:emailInput">
                 </div>
             </div>
         </div>
@@ -52,4 +52,6 @@
         location.href="set-password.html"
     });
 </script>
+<script src="../language/forget.js"></script>
+<script src="../js/language.js"></script>
 </html>

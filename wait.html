@@ -34,38 +34,38 @@
             <div class="box-num1">
                 <img src="img/step_success.png">
             </div>
-            <span>提交订单</span>
+            <span set-lan="html:PlaceOrder">提交订单</span>
         </li>
         <li class="box-num-second">
             <div class="box-num2">2</div>
-            <span>平台确认</span>
+            <span set-lan="html:PlatformConfirmation">平台确认</span>
         </li>
         <li>
             <div class="box-num3">3</div>
-            <span>支付定金</span>
+            <span set-lan="html:deposit">支付定金</span>
         </li>
         <li>
             <div class="box-num4">4</div>
-            <span>资料认证</span>
+            <span set-lan="html:authentication">资料认证</span>
         </li>
         <li>
             <div class="box-num5">5</div>
-            <span>支付房租</span>
+            <span set-lan="html:rent">支付房租</span>
         </li>
         <li>
             <div class="box-num6">6</div>
-            <span>交易房租</span>
+            <span set-lan="html:finish">交易完成</span>
         </li>
     </ul>
     <div class="order-detail order-detail-specil">
         <div class="order-confirm">
             <div class="text-center order-img"><img src="img/wait_img.png"></div>
-            <div class="text-center order-confirm-title">公寓提交成功，请耐心等待公寓方确认</div>
+            <div class="text-center order-confirm-title" set-lan="html:success">公寓提交成功，请耐心等待公寓方确认</div>
             <div class="careful">
-                <div class="careful-title">注意：</div>
+                <div class="careful-title" set-lan="html:careful">注意：</div>
                 <div class="careful-tips">稍后我们会与你联系请注意接听来自400****的来电，进一步确认相关租房信息，请提前准备好以下证件：</div>
                 <div class="careful-detail">I20，签证，护照，居留证明（预定英国公寓才需提供），身份证。以上信息均为扫描件。</div>
-                <div class="order-btn">查看进度</div>
+                <div class="order-btn" set-lan="html:progress">查看进度</div>
             </div>
         </div>
     </div>
@@ -78,5 +78,7 @@
         location.href="order-detail.html?status=1";
     })
 </script>
+<script src="language/wait.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ function changeTime() {
         waitChange = 60;
     } else {
         $(".change-modal-phone").addClass("default");
-        $(".change-modal-phone").text( waitChange + " 秒");
+        $(".change-modal-phone").text( waitChange + " s");
         waitChange--;
         setTimeout(function () {
             changeTime();
@@ -27,7 +27,7 @@ function emaliTime() {
         emaliWait = 60;
     } else {
         $(".change-modal-email").addClass("default");
-        $(".change-modal-email").text( emaliWait + " 秒");
+        $(".change-modal-email").text( emaliWait + " s");
         emaliWait--;
         setTimeout(function () {
             emaliTime();

@@ -41,10 +41,22 @@ Load.prototype = {
             data:{currPage:page,pageSize:"9",type:that.tabType},
             success:function(data){
                 if(data.code=="0"){
-                    if(data.top==null){
+                    if(data.top == null||data.top == undefined||data.top == ''){
                         $(".news-recommend").hide();
                         var NoData=template('NoData');
                         $(".news-list").html(NoData);
+                        var lan = $.cookie('lan');
+                        switch(lan){
+                            case 'cn':
+                                var text = '暂无内容';
+                                break;
+                            case 'en':
+                                var text = 'No content';
+                                break;
+                            default:
+                                var text = 'No content';
+                        }
+                        $(".no-text").text(text);
                         $(".news-page").hide();
                     }else{
                         if(that.totalCount==""){

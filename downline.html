@@ -21,14 +21,14 @@
     <div class="register-left"></div>
     <div class="register-right">
         <div class="register-group">
-            <div class="register-title">温馨提示</div>
+            <div class="register-title" set-lan="html:Reminder">温馨提示</div>
             <div class="register-content">
                 <div class="downline-title">
                     <img src="img/tips.png">
-                    <span>下线通知</span>
+                    <span set-lan="html:notice">下线通知</span>
                 </div>
-                <div class="downline-tips">您的账号132****6569修改了登录密码，请重新登录</div>
-                <div class="downline-btn">重新登录</div>
+                <div class="downline-tips" set-lan="html:change">您的账号132****6569修改了登录密码，请重新登录</div>
+                <div class="downline-btn" set-lan="html:relist">重新登录</div>
             </div>
         </div>
     </div>
@@ -39,4 +39,6 @@
        location.href="index.html";
     });
 </script>
+<script src="language/forget.js"></script>
+<script src="js/language.js"></script>
 </html>

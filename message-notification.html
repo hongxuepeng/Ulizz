@@ -22,9 +22,9 @@
     <script src="js/toTop.js"></script>
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/page.js"></script>
     <script src="js/template.js"></script>
-    <script src="js/jquery.cookie.js"></script>
     <script src="js/md5.js"></script>
 </head>
 <body>
@@ -32,17 +32,17 @@
     <include src="tpl/header.html"></include>
 </div>
 <div class="bread">
-    <a href="index.html">首页</a><a>消息通知</a>
+    <a href="index.html" set-lan="html:home">首页</a><a set-lan="html:MessageNotification">消息通知</a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="my-order">我的订单</li>
-                <li class="order-aside-active message-notification">消息通知</li>
-                <li class="personal-information">个人信息</li>
-                <li class="my-collection">我的收藏</li>
-                <li class="security-setting">安全设置</li>
+                <li class="my-order" set-lan="html:MyOrder">我的订单</li>
+                <li class="order-aside-active message-notification" set-lan="html:MessageNotification">消息通知</li>
+                <li class="personal-information" set-lan="html:PersonalInformation">个人信息</li>
+                <li class="my-collection" set-lan="html:MyCollection">我的收藏</li>
+                <li class="security-setting" set-lan="html:SecuritySetting">安全设置</li>
             </ul>
         </div>
         <div class="order-section">
@@ -77,5 +77,7 @@
         var load = new Load();
     });
 </script>
+<script src="language/down.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

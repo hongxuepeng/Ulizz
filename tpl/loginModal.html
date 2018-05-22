@@ -5,8 +5,8 @@
                 <img src="img/close.png" data-dismiss="modal" class="close-img" >
                 <div class="login-modal-content">
                     <ul class="login-modal-tab">
-                        <li class="login-modal-active" type="phone" tabindex="1"><span>手机登录</span></li>
-                        <li tabindex="2" type="email"><span>邮箱登录</span></li>
+                        <li class="login-modal-active" type="phone" tabindex="1"><span set-lan="html:mobile">手机登录</span></li>
+                        <li tabindex="2" type="email"><span set-lan="html:email">邮箱登录</span></li>
                     </ul>
                     <div class="login-content">
                         <div class="login-content-1">
@@ -15,7 +15,7 @@
                                     （+86）
                                 </div>
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入手机号" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                    <input type="text" placeholder="请输入手机号" set-lan="placeholder:mobileInput" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                                            onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" id="phone-input">
                                 </div>
                                 <ul class="login-modal-menu" id="phone-key" data-key="+86">
@@ -28,25 +28,25 @@
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="password" placeholder="请输入登录密码" autocomplete="new-password" id="phone-password">
+                                    <input type="password" placeholder="请输入登录密码" set-lan="placeholder:passwordInput" autocomplete="new-password" id="phone-password">
                                 </div>
                             </div>
                             <div class="login-modal-tips">用户名或密码错误</div>
-                            <div class="login-modal-btn margin-30" id="phoneLogin">登录</div>
+                            <div class="login-modal-btn margin-30" id="phoneLogin" set-lan="html:login">登录</div>
                         </div>
                         <div class="login-content-2">
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入邮箱" autocomplete="off" id="email-input">
+                                    <input type="text" placeholder="请输入邮箱" set-lan="placeholder:emialInput" autocomplete="off" id="email-input">
                                 </div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="password" placeholder="请输入登录密码" autocomplete="new-password" id="email-password">
+                                    <input type="password" placeholder="请输入登录密码" set-lan="placeholder:passwordInput" autocomplete="new-password" id="email-password">
                                 </div>
                             </div>
                             <div class="login-modal-tips">用户名或密码错误</div>
-                            <div class="login-modal-btn margin-30" id="emailLogin">登录</div>
+                            <div class="login-modal-btn margin-30" id="emailLogin" set-lan="html:login">登录</div>
                         </div>
                     </div>
                     <!--<div class="login-input-parent">-->
@@ -56,10 +56,10 @@
                         <!--</span>-->
                     <!--</div>-->
                     <div class="login-modal-href">
-                        <a href="forget.html" class="pull-left">忘记密码?</a>
-                        <a href="register.html" class="pull-right">立即注册</a>
+                        <a href="forget.html" class="pull-left" set-lan="html:forget">忘记密码?</a>
+                        <a href="register.html" class="pull-right" set-lan="html:loginRegister">立即注册</a>
                     </div>
-                    <div class="line_02"><span>其它登录方式</span></div>
+                    <div class="line_02"><span set-lan="html:other">其它登录方式</span></div>
                     <div class="wechat-login">
                         <img src="img/wechat.png">
                     </div>
@@ -72,6 +72,33 @@
 <script>
     $(function () {
         var url= 'http://47.106.83.149:8081/api';
+        var ctips={
+            mobile: '请输入手机号',
+            mobileFormat: '手机格式不正确',
+            email: '请输入邮箱',
+            emailFormat: '邮箱格式不正确',
+            password: '请输入密码',
+        }
+        var etips={
+            mobile: 'Please enter the cell phone number',
+            mobileFormat: 'Mobile phone format is incorrect',
+            email: 'Please enter the mailbox',
+            emailFormat: 'Incorrect mailbox format',
+            password: 'Please input a password',
+        }
+        var lan = $.cookie('lan');
+        //选取语言文字
+        switch(lan){
+            case 'cn':
+                var tips = ctips;  //这里cn[m]中的cn是上面定义的json字符串的变量名，m是json中的键，用此方式读取到json中的值
+                break;
+            case 'en':
+                var tips = etips;
+                break;
+            default:
+                var tips = etips;
+        }
+        console.log(tips);
         function BindUser() {
             var url= 'http://47.106.83.149:8081/api';
             $.ajax({
@@ -148,11 +175,11 @@
             var thisReg = reg(key);
             var password = $("#phone-password").val();
             if(phone==""){
-                $(".login-content-1 .login-modal-tips").text("请输入手机号").show();
+                $(".login-content-1 .login-modal-tips").text(tips.mobile).show();
             }else if(!thisReg.test(phone)){
-                $(".login-content-1 .login-modal-tips").show().text("手机格式不正确");
+                $(".login-content-1 .login-modal-tips").show().text(tips.mobileFormat);
             }else if(password==""){
-                $(".login-content-1 .login-modal-tips").text("请输登录密码").show();
+                $(".login-content-1 .login-modal-tips").text(tips.password).show();
             }else{
                 $.ajax({
                     url:url+'/login',
@@ -181,11 +208,11 @@
             var email = $("#email-input").val();
             var password = $("#email-password").val();
             if(email==""){
-                $(".login-content-2 .login-modal-tips").text("请输邮箱").show();
+                $(".login-content-2 .login-modal-tips").text(tips.email).show();
             }else if(!emialreg.test(email)){
-                $(".login-content-2 .login-modal-tips").text("邮箱格式不正确，请重新输入").show();
+                $(".login-content-2 .login-modal-tips").text(tips.emailFormat).show();
             }else if(password==""){
-                $(".login-content-2 .login-modal-tips").text("请输登录密码").show();
+                $(".login-content-2 .login-modal-tips").text(tips.password).show();
             }else{
                 $.ajax({
                     url:url+'/login',

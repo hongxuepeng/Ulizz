@@ -25,12 +25,12 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/toTop.js"></script>
     <script src="js/icheck.min.js"></script>
-    <script src="js/page.js"></script>
     <script src="js/startScore.js"></script>
     <script src="js/viewer.js"></script>
     <script src="js/navScroll.js"></script>
     <script src="js/include.js"></script>
     <script src="js/jquery.cookie.js"></script>
+    <script src="js/page.js"></script>
     <script src="lib/leaflet.js"></script>
     <script src="src/leaflet.ChineseTmsProviders.js"></script>
     <script src="js/md5.js"></script>
@@ -41,7 +41,7 @@
 </div>
 <div class="section">
     <div class="bread">
-        <a>首页</a><a>美国</a><a>纽约</a><a>学生公寓 Universitity Gateway</a>
+        <a href="index.html" set-lan="html:home">首页</a><a>U.S.A</a><a>New York</a><a>Universitity Gateway</a>
     </div>
     <div class="carousel">
         <div class="carousel-left">
@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="carousel-right">
-            <h4 class="carousel-title">学生公寓 Universitity Gateway 共卫共厨房</h4>
+            <h4 class="carousel-title">Universitity Gateway</h4>
             <div class="carousel-subtitle">配套完善、安全舒适</div>
             <div class="detail-price">
                 <span>£</span>
@@ -86,23 +86,23 @@
             </div>
             <div class="carousel-list">
                 <div class="carousel-item">
-                    <span>房源编号:</span>
+                    <span set-lan="html:identifier">房源编号:</span>
                     <div>LT00503</div>
-                    <a class="collet"><i class="fa fa-heart-o"></i><span>收藏</span></a>
+                    <a class="collet"><i class="fa fa-heart-o"></i><span set-lan="html:collect">收藏</span></a>
                 </div>
                 <div class="carousel-item">
-                    <span>房源类型:</span>
+                    <span set-lan="html:category">房源类型:</span>
                     <div class="carousel-type">
                         <span>studio</span>
                         <span>Ensuite</span>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <span>起&nbsp;&nbsp;租&nbsp;&nbsp;期:</span>
+                    <span set-lan="html:lease">起租期:</span>
                     <div>50周</div>
                 </div>
                 <div class="carousel-item">
-                    <span>房源评价:</span>
+                    <span set-lan="html:evaluate">房源评价:</span>
                     <div>
                         <div class="atar_Show">
                             <p tip="4.5"></p>
@@ -111,22 +111,22 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</span>
+                    <span set-lan="html:address">地址:</span>
                     <div class="carousel-place">
                         <span>Chapter Spitalfields,9 Frying Pan A;lley,London,E1 7HS</span>
-                        <a href="#">查看地图</a>
+                        <a href="#" set-lan="html:map">查看地图</a>
                     </div>
                 </div>
             </div>
-            <div class="consult">在线咨询</div>
+            <div class="consult" set-lan="html:consult">在线咨询</div>
         </div>
     </div>
     <div class="margin-30"></div>
     <div id="navHeight">
         <ul class="navigation" id="nav-wrap">
-            <li><a href="#box-1" class="current">房源信息</a></li>
-            <li class="map-title"><a href="#box-2">地图位置</a></li>
-            <li><a href="#box-3">用户评价</a></li>
+            <li><a href="#box-1" class="current" set-lan="html:details">房源信息</a></li>
+            <li class="map-title"><a href="#box-2" set-lan="html:location">地图位置</a></li>
+            <li><a href="#box-3" set-lan="html:evaluates">用户评价</a></li>
         </ul>
     </div>
     <div class="box" id="box-1">
@@ -139,7 +139,7 @@
             </div>
             <div class="box-item-detail">
                 <div class="box-tab">
-                    <div class="box-tab-item box-tab-active" tabindex="1">全部</div>
+                    <div class="box-tab-item box-tab-active" tabindex="1" set-lan="html:whole">全部</div>
                     <div class="box-tab-item" tabindex="2">ensuite</div>
                     <div class="box-tab-item" tabindex="3">studio</div>
                     <i class="fa fa-question-circle-o box-tab-tips"></i>
@@ -162,56 +162,56 @@
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4"><span class="view-matching">查看</span></td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4"><span class="view-matching">查看</span></td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4"><span class="view-matching">查看</span></td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="been">已定完</span>
+                                    <span class="been" set-lan="html:finish">已定完</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4"><span class="view-matching">查看</span></td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             </tbody>
@@ -234,56 +234,56 @@
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="been">已定完</span>
+                                    <span class="been" set-lan="html:finish">已定完</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             </tbody>
@@ -306,56 +306,56 @@
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="been">已定完</span>
+                                    <span class="been" set-lan="html:finish">已定完</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="width-1">201</td>
                                 <td class="width-2">studio</td>
                                 <td class="width-3">2018-10-01</td>
-                                <td class="width-4">查看</td>
+                                <td class="width-4"><span class="view-matching" set-lan="html:see">查看</span></td>
                                 <td class="width-6">
                                     <span class="detail-price-unit">£</span>
                                     <span class="detail-price-num">289.00</span>
                                     <span>/月</span>
                                 </td>
                                 <td>
-                                    <span class="reserve">预定</span>
+                                    <span class="reserve" set-lan="html:reserve">预定</span>
                                 </td>
                             </tr>
                             </tbody>
@@ -460,13 +460,13 @@
         </div>
     </div>
     <div class="box" id="box-2">
-        <div class="title map-title">地图</div>
+        <div class="title map-title" set-lan="html:maps">地图</div>
         <div class="map-content">
             <div id="map"></div>
         </div>
     </div>
     <div class="box" id="box-3">
-        <div class="title">用户评价</div>
+        <div class="title" set-lan="html:evaluates">用户评价</div>
         <div class="evaluate">
             <div class="evaluate-item">
                 <div class="evaluate-img">
@@ -507,14 +507,14 @@
         </div>
         <div class="evaluate-edit">
             <div class="evaluate-score">
-                <span class="pull-left">选择评分</span>
+                <span class="pull-left" set-lan="html:score">选择评分</span>
                 <div id="startone">
                     <div class="star_score"></div>
                     <span class="fenshu"></span>
                 </div>
             </div>
             <div class="evaluate-textarea">
-                <textarea placeholder="请输入您要说的评论内容"></textarea>
+                <textarea placeholder="请输入您要说的评论内容" set-lan="placeholder:evaluateContent"></textarea>
             </div>
             <!--<div class="evaluate-mask">-->
                 <!--<div class="evaluate-login">立即登录</div>-->
@@ -523,12 +523,12 @@
         <div class="evaluate-form">
                 <span class="evaluate-input">
                     <input tabindex="1" type="checkbox" id="input-1">
-                    <label for="input-1"><span>匿名</span></label>
+                    <label for="input-1"><span set-lan="html:anonymous">匿名</span></label>
                 </span>
-            <span class="evaluate-btn">提交</span>
+            <span class="evaluate-btn" set-lan="html:submit">提交</span>
         </div>
     </div>
-    <div class="title">附近房源推荐</div>
+    <div class="title" set-lan="html:nearby">附近房源推荐</div>
     <ul class="recommend">
         <li>
             <a href="#">
@@ -580,16 +580,16 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="matching-header">201房间详情<img src="img/close.png" data-dismiss="modal"/></div>
+                <div class="matching-header">201<span set-lan="html:roomDetail">房间详情</span><img src="img/close.png" data-dismiss="modal"/></div>
                 <div class="matching-content">
                     <div class="matching-list">
-                        <span>户型图</span>
+                        <span set-lan="html:picture">户型图</span>
                         <div class="matching-img">
                             <img src="img/matching.jpg">
                         </div>
                     </div>
                     <div class="matching-list">
-                        <span>配套</span>
+                        <span set-lan="html:matching">配套</span>
                         <div class="matching-span">
                             <span>10m<sup>2</sup></span>
                             <span>独立卫生间</span>
@@ -600,10 +600,9 @@
                         </div>
                     </div>
                     <div class="matching-list">
-                        <span>押金</span>
+                        <span set-lan="html:deposit">押金</span>
                         <div class="matching-deposit">£289.00</div>
                     </div>
-                    <div class="matching-tips">提示：该房源暂无，预计15天后可预定该房源</div>
                 </div>
             </div>
         </div>
@@ -618,5 +617,7 @@
         var load = new Load();
     });
 </script>
+<script src="language/detail.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

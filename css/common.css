@@ -89,6 +89,7 @@ ul,li{
     opacity: 0;
     -webkit-transition: all .25s ease;
     transition: all .25s ease;
+	padding-top: 5px;
 }
 .header-location:hover>.location-detail{
 	opacity: 1;
@@ -263,7 +264,7 @@ ul,li{
   	color: #7f7f7f;
 }
 .footer-item{
-  margin-left: 145px;
+  margin-left: 100px;
 }
 .footer-item>h4{
   color: #000;
@@ -501,7 +502,7 @@ ul,li{
 	margin-top: 10px;
 }
 .login-modal-btn{
-	height: 42px;
+	height: 42px!important;
 	width: 100%;
 	background: #2598cf;
 	color: #fff;
@@ -672,4 +673,13 @@ ul,li{
 }
 .margin-30{
 	margin-top: 30px;
+}
+.margin-145{
+	margin-left: 145px;
+}
+.margin-100{
+	margin-left: 100px;
+}
+.location-item-title{
+	line-height: 30px;
 }

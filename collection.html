@@ -24,32 +24,32 @@
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
     <script src="js/showBo.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/page.js"></script>
     <script src="js/template.js"></script>
-    <script src="js/jquery.cookie.js"></script>
     <script src="js/md5.js"></script>
 <body>
 <div class="header">
     <include src="tpl/header.html"></include>
 </div>
 <div class="bread">
-    <a href="index.html">首页</a><a>我的收藏</a>
+    <a href="index.html" set-lan="html:home">首页</a><a set-lan="html:MyCollection">我的收藏</a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="my-order">我的订单</li>
-                <li class="message-notification">消息通知</li>
-                <li class="personal-information">个人信息</li>
-                <li class="order-aside-active my-collection">我的收藏</li>
-                <li class="security-setting">安全设置</li>
+                <li class="my-order" set-lan="html:MyOrder">我的订单</li>
+                <li class="message-notification" set-lan="html:MessageNotification">消息通知</li>
+                <li class="personal-information" set-lan="html:PersonalInformation">个人信息</li>
+                <li class="my-collection order-aside-active" set-lan="html:MyCollection">我的收藏</li>
+                <li class="security-setting" set-lan="html:SecuritySetting">安全设置</li>
             </ul>
         </div>
         <div class="order-section collection-section">
             <div class="collection-tab">
-                <span class="collection-active" tabindex="1">房源</span>
-                <span tabindex="2">资讯</span>
+                <span class="collection-active" tabindex="1" set-lan="html:housing">房源</span>
+                <span tabindex="2" set-lan="html:news">资讯</span>
             </div>
             <div class="collection-content">
                 <div class="collection-1">
@@ -90,8 +90,8 @@
                 <span><img src="img/list_riding.png">{{$value.houseSchoolEntity.bikeTime}}分</span>
             </div>
         </div>
-        <div class="collection-housing-right">{{$value.currencySymbol}}{{$value.price}}起/月</div>
-        <span class="cancel-collet" type="1" collectId="{{$value.collectId}}">取消收藏</span>
+        <div class="collection-housing-right">{{$value.currencySymbol}}{{$value.price}}{{if $value.houseType=="10"}}起{{/if}}/{{$value.leaseUnitValue}}</div>
+        <span class="cancel-collet" type="1" collectId="{{$value.collectId}}" set-lan="html:cancel">取消收藏</span>
     </div>
     {{/each}}
 </script>
@@ -106,7 +106,7 @@
                 <span>{{$value.createTime}}</span>
             </div>
         </div>
-        <span class="cancel-information" type="2" collectId="{{$value.collectId}}">取消收藏</span>
+        <span class="cancel-information" type="2" collectId="{{$value.collectId}}" set-lan="html:cancel">取消收藏</span>
     </div>
     {{/each}}
 </script>
@@ -122,5 +122,7 @@
         var load = new Load();
     });
 </script>
+<script src="language/down.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

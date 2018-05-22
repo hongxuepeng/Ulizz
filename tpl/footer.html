@@ -3,34 +3,34 @@
         <ul class="footer-list">
             <li class="footer-logo">
                 <img src="img/logo.png">
-                <select class="form-control">
-                    <option value="cn">中文</option>
+                <select class="form-control" id="language">
                     <option value="en">English</option>
+                    <option value="cn">中文</option>
                 </select>
             </li>
-            <li class="footer-item">
-                <h4>荔枝租房</h4>
-                <p>关于我们</p>
+            <li class="footer-item" set-lan="class:item">
+                <h4 set-lan="html:brand">荔枝租房</h4>
+                <p set-lan="html:about">关于我们</p>
             </li>
-            <li class="footer-item">
-                <h4>服务指南</h4>
-                <p>网站协议</p>
-                <p>常见问题</p>
+            <li class="footer-item" set-lan="class:item">
+                <h4 set-lan="html:guide">服务指南</h4>
+                <p set-lan="html:agreement">网站协议</p>
+                <p set-lan="html:problem">常见问题</p>
             </li>
-            <li class="footer-item">
-                <h4>联系我们</h4>
-                <p>国内客服</p>
+            <li class="footer-item" set-lan="class:item">
+                <h4 set-lan="html:contact">联系我们</h4>
+                <p set-lan="html:domestic">国内客服</p>
                 <p>400-8652546</p>
-                <p>国外客服</p>
+                <p set-lan="html:abroad">国外客服</p>
                 <p>+86-10-2531235</p>
             </li>
-            <li class="footer-item">
+            <li class="footer-item" set-lan="class:item">
                 <div class="footer-qq">
-                    <p class="footer-title">QQ交流群</p>
+                    <p class="footer-title" set-lan="html:group">QQ交流群</p>
                     <p>265465565</p>
                 </div>
                 <div class="footer-email">
-                    <p class="footer-title">联系邮箱</p>
+                    <p class="footer-title" set-lan="html:problem">联系邮箱</p>
                     <p>huahsi@group.com</p>
                 </div>
             </li>
@@ -85,3 +85,14 @@
         <div>深圳市华世恒通网络科技有限公司</div>
     </div>
 </div>
+<script>
+    var lanValue = $.cookie('lan');
+    if(lanValue!=null&&lanValue!=undefined&&lanValue!=''){
+        $("#language").val(lanValue)
+    }
+    $("#language").on('change',function () {
+        var lan = $(this).val();
+        $.cookie('lan',lan);
+        location.reload();
+    });
+</script>

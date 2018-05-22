@@ -27,8 +27,8 @@
             <div class="register-right">
                 <div class="register-group">
                     <ul class="register-tab">
-                        <li class="register-tab-active" tabindex="1">手机注册</li>
-                        <li tabindex="2">邮箱注册</li>
+                        <li class="register-tab-active" tabindex="1" set-lan="html:mobile">手机注册</li>
+                        <li tabindex="2" set-lan="html:emial">邮箱注册</li>
                     </ul>
                     <div class="register-content">
                         <div class="register-content-1">
@@ -37,7 +37,7 @@
                                     （+86）
                                 </div>
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入手机号" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                    <input type="text" placeholder="请输入手机号" set-lan="placeholder:phoneInput" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
                                            onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" id="phone-input">
                                 </div>
                                 <ul class="login-modal-menu" id="phone-key" data-key="+86">
@@ -51,32 +51,32 @@
                             <div class="bind-modal-form specil-modal-form">
                                 <div class="login-modal-right">
                                     <input type="text" id="phone-captcha" autocomplete="off" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
-                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入6位验证码">
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入6位验证码" set-lan="placeholder:codeInput">
                                 </div>
-                                <div class="bind-modal-code phone-code">获取验证码</div>
+                                <div class="bind-modal-code phone-code" set-lan="html:obtain">获取验证码</div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" id="phone-password">
+                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" set-lan="placeholder:passwordInput" id="phone-password">
                                 </div>
                             </div>
                         </div>
                         <div class="register-content-2">
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="text" placeholder="请输入邮箱账号" id="email-input">
+                                    <input type="text" placeholder="请输入邮箱账号" set-lan="placeholder:emailInput" id="email-input">
                                 </div>
                             </div>
                             <div class="bind-modal-form specil-modal-form">
                                 <div class="login-modal-right">
                                     <input type="text" id="email-captcha" autocomplete="off" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
-                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入6位验证码">
+                                           onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" placeholder="请输入6位验证码" set-lan="placeholder:codeInput">
                                 </div>
-                                <div class="bind-modal-code email-code">获取验证码</div>
+                                <div class="bind-modal-code email-code" set-lan="html:obtain">获取验证码</div>
                             </div>
                             <div class="login-modal-form">
                                 <div class="login-modal-right">
-                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" id="email-password">
+                                    <input type="password" autocomplete="new-password" placeholder="设置8至15位英文+数字密码" set-lan="placeholder:passwordInput" id="email-password">
                                 </div>
                             </div>
                         </div>
@@ -88,16 +88,52 @@
                             <!--<label for="input-login">-->
                                 <!--<span>已阅读并同意<a href="#">《用户服务协议》</a></span>-->
                             <!--</label>-->
-                            <span class="login-input-tips">注册即同意<a href="#">《用户服务协议》</a></span>
+                            <span class="login-input-tips"><span set-lan="html:agreed">注册即同意</span><a href="#">《<span set-lan="html:protocol">用户服务协议</span>》</a></span>
                         </span>
                     </div>
-                    <div class="login-modal-btn">立即注册</div>
+                    <div class="login-modal-btn" set-lan="html:register">立即注册</div>
                 </div>
             </div>
         </div>
     </body>
 <script>
     var url= 'http://47.106.83.149:8081/api';
+    var ctips={
+        mobile: '请输入手机号',
+        mobileFormat: '手机格式不正确',
+        email: '请输入邮箱',
+        emailFormat: '邮箱格式不正确',
+        code: '请输入验证码',
+        codeFormat: '验证码错误',
+        password: '请输入密码',
+        passwordFormat: '密码格式不正确，请重新输入',
+        success: '注册成功',
+        close: '2秒后自动关闭'
+    }
+    var etips={
+        mobile: 'Please enter the cell phone number',
+        mobileFormat: 'Mobile phone format is incorrect',
+        email: 'Please enter the mailbox',
+        emailFormat: 'Incorrect mailbox format',
+        code: 'Please enter the verification code',
+        codeFormat: 'Verification code error',
+        password: 'Please input a password',
+        passwordFormat: 'The password format is incorrect, please retype',
+        success: 'login was successful',
+        close: 'Automatically shut down after 2 seconds'
+    }
+    var lan = $.cookie('lan');
+    //选取语言文字
+    switch(lan){
+        case 'cn':
+            var tips = ctips;  //这里cn[m]中的cn是上面定义的json字符串的变量名，m是json中的键，用此方式读取到json中的值
+            break;
+        case 'en':
+            var tips = etips;
+            break;
+        default:
+            var tips = etips;
+    }
     $(document).bind("click", function (e) {
         if (!$(".login-modal-menu").is(":hidden")) {
             if ($(e.target).closest(".login-modal-left,.login-modal-menu").length == 0) {
@@ -177,17 +213,17 @@
             var phoneCaptcha = $("#phone-captcha").val();
             var phonePassword = $("#phone-password").val();
             if(mobile==""){
-                $(".login-modal-tips").show().text("请输入手机号");
+                $(".login-modal-tips").show().text(tips.mobile);
             }else if(!thisReg.test(mobile)){
-                $(".login-modal-tips").show().text("手机格式不正确");
+                $(".login-modal-tips").show().text(tips.mobileFormat);
             }else if(phoneCaptcha==""){
-                $(".login-modal-tips").show().text("请输入手机验证码");
+                $(".login-modal-tips").show().text(tips.code);
             }else if(!codereg.test(phoneCaptcha)){
-                $(".login-modal-tips").show().text("验证码错误");
+                $(".login-modal-tips").show().text(tips.codeFormat);
             }else if(phonePassword==""){
-                $(".login-modal-tips").show().text("请输入密码");
+                $(".login-modal-tips").show().text(tips.password);
             }else if(!myreg.test(phonePassword)){
-                $(".login-modal-tips").text("密码格式不正确，请重新输入").show();
+                $(".login-modal-tips").text(tips.passwordFormat).show();
             }else{
                 $.ajax({
                     url:url+'/register',
@@ -200,8 +236,8 @@
                         //console.log(data);
                         if(data.code=="0"){
                             swal({
-                                title: "注册成功!",
-                                text: '2秒后自动关闭',
+                                title: tips.success,
+                                text: tips.close,
                                 type: "success",
                                 timer:2000,
                                 showConfirmButton: false
@@ -226,17 +262,17 @@
             var emailCaptcha = $("#email-captcha").val();
             var emailPassword = $("#email-password").val();
             if(email==""){
-                $(".login-modal-tips").show().text("请输入邮箱");
+                $(".login-modal-tips").show().text(tips.email);
             }else if(!emailReg.test(email)){
-                $(".login-modal-tips").show().text("邮箱格式不正确");
+                $(".login-modal-tips").show().text(tips.emailFormat);
             }else if(emailCaptcha==""){
-                $(".login-modal-tips").show().text("请输入邮箱验证码");
+                $(".login-modal-tips").show().text(tips.code);
             }else if(!codereg.test(emailCaptcha)){
-                $(".login-modal-tips").show().text("验证码错误");
+                $(".login-modal-tips").show().text(tips.codeFormat);
             }else if(emailPassword==""){
-                $(".login-modal-tips").show().text("请输入密码");
+                $(".login-modal-tips").show().text(tips.password);
             }else if(!myreg.test(emailPassword)){
-                $(".login-modal-tips").text("密码格式不正确，请重新输入").show();
+                $(".login-modal-tips").text(tips.passwordFormat).show();
             }else{
                 $.ajax({
                     url:url+'/register',
@@ -248,8 +284,8 @@
                     success:function(data){
                         if(data.code=="0"){
                             swal({
-                                title: "注册成功!",
-                                text: '2秒后自动关闭',
+                                title: tips.success,
+                                text: tips.close,
                                 type: "success",
                                 timer:2000,
                                 showConfirmButton: false
@@ -281,4 +317,6 @@
         $(".login-modal-tips").hide();
     });
 </script>
+<script src="language/account.js"></script>
+<script src="js/language.js"></script>
 </html>

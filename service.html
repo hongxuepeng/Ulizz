@@ -33,14 +33,7 @@
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
-            <ul class="order-aside-list">
-                <li class="order-aside-active" type="1">客户服务</li>
-                <li type="2">预定流程</li>
-                <li type="6">网络条款</li>
-                <li type="3">费用及支付问题</li>
-                <li type="5">退订及退款政策</li>
-                <li type="4">入住后及注意事项</li>
-            </ul>
+            <ul class="order-aside-list"></ul>
         </div>
         <div class="order-section">
             <div class="service-title">客户服务</div>
@@ -55,11 +48,13 @@
 <script type="text/html" id="NoData">
     <div class="no-data text-center">
         <img src="img/no-data.png">
-        <div>暂无内容</div>
+        <div class="no-text">暂无内容</div>
     </div>
 </script>
 <script type="text/html" id="ServiceTab">
-    <li>预定流程</li>
+    {{each list}}
+    <li class="{{if $index==0}}order-aside-active{{/if}}" type="{{$value.code}}">{{$value.value}}</li>
+    {{/each}}
 </script>
 <script type="text/html" id="ServiceHtml">
     {{each list}}
@@ -74,5 +69,7 @@
         var load = new Load();
     });
 </script>
+<script src="language/news.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

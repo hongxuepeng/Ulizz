@@ -46,23 +46,23 @@
         </div>
         <div class="swiper-search">
             <div class="search-left pull-left" id="SearchBox">
-                <input type="text" placeholder="请输入城市、公寓名称、学校" class="pull-left search-val" id="text-search">
-                <div class="pull-left search-btn">搜索</div>
+                <input type="text" set-lan="placeholder:holderSearch" placeholder="请输入城市、公寓名称、学校" class="pull-left search-val" id="text-search">
+                <div class="pull-left search-btn" set-lan="html:search">搜索</div>
                 <div class="search-content shadow">
-                    <div class="search-history">
-                        <div class="history-title">历史搜索</div>
-                        <div class="history-detail">
-                            <span><img src="img/place_1.png">汉诺丁大学</span>
-                            <span><img src="img/place_2.png">汉诺丁helloroom公寓</span>
-                            <span><img src="img/place_3.png">东京</span>
-                        </div>
-                        <div class="history-delete">
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </div>
-                    </div>
+                    <!--<div class="search-history">-->
+                        <!--<div class="history-title">历史搜索</div>-->
+                        <!--<div class="history-detail">-->
+                            <!--<span><img src="img/place_1.png">汉诺丁大学</span>-->
+                            <!--<span><img src="img/place_2.png">汉诺丁helloroom公寓</span>-->
+                            <!--<span><img src="img/place_3.png">东京</span>-->
+                        <!--</div>-->
+                        <!--<div class="history-delete">-->
+                            <!--<i class="glyphicon glyphicon-trash"></i>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="search-detail">
                         <div class="search-title">
-                            <span><img src="img/place_1.png">学校</span>
+                            <span><img src="img/place_1.png"><span set-lan="html:school">学校</span></span>
                         </div>
                         <ul class="search-section">
                             <li>东京大学</li>
@@ -74,11 +74,9 @@
                     </div>
                 </div>
             </div>
-            <div class="search-right pull-right">
-                地图找房
-            </div>
+            <div class="search-right pull-right" set-lan="html:map">地图找房</div>
             <div class="hot-search">
-                <span>热门搜索:</span>
+                <span set-lan="html:hotSearch">热门搜索:</span>
                 <a>芝加哥大学</a>
                 <a>纽约大学</a>
                 <a>华盛顿大学</a>
@@ -88,23 +86,23 @@
     <div class="wrap">
         <div class="wrap-item">
             <img src="img/wrap_icon1.png">
-            <div>专业团队</div>
+            <div set-lan="html:team">专业团队</div>
         </div>
         <div class="wrap-item">
             <img src="img/wrap_icon2.png">
-            <div>简洁流程</div>
+            <div set-lan="html:flow">简洁流程</div>
         </div>
         <div class="wrap-item">
             <img src="img/wrap_icon3.png">
-            <div>交易省心</div>
+            <div set-lan="html:transaction">交易省心</div>
         </div>
     </div>
-    <div class="title map-title">地图找房</div>
+    <div class="title map-title" set-lan="html:map">地图找房</div>
     <div class="map-content">
-        <div class="country">伦敦</div>
+        <div class="country" set-lan="html:city">伦敦</div>
         <div id="map"></div>
     </div>
-    <div class="title">纽约热门公寓推荐</div>
+    <div class="title" set-lan="html:recommend">热门公寓推荐</div>
     <div class="hot-apartment">
         <ul class="hot-list">
             <li class="hot-item">
@@ -192,11 +190,11 @@
                 </ul>
             </li>
         </ul>
-        <a href="list.html" class="view-more">查看更多<img src="img/more_icon.png"/></a>
+        <a href="list.html" class="view-more"><span set-lan="html:more">查看更多</span><img src="img/more_icon.png"/></a>
     </div>
-    <div class="title">快速申请</div>
+    <div class="title" set-lan="html:apply">快速申请</div>
     <div class="apply"></div>
-    <div class="title">您的贴身顾问</div>
+    <div class="title" set-lan="html:adviser">您的贴身顾问</div>
     <ul class="adviser">
         <li>
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -269,7 +267,7 @@
             <div class="adviser-tel">15220070233</div>
         </li>
     </ul>
-    <div class="title">合作伙伴</div>
+    <div class="title" set-lan="html:partner">合作伙伴</div>
     <ul class="partner">
         <li><img src="img/partner_1.png"/></li>
         <li><img src="img/partner_2.png"/></li>
@@ -350,4 +348,6 @@
         var load = new Load();
     });
 </script>
+<script src="language/index.js"></script>
+<script src="js/language.js"></script>
 </html>

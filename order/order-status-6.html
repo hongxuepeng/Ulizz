@@ -2,34 +2,34 @@
     <div class="order-detail-header">
         <img src="img/logo.png">
         <div class="bread">
-            <a href="index.html">首页</a><a href="order.html">我的订单</a><a>详情</a>
+            <a href="index.html" set-lan="html:home">首页</a><a href="order.html" set-lan="html:MyOrder">我的订单</a><a set-lan="html:detail">详情</a>
         </div>
         <ul class="box-num-parent">
             <li class="box-num-complate">
                 <div class="box-num1">
                     <img src="img/step_success.png">
                 </div>
-                <span>提交订单</span>
+                <span set-lan="html:PlaceOrder">提交订单</span>
             </li>
-            <li class="box-num-complate">
+            <li>
                 <div class="box-num2">2</div>
-                <span>公寓确认</span>
+                <span set-lan="html:PlatformConfirmation">平台确认</span>
             </li>
             <li>
                 <div class="box-num3">3</div>
-                <span>支付定金</span>
+                <span set-lan="html:deposit">支付定金</span>
             </li>
             <li>
                 <div class="box-num4">4</div>
-                <span>申请认证</span>
+                <span set-lan="html:authentication">资料认证</span>
             </li>
             <li>
                 <div class="box-num5">5</div>
-                <span>支付房租</span>
+                <span set-lan="html:rent">支付房租</span>
             </li>
             <li>
                 <div class="box-num6">6</div>
-                <span>交易房租</span>
+                <span set-lan="html:finish">交易完成</span>
             </li>
         </ul>
     </div>
@@ -38,35 +38,35 @@
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="order-aside-active my-order">我的订单</li>
-                <li class="message-notification">消息通知</li>
-                <li class="message-notification">个人信息</li>
-                <li class="my-collection">我的收藏</li>
-                <li class="security-setting">安全设置</li>
+                <li class="order-aside-active my-order" set-lan="html:MyOrder">我的订单</li>
+                <li class="message-notification" set-lan="html:MessageNotification">消息通知</li>
+                <li class="message-notification" set-lan="html:PersonalInformation">个人信息</li>
+                <li class="my-collection" set-lan="html:MyCollection">我的收藏</li>
+                <li class="security-setting" set-lan="html:SecuritySetting">安全设置</li>
             </ul>
         </div>
         <div class="order-section">
             <div class="order-section-header">
-                <span>下单时间：</span><span>2018-01-08 15:02:00</span>
-                <span class="margin-left">订单编号：</span><span>JP18032836852</span>
+                <span set-lan="html:OrderTime">下单时间</span>：<span>2018-01-08 15:02:00</span>
+                <span class="margin-left" set-lan="html:OrderNumber">订单编号</span>：<span>JP18032836852</span>
             </div>
-            <div class="order-tips">支付提醒：支付超时，订单已关闭，如需预定请重新提交！</div>
+            <div class="order-tips"><span set-lan="html:remind">支付提醒</span>：支付超时，订单已关闭，如需预定请重新提交！</div>
             <div class="order-title">
-                <span>房源信息</span>
+                <span set-lan="html:HousingInformation">房源信息</span>
                 <div class="order-title-status">
-                    <span>订单状态：</span>
+                    <span set-lan="html:OrderStatus">订单状态</span>：
                     <span>已关闭</span>
                 </div>
             </div>
             <div class="housing-information">
                 <img src="img/news_hot1.png">
                 <div class="housing-content">
-                    <h4>学生公寓 University Gatewayroom</h4>
+                    <h4>University Gatewayroom</h4>
                     <ul>
-                        <li>房源类型：<span>studio</span></li>
-                        <li>房号：<span>201</span></li>
-                        <li>起租期：<span>50周</span></li>
-                        <li>起租日期：<span>2018-10-01</span></li>
+                        <li><span set-lan="html:category">房源类型</span><span>：studio</span></li>
+                        <li><span set-lan="html:number">房号</span><span>：201</span></li>
+                        <li><span set-lan="html:lease">起租期</span><span>：50周</span></li>
+                        <li><span set-lan="html:date">起租日期</span><span>：2018-10-01</span></li>
                     </ul>
                     <div class="order-price-num">
                         <span>£</span>
@@ -76,19 +76,19 @@
                 </div>
             </div>
             <div class="order-title">
-                <span>费用明细</span>
+                <span set-lan="html:charges">费用明细</span>
             </div>
             <ul class="cost-detailed">
                 <li>
-                    押&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金：
+                    <small><small set-lan="html:CashPledge">押金</small>：</small>
                     <span>￡289.00</span>
                 </li>
                 <li>
-                    总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计：
+                    <small><small set-lan="html:Total">总计</small>：</small>
                     <span>￡100.00</span>
                 </li>
                 <li>
-                    R&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;B：
+                    <small><small>RMB</small>：</small>
                     <span>￥1005.00
                         <span class="order-help">
                             <i class="fa fa-question-circle"></i>
@@ -98,31 +98,31 @@
                 </li>
             </ul>
             <div class="order-title">
-                <span>预定信息</span>
+                <span set-lan="html:reserve">预定信息</span>
             </div>
             <div class="order-user-information">
                 <div class="order-user-div">
-                    <div class="order-user-item"><span>姓名：</span><span>刘志辉</span></div>
-                    <div class="order-user-item"><span>手机号：</span><span>+8613265694844</span></div>
-                    <div class="order-user-item"><span>邮箱：</span><span>1078023467@163.com</span></div>
-                    <div class="order-user-item"><span>微信：</span><span>liu19234</span></div>
-                    <div class="order-user-item"><span>期望入住日期：</span><span>2018-10-01</span></div>
-                    <div class="order-user-item"><span>租期：</span><span>50周</span></div>
-                    <div class="order-user-item"><span>国家：</span><span>英国</span></div>
+                    <div class="order-user-item"><span set-lan="html:name">姓名</span>：<span>刘志辉</span></div>
+                    <div class="order-user-item"><span set-lan="html:phone">手机号</span>：<span>+8613265694844</span></div>
+                    <div class="order-user-item"><span set-lan="html:email">邮箱</span>：<span>1078023467@163.com</span></div>
+                    <div class="order-user-item"><span set-lan="html:wechat">微信</span>：<span>liu19234</span></div>
+                    <div class="order-user-item"><span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span></div>
+                    <div class="order-user-item"><span set-lan="html:leases">租期</span>：<span>50周</span></div>
+                    <div class="order-user-item"><span set-lan="html:country">国家</span>：<span>英国</span></div>
                 </div>
                 <div class="order-user-div">
-                    <span>备注信息：</span><span>我需要单独卫生间、单独厨房,需要健身房和洗衣房,安全性必须有保障的公寓。</span>
+                    <span set-lan="html:remarks">备注信息</span>：<span>我需要单独卫生间、单独厨房,需要健身房和洗衣房,安全性必须有保障的公寓。</span>
                 </div>
             </div>
             <div class="order-title">
-                <span>注意事项</span>
+                <span set-lan="html:attention">注意事项</span>
             </div>
             <div class="be-careful">
-                <div class="be-careful-title">1、退款规则：</div>
+                <div class="be-careful-title">1、<span set-lan="html:RefundsRule">退款规则</span>：</div>
                 <div class="text-center">
                     <img src="img/refunds-rule.png" alt="">
                 </div>
-                <div class="be-careful-title">2、其他：</div>
+                <div class="be-careful-title">2、<span set-lan="html:other">其他</span>：</div>
                 <div>如果取消订单或没有入住，将收取全部预付房费作为违约金支付给房东如提前退房，将收取全部剩余，房费作为违约金支付给房东。</div>
             </div>
         </div>

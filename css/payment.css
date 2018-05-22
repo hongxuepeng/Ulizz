@@ -159,3 +159,6 @@ body{
     padding-bottom: 30px;
     cursor: pointer;
 }
+.payment-money small{
+    font-size: 14px;
+}

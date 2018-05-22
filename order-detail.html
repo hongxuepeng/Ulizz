@@ -26,6 +26,7 @@
 </head>
 <body>
     <include class="order-include" src="order/order-status-1.html"></include>
+    <include src="tpl/footer.html"></include>
     <script>
         function getUrlParam(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
@@ -66,5 +67,7 @@
             });
         });
     </script>
+    <script src="language/order-detail.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

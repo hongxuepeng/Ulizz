@@ -33,53 +33,53 @@
     <include src="tpl/header.html"></include>
 </div>
 <div class="bread">
-    <a href="index.html">首页</a><a>个人信息</a>
+    <a href="index.html" set-lan="html:home">首页</a><a set-lan="html:PersonalInformation">个人信息</a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="my-order">我的订单</li>
-                <li class="message-notification">消息通知</li>
-                <li class="personal-information order-aside-active">个人信息</li>
-                <li class="my-collection">我的收藏</li>
-                <li class="security-setting">安全设置</li>
+                <li class="my-order" set-lan="html:MyOrder">我的订单</li>
+                <li class="message-notification" set-lan="html:MessageNotification">消息通知</li>
+                <li class="personal-information order-aside-active" set-lan="html:PersonalInformation">个人信息</li>
+                <li class="my-collection" set-lan="html:MyCollection">我的收藏</li>
+                <li class="security-setting" set-lan="html:SecuritySetting">安全设置</li>
             </ul>
         </div>
         <div class="order-section">
-            <div class="personal-title">个人信息</div>
+            <div class="personal-title" set-lan="html:PersonalInformation">个人信息</div>
             <div class="personal-list">
-                <div class="personal-name">头像</div>
+                <div class="personal-name" set-lan="html:portrait">头像</div>
                 <div class="personal-right personal-img">
                     <img src="img/user1.png" id="finalImg" class="pull-left">
                     <div class="pull-left personal-div">
-                        <div class="personal-img-btn" id="replaceImg">本地照片</div>
-                        <div>仅支持png、jpg格式，小于2M</div>
+                        <div class="personal-img-btn" id="replaceImg" set-lan="html:local">本地照片</div>
+                        <div set-lan="html:format">仅支持png、jpg格式，小于2M</div>
                     </div>
                 </div>
             </div>
             <div class="personal-list">
-                <div class="personal-name">昵称</div>
+                <div class="personal-name" set-lan="html:nickname">昵称</div>
                 <div class="personal-right">
                     <input type="text" class="form-control">
                 </div>
             </div>
             <div class="personal-list">
-                <div class="personal-name">姓名</div>
+                <div class="personal-name" set-lan="html:name">姓名</div>
                 <div class="personal-right">
                     <input type="text" class="form-control pull-left" readonly>
-                    <span class="pull-left">务必填写真实姓名，编辑后不可修改！</span>
+                    <span class="pull-left" set-lan="html:must">务必填写真实姓名，编辑后不可修改！</span>
                 </div>
             </div>
             <div class="personal-list">
-                <div class="personal-name">手机号</div>
+                <div class="personal-name" set-lan="html:phone">手机号</div>
                 <div class="personal-right">
                     <input type="text" class="form-control pull-left">
-                    <span class="pull-left revise">修改</span>
+                    <span class="pull-left revise" set-lan="html:modify">修改</span>
                 </div>
             </div>
             <div class="personal-list">
-                <div class="personal-name">国家</div>
+                <div class="personal-name" set-lan="html:country">国家</div>
                 <div class="personal-right">
                     <select class="form-control">
                         <option value="1">中国</option>
@@ -87,14 +87,14 @@
                 </div>
             </div>
             <div class="personal-list">
-                <div class="personal-name">邮箱</div>
+                <div class="personal-name" set-lan="html:email">邮箱</div>
                 <div class="personal-right">
                     <input type="text" class="form-control pull-left">
-                    <div class="pull-left validate-status unverified">未验证</div>
-                    <span class="pull-left validate">去验证</span>
+                    <div class="pull-left validate-status unverified" set-lan="html:unverified">未验证</div>
+                    <span class="pull-left validate" set-lan="html:validate">去验证</span>
                 </div>
             </div>
-            <div class="personal-save">保存</div>
+            <div class="personal-save" set-lan="html:save">保存</div>
         </div>
     </div>
 </div>
@@ -137,13 +137,13 @@
                 </div>
                 <div class="change-content">
                     <div class="change-modal-item">
-                        <span>新手机号</span>
+                        <span set-lan="html:phone">新手机号</span>
                         <div class="change-modal-form padding-100">
                             <div class="change-modal-left">
                                 （+86）
                             </div>
                             <div class="change-modal-right">
-                                <input type="text" placeholder="请输入手机号">
+                                <input type="text" placeholder="请输入手机号" set-lan="placeholder:mobileInput">
                             </div>
                             <ul class="change-modal-menu">
                                 <li key="86">中国(+86)</li>
@@ -155,16 +155,16 @@
                         </div>
                     </div>
                     <div class="change-modal-item">
-                        <span>验证码</span>
+                        <span set-lan="html:code">验证码</span>
                         <div class="bind-modal-form specil-modal-form">
                             <div class="login-modal-right">
-                                <input type="text" placeholder="请输入验证码">
+                                <input type="text" placeholder="请输入验证码" set-lan="placeholder:codeInput">
                             </div>
-                            <div class="change-modal-code change-modal-phone">获取验证码</div>
+                            <div class="change-modal-code change-modal-phone" set-lan="html:obtain">获取验证码</div>
                         </div>
                     </div>
                 </div>
-                <div class="change-btn">确定</div>
+                <div class="change-btn" set-lan="html:confirm">确定</div>
             </div>
         </div>
     </div>
@@ -178,24 +178,24 @@
                 </div>
                 <div class="change-content">
                     <div class="change-modal-item">
-                        <span>邮箱</span>
+                        <span set-lan="html:email">邮箱</span>
                         <div class="change-modal-form">
                             <div class="change-modal-right">
-                                <input type="text" placeholder="请输入邮箱">
+                                <input type="text" placeholder="请输入邮箱" set-lan="placeholder:emialInput">
                             </div>
                         </div>
                     </div>
                     <div class="change-modal-item">
-                        <span>验证码</span>
+                        <span set-lan="html:code">验证码</span>
                         <div class="bind-modal-form specil-modal-form">
                             <div class="login-modal-right">
-                                <input type="text" placeholder="请输入验证码">
+                                <input type="text" placeholder="请输入验证码" set-lan="placeholder:codeInput">
                             </div>
-                            <div class="change-modal-code change-modal-email">获取验证码</div>
+                            <div class="change-modal-code change-modal-email" set-lan="html:obtain">获取验证码</div>
                         </div>
                     </div>
                 </div>
-                <div class="change-btn">确定</div>
+                <div class="change-btn" set-lan="html:confirm">确定</div>
             </div>
         </div>
     </div>
@@ -227,5 +227,7 @@
         $(".change-modal-menu").hide();
     });
 </script>
+<script src="language/down.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

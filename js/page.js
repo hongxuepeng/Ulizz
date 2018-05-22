@@ -1,6 +1,33 @@
 /**
  * Created by zxm on 2017/3/31.
  */
+var lan = $.cookie('lan');
+switch(lan){
+    case 'cn':
+        var language={
+            first: '首页',
+            Tail: '尾页',
+            previous: '上一页',
+            next: '下一页'
+        }
+        break;
+    case 'en':
+        var language={
+            first: 'First',
+            Tail: 'Tail',
+            previous: 'Prev',
+            next: 'Next'
+        }
+        break;
+    default:
+        var language={
+            first: 'First',
+            Tail: 'Tail',
+            previous: 'Prev',
+            next: 'Next'
+        }
+
+}
 $.fn.extend({
     "initPage":function(listCount,currentPage,fun){
         var maxshowpageitem = $(this).attr("maxshowpageitem");
@@ -72,8 +99,8 @@ var  page = {
             nextPageClass="pageItemDisable";
         }
         var appendStr ="";
-        appendStr+="<li class='"+prePageClass+"' page-data='1' page-rel='firstpage'>首页</li>";
-        appendStr+="<li class='"+prePageClass+"' page-data='"+prePage+"' page-rel='prepage'>&lt;上一页</li>";
+        appendStr+="<li class='"+prePageClass+"' page-data='1' page-rel='firstpage'>"+language.first+"</li>";
+        appendStr+="<li class='"+prePageClass+"' page-data='"+prePage+"' page-rel='prepage'>&lt; "+language.previous+"</li>";
         var miniPageNumber = 1;
         if(currentPage-parseInt(page.maxshowpageitem/2)>0&&currentPage+parseInt(page.maxshowpageitem/2)<=pageCount){
             miniPageNumber = currentPage-parseInt(page.maxshowpageitem/2);
@@ -96,8 +123,8 @@ var  page = {
 
             appendStr+="<li class='"+itemPageClass+"' page-data='"+pageNumber+"' page-rel='itempage'>"+pageNumber+"</li>";
         }
-        appendStr+="<li class='"+nextPageClass+"' page-data='"+nextPage+"' page-rel='nextpage'>下一页&gt;</li>";
-        appendStr+="<li class='"+nextPageClass+"' page-data='"+pageCount+"' page-rel='lastpage'>尾页</li>";
+        appendStr+="<li class='"+nextPageClass+"' page-data='"+nextPage+"' page-rel='nextpage'>"+language.next+" &gt;</li>";
+        appendStr+="<li class='"+nextPageClass+"' page-data='"+pageCount+"' page-rel='lastpage'>"+language.Tail+"</li>";
        return appendStr;
 
     }

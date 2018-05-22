@@ -70,7 +70,7 @@ Load.prototype = {
         $.ajax({
             url:this.url+'/collect/list',
             type:'GET',//GET
-            async:true,//或false,是否异步,
+            async:false,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             data:{currPage:page,pageSize:10,type:1,token:$.cookie('token')},
@@ -108,7 +108,7 @@ Load.prototype = {
         $.ajax({
             url:this.url+'/collect/list',
             type:'GET',//GET
-            async:true,//或false,是否异步,
+            async:false,//或false,是否异步,
             timeout:5000,//超时时间
             dataType:'json',
             data:{currPage:page,pageSize:10,type:2,token:$.cookie('token')},

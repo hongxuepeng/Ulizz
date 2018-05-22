@@ -21,11 +21,11 @@
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/toTop.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/page.js"></script>
     <script src="js/icheck.min.js"></script>
     <script src="js/include.js"></script>
     <script src="js/showBo.js"></script>
-    <script src="js/jquery.cookie.js"></script>
     <script src="js/md5.js"></script>
 </head>
 <body>
@@ -33,28 +33,28 @@
     <include src="tpl/header.html"></include>
 </div>
 <div class="bread">
-    <a href="index.html">首页</a><a>我的订单</a>
+    <a href="index.html" set-lan="html:home"></a><a set-lan="html:MyOrder"></a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="order-aside-active my-order">我的订单</li>
-                <li class="message-notification">消息通知</li>
-                <li class="personal-information">个人信息</li>
-                <li class="my-collection">我的收藏</li>
-                <li class="security-setting">安全设置</li>
+                <li class="order-aside-active my-order" set-lan="html:MyOrder"></li>
+                <li class="message-notification" set-lan="html:MessageNotification"></li>
+                <li class="personal-information" set-lan="html:PersonalInformation"></li>
+                <li class="my-collection" set-lan="html:MyCollection"></li>
+                <li class="security-setting" set-lan="html:SecuritySetting"></li>
             </ul>
         </div>
         <ul class="order-section">
             <li class="order-section-item" status="1">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">待审核</span>
                     </span>
                 </div>
@@ -63,12 +63,12 @@
                        <img src="img/news_hot3.png">
                    </div>
                    <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                        <div class="order-room-type">
-                           <span>房型：</span><span>studio（201）</span>
+                           <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                        </div>
                        <div class="order-room-date">
-                           <span>入住日期：</span><span>2018-10-01</span>
+                           <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                        </div>
                    </div>
                    <div class="pull-left order-price">
@@ -82,26 +82,31 @@
                    </div>
                    <div class="pull-left order-operation">
                        <ul class="text-center order-operation-box">
-                           <li><span class="order-view">查看详情</span></li>
-                           <li><span class="order-edit">修改订单</span></li>
-                           <li><span class="order-cancel">取消订单</span></li>
+                           <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                           <li><span class="order-edit" set-lan="html:revise">修改订单</span></li>
+                           <li><span class="order-cancel" set-lan="html:cancel">取消订单</span></li>
                        </ul>
                    </div>
                </div>
            </li>
             <li class="order-section-item" status="2">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">待支付</span>
                     </span>
                     <span class="pull-right payment-deadline">
-                        <span><i class="fa fa-clock-o"></i>付款截止：</span>
-                        <span class="order-status">剩余<span>21</span>小时<span>25</span>分<span>36</span>秒</span>
+                        <span><i class="fa fa-clock-o"></i><span set-lan="html:deadline">付款截止</span></span>：
+                        <span class="order-status">
+                            <span set-lan="html:surplus">剩余</span>
+                            <span>21</span><span set-lan="html:hour">小时</span>
+                            <span>25</span><span set-lan="html:min">分</span>
+                            <span>36</span><span set-lan="html:s">秒</span>
+                        </span>
                     </span>
                 </div>
                 <div class="order-section-content">
@@ -109,12 +114,12 @@
                         <img src="img/news_hot4.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -123,31 +128,36 @@
                                 <span>£</span>
                                 <span class="detail-price-num">265.00</span>
                             </div>
-                            <div class="order-price-tips">（定金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:deposit">定金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-operation-btn">立即付款</span></li>
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-cancel">取消订单</span></li>
+                            <li><span class="order-operation-btn" set-lan="html:payment">立即付款</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-cancel" set-lan="html:cancel">取消订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="3">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">待支付</span>
                     </span>
                     <span class="pull-right payment-deadline">
-                        <span><i class="fa fa-clock-o"></i>付款截止：</span>
-                        <span class="order-status">剩余<span>21</span>小时<span>25</span>分<span>36</span>秒</span>
+                        <span><i class="fa fa-clock-o"></i><span set-lan="html:deadline">付款截止</span></span>：
+                        <span class="order-status">
+                            <span set-lan="html:surplus">剩余</span>
+                            <span>21</span><span set-lan="html:hour">小时</span>
+                            <span>25</span><span set-lan="html:min">分</span>
+                            <span>36</span><span set-lan="html:s">秒</span>
+                        </span>
                     </span>
                 </div>
                 <div class="order-section-content">
@@ -155,12 +165,12 @@
                         <img src="img/news_hot1.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -169,25 +179,25 @@
                                 <span>£</span>
                                 <span class="detail-price-num">1289.00</span>
                             </div>
-                            <div class="order-price-tips">（房租+押金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:CashPledge">房租+押金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-operation-btn">立即付款</span></li>
-                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-operation-btn" set-lan="html:payment">立即付款</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="4">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">待认证</span>
                     </span>
                 </div>
@@ -196,12 +206,12 @@
                         <img src="img/news_hot3.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -215,20 +225,20 @@
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-cancel">取消订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-cancel" set-lan="html:cancel">取消订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="5">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">交易完成</span>
                     </span>
                 </div>
@@ -237,12 +247,12 @@
                         <img src="img/news_hot2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -255,20 +265,20 @@
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="6">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">已关闭</span>
                     </span>
                 </div>
@@ -277,12 +287,12 @@
                         <img src="img/hot_1.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -291,25 +301,25 @@
                                 <span>£</span>
                                 <span class="detail-price-num">2289.00</span>
                             </div>
-                            <div class="order-price-tips">（定金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:deposit">定金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="7">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">已关闭</span>
                     </span>
                 </div>
@@ -318,12 +328,12 @@
                         <img src="img/hot_1.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -332,25 +342,25 @@
                                 <span>£</span>
                                 <span class="detail-price-num">2289.00</span>
                             </div>
-                            <div class="order-price-tips">（房租+押金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:CashPledge">房租+押金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="8">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">已取消</span>
                     </span>
                 </div>
@@ -359,12 +369,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -378,20 +388,20 @@
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="9">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">已取消</span>
                     </span>
                 </div>
@@ -400,12 +410,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -415,25 +425,25 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（定金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:deposit">定金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="10">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">已取消</span>
                     </span>
                 </div>
@@ -442,12 +452,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -457,25 +467,25 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（房租+押金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:CashPledge">房租+押金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
-                            <li><span class="order-delete">删除订单</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
+                            <li><span class="order-delete" set-lan="html:delete">删除订单</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="11">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">支付失败</span>
                     </span>
                 </div>
@@ -484,12 +494,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -499,25 +509,25 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（定金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:deposit">定金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-operation-btn">立即付款</span></li>
-                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-operation-btn" set-lan="html:payment">立即付款</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="12">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">支付失败</span>
                     </span>
                 </div>
@@ -526,12 +536,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -541,25 +551,25 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（房租+押金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:CashPledge">房租+押金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-operation-btn">立即付款</span></li>
-                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-operation-btn" set-lan="html:payment">立即付款</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="13">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">支付处理中</span>
                     </span>
                 </div>
@@ -568,12 +578,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -583,24 +593,24 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（定金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:deposit">定金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="order-section-item" status="14">
                 <div class="order-section-header">
-                    <span>下单时间：</span>
+                    <span set-lan="html:OrderTime">下单时间</span>：
                     <span>2018-01-08 15:02:00</span>
-                    <span class="margin-30">订单编号：</span>
+                    <span class="margin-30" set-lan="html:OrderNumber">订单编号</span>：
                     <span>JP18032836852</span>
                     <span class="pull-right">
-                        <span>订单状态：</span>
+                        <span set-lan="html:OrderStatus">订单状态</span>：
                         <span class="order-status">支付处理中</span>
                     </span>
                 </div>
@@ -609,12 +619,12 @@
                         <img src="img/hot_2.png">
                     </div>
                     <div class="pull-left order-room">
-                        <h4>学生公寓 University Gatewayroom</h4>
+                        <h4>University Gatewayroom</h4>
                         <div class="order-room-type">
-                            <span>房型：</span><span>studio（201）</span>
+                            <span set-lan="html:category">房型</span>：<span>studio（201）</span>
                         </div>
                         <div class="order-room-date">
-                            <span>入住日期：</span><span>2018-10-01</span>
+                            <span set-lan="html:stay">入住日期</span>：<span>2018-10-01</span>
                         </div>
                     </div>
                     <div class="pull-left order-price">
@@ -624,12 +634,12 @@
                                 <span class="detail-price-num">421.00</span>
                                 <span>起/月</span>
                             </div>
-                            <div class="order-price-tips">（房租+押金）</div>
+                            <div class="order-price-tips">（<span set-lan="html:CashPledge">房租+押金</span>）</div>
                         </div>
                     </div>
                     <div class="pull-left order-operation">
                         <ul class="text-center order-operation-box">
-                            <li><span class="order-view">查看详情</span></li>
+                            <li><span class="order-view" set-lan="html:ViewDetail">查看详情</span></li>
                         </ul>
                     </div>
                 </div>
@@ -731,5 +741,7 @@
     }
     console.log(status("-10"))
 </script>
+<script src="language/order.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

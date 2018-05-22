@@ -36,55 +36,70 @@
             <div class="box-num1">
                 <img src="img/step_success.png">
             </div>
-            <span>提交订单</span>
+            <span set-lan="html:PlaceOrder">提交订单</span>
         </li>
         <li>
             <div class="box-num2">2</div>
-            <span>平台确认</span>
+            <span set-lan="html:PlatformConfirmation">平台确认</span>
         </li>
         <li>
             <div class="box-num3">3</div>
-            <span>支付定金</span>
+            <span set-lan="html:deposit">支付定金</span>
         </li>
         <li>
             <div class="box-num4">4</div>
-            <span>资料认证</span>
+            <span set-lan="html:authentication">资料认证</span>
         </li>
         <li>
             <div class="box-num5">5</div>
-            <span>支付房租</span>
+            <span set-lan="html:rent">支付房租</span>
         </li>
         <li>
             <div class="box-num6">6</div>
-            <span>交易房租</span>
+            <span set-lan="html:finish">交易完成</span>
         </li>
     </ul>
     <div class="order-detail">
         <div class="order-left pull-left">
-            <div class="order-title">填写个人信息</div>
+            <div class="order-title" set-lan="html:PersonalInformation">填写个人信息</div>
             <div class="order-form">
                 <div class="order-list">
                     <div class="order-item pull-left">
-                        <input type="text" class="form-control" placeholder="请输入姓名">
+                        <input type="text" class="form-control" placeholder="请输入姓名" set-lan="placeholder:name">
                     </div>
                     <div class="order-item pull-right">
-                        <input type="text" class="form-control" placeholder="请输入手机号">
+                        <div class="place-modal-form padding-100">
+                            <div class="place-modal-left">
+                                （+86）
+                            </div>
+                            <div class="place-modal-right">
+                                <input type="text" placeholder="请输入手机号" set-lan="placeholder:mobileInput" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                                       onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
+                            </div>
+                            <ul class="place-modal-menu" data-key="+86">
+                                <li key="86">中国 (+86)</li>
+                                <!--<li key="+1">美国(+1)</li>-->
+                                <!--<li key="+44">英国(+44)</li>-->
+                                <!--<li key="+61">澳大利亚(+61)</li>-->
+                                <!--<li key="+1">加拿大(+1)</li>-->
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="order-list">
                     <div class="order-item pull-left">
-                        <input type="text" class="form-control" placeholder="邮箱账号">
+                        <input type="text" class="form-control" placeholder="邮箱账号" set-lan="placeholder:EnterEmail">
                     </div>
                     <div class="order-item pull-right">
-                        <input type="text" class="form-control" placeholder="微信账号（选填）">
+                        <input type="text" class="form-control" placeholder="微信账号（选填）" set-lan="placeholder:wechat">
                     </div>
                 </div>
                 <div class="order-list">
                     <div class="order-item pull-left jeitem">
-                        <div class="jeinpbox"><input type="text" class="jeinput form-control" id="test03" placeholder="入住日期"></div>
+                        <div class="jeinpbox"><input type="text" class="jeinput form-control" id="test03" placeholder="入住日期" set-lan="placeholder:ArrivalDate"></div>
                     </div>
                     <div class="order-item pull-right">
-                        <input type="text" class="form-control" placeholder="填写租期/周">
+                        <input type="text" class="form-control" placeholder="填写租期/周" set-lan="placeholder:lease">
                     </div>
                 </div>
                 <!--<div class="order-list">-->
@@ -100,7 +115,7 @@
                     <!--</div>-->
                 <!--</div>-->
                 <div class="order-textarea">
-                    <textarea class="form-control textarea-item" maxlength="200" spellcheck="false" placeholder="请输入您的额外需求..."></textarea>
+                    <textarea class="form-control textarea-item" maxlength="200" spellcheck="false" placeholder="请输入您的额外需求..." set-lan="placeholder:demand"></textarea>
                     <div class="textarea-count">
                         <span class="textareaInput">0</span>/<span class="textareaTotal">200</span>
                     </div>
@@ -108,15 +123,15 @@
                 <div class="order-checkbox">
                     <span class="login-input">
                         <input tabindex="1" type="checkbox" id="input-login">
-                        <label for="input-login"><span>已阅读并同意</span></label>
-                        <a href="#">《荔枝租房用户协议》</a><span>、</span><a href="#">《退款协议》</a>
+                        <label for="input-login"><span set-lan="html:agree">已阅读并同意</span></label>
+                        <a href="#">《<span set-lan="html:agreement">荔枝租房用户协议</span>》</a><span>、</span><a href="#">《<span set-lan="html:refund">退款协议</span>》</a>
                     </span>
                 </div>
-                <div class="order-btn">确认提交</div>
+                <div class="order-btn" set-lan="html:submit">确认提交</div>
             </div>
         </div>
         <div class="order-right pull-right">
-            <div class="order-title">房源信息</div>
+            <div class="order-title" set-lan="html:HousingInformation">房源信息</div>
             <div class="order-aside place-order-aside">
                 <img src="img/hot_1.png"/>
                 <h4 class="carousel-title">学生公寓 Universitity Gateway 共卫共厨房</h4>
@@ -127,30 +142,30 @@
                 </div>
                 <div class="carousel-list">
                     <div class="carousel-item">
-                        <span>房源编号：</span>
+                        <span set-lan="html:identifier">房源编号：</span>
                         <div>LT00503</div>
                     </div>
                     <div class="carousel-item">
-                        <span>房源类型：</span>
+                        <span set-lan="html:category">房源类型：</span>
                         <div class="carousel-type">
                             <span>studio</span>
                             <span>Ensuite</span>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <span>起&nbsp;&nbsp;租&nbsp;&nbsp;期：</span>
+                        <span set-lan="html:lease">起租期：</span>
                         <div>50周</div>
                     </div>
                     <div class="carousel-item">
-                        <span>起租时间：</span>
+                        <span set-lan="html:date">起租时间：</span>
                         <div class="carousel-type">2018-10-02</div>
                     </div>
                     <div class="carousel-item">
-                        <span>房间号码：</span>
+                        <span set-lan="html:number">房间号码：</span>
                         <div class="carousel-type">201</div>
                     </div>
                     <div class="carousel-item">
-                        <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+                        <span set-lan="html:address">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
                         <div class="carousel-place">
                             <span>Chapter Spitalfields,9 Frying Pan A;lley,London,E1 7HS</span>
                         </div>
@@ -178,10 +193,46 @@
     $(".order-btn").click(function () {
         location.href="wait.html";
     });
+    var enLang = {
+        name  : "en",
+        month : ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+        weeks : [ "SUN","MON","TUR","WED","THU","FRI","SAT" ],
+        times : ["Hour","Minute","Second"],
+        timetxt: ["Time","Start Time","End Time"],
+        backtxt:"Back",
+        clear : "Clear",
+        today : "Now",
+        yes   : "Confirm",
+        close : "Close"
+    }
     jeDate("#test03",{
         //onClose:false,
+        theme:{bgcolor:"#00A1CB",pnColor:"#00CCFF"},
+        language:enLang,
         format: "YYYY-MM-DD"
     });
+    $(document).bind("click", function (e) {
+        if (!$(".place-modal-menu").is(":hidden")) {
+            if ($(e.target).closest(".place-modal-left,.place-modal-menu").length == 0) {
+                $(".place-modal-menu").hide();
+            }
+        }
+    });
+    $(".place-modal-left").click(function () {
+        if($(".place-modal-menu").is(":hidden")){
+            $(".place-modal-menu").show();
+        }else{
+            $(".place-modal-menu").hide();
+        }
+    });
+    $(document).on('click','.place-modal-menu>li',function () {
+        var key=$(this).attr("key");
+        $(".place-modal-left").text("（+"+key+"）");
+        $(".place-modal-menu").attr("data-key","+"+key);
+        $(".place-modal-menu").hide();
+    });
 </script>
+<script src="language/place-order.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>

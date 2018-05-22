@@ -29,15 +29,15 @@
 <body>
     <div id="map"></div>
     <div class="screen-box">
-        <div class="screen-title"><i class="fa fa-map-marker"></i>伦敦</div>
+        <div class="screen-title"><i class="fa fa-map-marker"></i>London</div>
         <div class="screen-detail">
-            <div class="screen-tips">当前城市大学</div>
+            <div class="screen-tips" set-lan="html:current">当前城市大学</div>
             <select class="form-control" id="university">
-                <option value="">请选择大学</option>
+                <option value="" set-lan="html:choice">请选择大学</option>
                 <option value="1">东京大学</option>
                 <option value="2">华盛顿大学</option>
             </select>
-            <div class="screen-tips margin-20">公寓价格区间（单位：$）</div>
+            <div class="screen-tips margin-20"><span set-lan="html:section">公寓价格区间</span>（<span set-lan="html:unit">单位</span>：$）</div>
             <div id="scale-slider"></div>
         </div>
     </div>
@@ -47,4 +47,6 @@
         var load = new Load();
     });
 </script>
+<script src="language/list.js"></script>
+<script src="js/language.js"></script>
 </html>

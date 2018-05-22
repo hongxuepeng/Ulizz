@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="iCheck/skins/all.css">
     <link rel="stylesheet" href="css/page.css">
     <link href="css/common.css" rel="stylesheet">
-    <link href="css/list.css" rel="stylesheet">
+    <link href="css/list.css?v=1.01" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -27,10 +27,10 @@
     <script src="js/toTop.js"></script>
     <script src="js/icheck.min.js"></script>
     <script src="js/highlight.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/page.js"></script>
     <script src="js/include.js"></script>
     <script src="js/template.js"></script>
-    <script src="js/jquery.cookie.js"></script>
     <script src="js/md5.js"></script>
 </head>
 <body type="list">
@@ -40,27 +40,27 @@
     <div class="list-content">
         <div class="list-header">
             <div class="bread">
-                <a>首页</a><a>美国</a><a>纽约</a>
+                <a href="index.html" set-lan="html:home"></a><a>美国</a><a>纽约</a>
             </div>
             <div class="swiper-search">
                 <div class="search-left pull-left" id="SearchBox">
-                    <input type="text" placeholder="请输入城市、公寓名称、学校" class="pull-left search-val" id="text-search">
-                    <div class="pull-left search-btn">搜索</div>
+                    <input type="text" set-lan="placeholder:holderSearch" class="pull-left search-val" id="text-search">
+                    <div class="pull-left search-btn" set-lan="html:search"></div>
                     <div class="search-content shadow">
-                        <div class="search-history">
-                            <div class="history-title">历史搜索</div>
-                            <div class="history-detail">
-                                <span><img src="img/place_1.png">汉诺丁大学</span>
-                                <span><img src="img/place_2.png">汉诺丁helloroom公寓</span>
-                                <span><img src="img/place_3.png">东京</span>
-                            </div>
-                            <div class="history-delete">
-                                <i class="glyphicon glyphicon-trash"></i>
-                            </div>
-                        </div>
+                        <!--<div class="search-history">-->
+                            <!--<div class="history-title">历史搜索</div>-->
+                            <!--<div class="history-detail">-->
+                                <!--<span><img src="img/place_1.png">汉诺丁大学</span>-->
+                                <!--<span><img src="img/place_2.png">汉诺丁helloroom公寓</span>-->
+                                <!--<span><img src="img/place_3.png">东京</span>-->
+                            <!--</div>-->
+                            <!--<div class="history-delete">-->
+                                <!--<i class="glyphicon glyphicon-trash"></i>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="search-detail">
                             <div class="search-title">
-                                <span><img src="img/place_1.png">学校</span>
+                                <span><img src="img/place_1.png"><span set-lan="html:school"></span></span>
                             </div>
                             <ul class="search-section">
                                 <li>东京大学</li>
@@ -72,47 +72,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="search-right pull-right">
-                    地图找房
-                </div>
+                <div class="search-right pull-right" set-lan="html:map"></div>
             </div>
             <div class="screen">
                 <div class="screen-item">
-                    <div class="screen-title pull-left">
+                    <div class="screen-title pull-left" set-lan="html:university">
                         附近大学
                     </div>
                     <select class="form-control pull-left" id="university"></select>
                 </div>
                 <div class="screen-item">
-                    <div class="screen-item-title">公寓价格区间（单位：$）</div>
+                    <div class="screen-item-title"><span set-lan="html:section"></span>（<span set-lan="html:unit"></span>：<span class="unit"></span>）</div>
                     <div id="scale-slider"></div>
                 </div>
             </div>
             <div class="screen-group">
-                <div class="screen-list">
-                    <span>房型</span>
+                <div class="screen-list" set-lan="class:ScreenList">
+                    <span set-lan="html:category"></span>
                     <ul id="houseType"></ul>
                 </div>
-                <div class="screen-list">
-                    <span>公寓配套</span>
+                <div class="screen-list" set-lan="class:ScreenList">
+                    <span set-lan="html:matching"></span>
                     <ul id="config"></ul>
                 </div>
-                <div class="screen-list">
-                    <span>周边配套</span>
+                <div class="screen-list" set-lan="class:ScreenList">
+                    <span set-lan="html:peripheral"></span>
                     <ul id="aroundConfig"></ul>
                 </div>
             </div>
         </div>
         <div class="list-sort">
             <div class="pull-left list-sort-tab">
-                <span class="list-sort-active" sec="default">推荐排序</span>
-                <span class="list-sort-price" sec="desc" status="0">价格排序</span>
+                <span class="list-sort-active" sec="default" set-lan="html:recommend"></span>
+                <span class="list-sort-price" sec="desc" status="0" set-lan="html:price"></span>
             </div>
             <span class="pull-right">
-                共有<span class="list-apartment-num">50</span>个附近公寓
+                <span>共有</span><span class="list-apartment-num"></span><span>个附近公寓</span>
             </span>
         </div>
-        <div class="no-find hide">
+        <div class="no-find">
             <div class="no-find-tips">
                 <img src="img/no-find.png">
                 <ul>
@@ -121,158 +119,13 @@
                     <li class="no-find-tips-item">1、调整您输入的关键词</li>
                     <li class="no-find-tips-item">2、重新选择筛选条件</li>
                     <li class="no-find-tips-item">3、扩大搜索范围</li>
-                    <li class="no-find-tips-item">4、<span>联系客服</span></li>
+                    <li class="no-find-tips-item no-find-cache">4、<span>清空条件</span></li>
                 </ul>
             </div>
             <div class="no-find-recommend">我们为您推荐以下房源</div>
         </div>
         <div class="list-detail">
             <div class="list-section">
-                <div class="list-section-item">
-                    <img src="img/hot_1.png">
-                    <div class="list-section-detial">
-                        <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
-                        <div class="list-section-content">
-                            全球最高的学生公寓，没有之一！伦敦金融城中心地带，推开窗即可看到“小黄瓜”。公寓提供免费健身房、KTV和私人地影院。
-                        </div>
-                        <div class="list-section-tips">
-                            <span class="color_1">交通便利</span>
-                            <span class="color_2">安全保障</span>
-                            <span class="color_3">可短租</span>
-                        </div>
-                        <div class="list-section-distance">
-                            <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                            <span><img src="img/list_walk.png">20分</span>
-                            <span><img src="img/list_car.png">5分</span>
-                            <span><img src="img/list_riding.png">10分</span>
-                            <a href="map-room.html"><img src="img/list_location.png"/></a>
-                        </div>
-                    </div>
-                    <div class="list-price">
-                        <div class="list-price-section">
-                            <span>£</span>
-                            <span class="list-price-num">289</span>
-                            <span>起/月</span>
-                        </div>
-                        <a href="detail.html" class="view-detail">查看详情</a>
-                    </div>
-                </div>
-                <div class="list-section-item">
-                    <img src="img/hot_2.png">
-                    <div class="list-section-detial">
-                        <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
-                        <div class="list-section-content">
-                            全球最高的学生公寓，没有之一！伦敦金融城中心地带，推开窗即可看到“小黄瓜”。公寓提供免费健身房、KTV和私人地影院。
-                        </div>
-                        <div class="list-section-tips">
-                            <span class="color_1">交通便利</span>
-                            <span class="color_2">安全保障</span>
-                            <span class="color_3">可短租</span>
-                        </div>
-                        <div class="list-section-distance">
-                            <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                            <span><img src="img/list_walk.png">20分</span>
-                            <span><img src="img/list_car.png">5分</span>
-                            <span><img src="img/list_riding.png">10分</span>
-                            <a href="map-room.html"><img src="img/list_location.png"/></a>
-                        </div>
-                    </div>
-                    <div class="list-price">
-                        <div class="list-price-section">
-                            <span>£</span>
-                            <span class="list-price-num">289</span>
-                            <span>起/月</span>
-                        </div>
-                        <a href="detail.html" class="view-detail">查看详情</a>
-                    </div>
-                </div>
-                <div class="list-section-item">
-                    <img src="img/hot_3.png">
-                    <div class="list-section-detial">
-                        <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
-                        <div class="list-section-content">
-                            全球最高的学生公寓，没有之一！伦敦金融城中心地带，推开窗即可看到“小黄瓜”。公寓提供免费健身房、KTV和私人地影院。
-                        </div>
-                        <div class="list-section-tips">
-                            <span class="color_1">交通便利</span>
-                            <span class="color_2">安全保障</span>
-                            <span class="color_3">可短租</span>
-                        </div>
-                        <div class="list-section-distance">
-                            <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                            <span><img src="img/list_walk.png">20分</span>
-                            <span><img src="img/list_car.png">5分</span>
-                            <span><img src="img/list_riding.png">10分</span>
-                            <a href="map-room.html"><img src="img/list_location.png"/></a>
-                        </div>
-                    </div>
-                    <div class="list-price">
-                        <div class="list-price-section">
-                            <span>£</span>
-                            <span class="list-price-num">289</span>
-                            <span>起/月</span>
-                        </div>
-                        <a href="detail.html" class="view-detail">查看详情</a>
-                    </div>
-                </div>
-                <div class="list-section-item">
-                    <img src="img/news_hot1.png">
-                    <div class="list-section-detial">
-                        <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
-                        <div class="list-section-content">
-                            全球最高的学生公寓，没有之一！伦敦金融城中心地带，推开窗即可看到“小黄瓜”。公寓提供免费健身房、KTV和私人地影院。
-                        </div>
-                        <div class="list-section-tips">
-                            <span class="color_1">交通便利</span>
-                            <span class="color_2">安全保障</span>
-                            <span class="color_3">可短租</span>
-                        </div>
-                        <div class="list-section-distance">
-                            <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                            <span><img src="img/list_walk.png">20分</span>
-                            <span><img src="img/list_car.png">5分</span>
-                            <span><img src="img/list_riding.png">10分</span>
-                            <a href="map-room.html"><img src="img/list_location.png"/></a>
-                        </div>
-                    </div>
-                    <div class="list-price">
-                        <div class="list-price-section">
-                            <span>£</span>
-                            <span class="list-price-num">289</span>
-                            <span>起/月</span>
-                        </div>
-                        <a href="detail.html" class="view-detail">查看详情</a>
-                    </div>
-                </div>
-                <div class="list-section-item">
-                    <img src="img/news_hot3.png">
-                    <div class="list-section-detial">
-                        <a href="detail.html">学生公寓 Universitity Gateway 共卫共厨房</a>
-                        <div class="list-section-content">
-                            全球最高的学生公寓，没有之一！伦敦金融城中心地带，推开窗即可看到“小黄瓜”。公寓提供免费健身房、KTV和私人地影院。
-                        </div>
-                        <div class="list-section-tips">
-                            <span class="color_1">交通便利</span>
-                            <span class="color_2">安全保障</span>
-                            <span class="color_3">可短租</span>
-                        </div>
-                        <div class="list-section-distance">
-                            <span class="list-distance-place">前往伦敦大学伦敦校区</span>
-                            <span><img src="img/list_walk.png">20分</span>
-                            <span><img src="img/list_car.png">5分</span>
-                            <span><img src="img/list_riding.png">10分</span>
-                            <a href="map-room.html"><img src="img/list_location.png"/></a>
-                        </div>
-                    </div>
-                    <div class="list-price">
-                        <div class="list-price-section">
-                            <span>£</span>
-                            <span class="list-price-num">289</span>
-                            <span>起/月</span>
-                        </div>
-                        <a href="detail.html" class="view-detail">查看详情</a>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="page-parent">
@@ -282,45 +135,33 @@
     <include src="tpl/footer.html"></include>
     <include src="tpl/loginModal.html"></include>
     <include src="tpl/bindAccount.html"></include>
-    <script src="js/list.js"></script>
+    <script src="js/list.js?v=1.01"></script>
     <script type="text/html" id="houseTypeHtml">
-        <li>
-            <input type="checkbox" id="input-houseType" checked>
-            <label for="input-houseType"><span>不限</span></label>
-        </li>
         {{each houseType}}
         <li>
-            <input type="checkbox" id="input-{{$value.id}}" myied="{{$value.id}}">
-            <label for="input-{{$value.id}}"><span>{{$value.value}}</span></label>
+            <input type="checkbox" id="house-{{$value.code}}" myid="{{$value.code}}">
+            <label for="house-{{$value.code}}"><span>{{$value.value}}</span></label>
         </li>
         {{/each}}
     </script>
     <script type="text/html" id="configHtml">
-        <li>
-            <input type="checkbox" id="input-config" checked>
-            <label for="input-config"><span>不限</span></label>
-        </li>
         {{each config}}
         <li>
-            <input type="checkbox" id="config-{{$value.id}}" myied="{{$value.id}}">
-            <label for="config-{{$value.id}}"><span>{{$value.value}}</span></label>
+            <input type="checkbox" id="config-{{$value.code}}" myid="{{$value.code}}">
+            <label for="config-{{$value.code}}"><span>{{$value.value}}</span></label>
         </li>
         {{/each}}
     </script>
     <script type="text/html" id="aroundHtml">
-        <li>
-            <input type="checkbox" id="input-around" checked>
-            <label for="input-around"><span>不限</span></label>
-        </li>
         {{each aroundConfig}}
         <li>
-            <input type="checkbox" id="around-{{$value.id}}" myied="{{$value.id}}">
-            <label for="around-{{$value.id}}"><span>{{$value.value}}</span></label>
+            <input type="checkbox" id="around-{{$value.code}}" myid="{{$value.code}}">
+            <label for="around-{{$value.code}}"><span>{{$value.value}}</span></label>
         </li>
         {{/each}}
     </script>
     <script type="text/html" id="universityHtml">
-        <option value="">请选择大学</option>
+        <option value="" set-lan="html:choice">请选择大学</option>
         {{each schoolEntityList}}
         <option value="{{$value.id}}">{{$value.name}}</option>
         {{/each}}
@@ -328,15 +169,15 @@
     <script type="text/html" id="listHtml">
         {{each list}}
         <div class="list-section-item">
-            <img src="img/hot_1.png">
+            <img src="{{$value.mainImgPath}}">
             <div class="list-section-detial">
                 <a href="detail.html?id={{$value.id}}">{{$value.title}}</a>
                 <div class="list-section-content">
                     {{$value.desc}}
                 </div>
                 <div class="list-section-tips">
-                    {{each $value.labelDict as labelDict index}}
-                    <span class="color_1">{{labelDict.value}}</span>
+                    {{each $value.label as label index}}
+                    <span style="background:{{label.color}}">{{label.value}}</span>
                     {{/each}}
                 </div>
                 <div class="list-section-distance">
@@ -351,7 +192,7 @@
                 <div class="list-price-section">
                     <span>{{$value.currencySymbol}}</span>
                     <span class="list-price-num">{{$value.price}}</span>
-                    <span>起/{{$value.leaseUnitDict.value}}</span>
+                    <span>{{if $value.houseType=="10"}}起{{/if}}/{{$value.leaseUnitValue}}</span>
                 </div>
                 <a href="detail.html?id={{$value.id}}" class="view-detail">查看详情</a>
             </div>
@@ -363,5 +204,7 @@
             var load = new Load();
         });
     </script>
+    <script src="language/list.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

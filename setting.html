@@ -28,46 +28,46 @@
     <include src="tpl/header.html"></include>
 </div>
 <div class="bread">
-    <a href="index.html">首页</a><a>安全设置</a>
+    <a href="index.html" set-lan="html:home">首页</a><a set-lan="html:SecuritySetting">安全设置</a>
 </div>
 <div class="section">
     <div class="order-content">
         <div class="order-aside">
             <ul class="order-aside-list">
-                <li class="my-order">我的订单</li>
-                <li class="message-notification">消息通知</li>
-                <li class="personal-information">个人信息</li>
-                <li class="my-collection">我的收藏</li>
-                <li class="order-aside-active security-setting">安全设置</li>
+                <li class="my-order" set-lan="html:MyOrder">我的订单</li>
+                <li class="message-notification" set-lan="html:MessageNotification">消息通知</li>
+                <li class="personal-information" set-lan="html:PersonalInformation">个人信息</li>
+                <li class="my-collection" set-lan="html:MyCollection">我的收藏</li>
+                <li class="security-setting order-aside-active" set-lan="html:SecuritySetting">安全设置</li>
             </ul>
         </div>
         <div class="order-section">
-            <div class="setting-header">修改密码</div>
+            <div class="setting-header" set-lan="html:ModifyPassword">修改密码</div>
             <div class="setting-content">
                 <div class="setting-item">
-                    <div class="setting-left">旧密码</div>
+                    <div class="setting-left" set-lan="html:OldPassword">旧密码</div>
                     <div class="setting-right">
-                        <input type="text">
-                        <a href="forget.html" class="setting-forget">忘记密码?</a>
+                        <input type="password">
+                        <a href="forget.html" class="setting-forget" set-lan="html:forget">忘记密码?</a>
                         <div class="setting-tips">旧密码错误</div>
                     </div>
                 </div>
                 <div class="setting-item">
-                    <div class="setting-left">新密码</div>
+                    <div class="setting-left" set-lan="html:NewPassword">新密码</div>
                     <div class="setting-right">
-                        <input type="text">
+                        <input type="password">
                         <div class="setting-tips">8～15位字母和数字的组合</div>
                     </div>
                 </div>
                 <div class="setting-item">
-                    <div class="setting-left">确认密码</div>
+                    <div class="setting-left" set-lan="html:ConfirmPassword">确认密码</div>
                     <div class="setting-right">
-                        <input type="text">
+                        <input type="password">
                         <div class="setting-tips">两次密码输入不一致</div>
                     </div>
                 </div>
             </div>
-            <div class="setting-btn">确认</div>
+            <div class="setting-btn" set-lan="html:confirm">确认</div>
         </div>
     </div>
 </div>
@@ -80,5 +80,7 @@
         location.href="downline.html";
     });
 </script>
+<script src="language/down.js"></script>
+<script src="js/language.js"></script>
 </body>
 </html>
